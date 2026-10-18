@@ -14,7 +14,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-- `wordwarriors/008_drive_storage`: storage policy (Matt, 2026-10-18): one home per file — git / Drive (`C:\Code\gdrive-sync\wordwarriors\`, junctioned into the main checkout) / nowhere. Moves `art-originals` and the generated edge-tts audio (new untracked `public/voice-gen/`) into Drive; recordings stay tracked. After it merges: send the `conductor.toml` request adding `public/voice-gen` to `shared`.
+nothing
 
 ## Waiting on Matt
 
@@ -24,8 +24,8 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Flags
 
-- `art-originals/` and `scratch/` are shared untracked folders across worktrees (conductor.toml), so full-res originals and contact sheets survive cleanup.
-- Voice folder is ~50 MB committed (v0.2 16.2 MB, 004 6 MB, 007 8 MB); narration is composed per possible friend. More narrators or many more lines need Matt's call.
+- Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge.
+- Generated voice (~42 MB) left git in 008; ~50 MB of old voice remains in git history.; narration is composed per possible friend. More narrators or many more lines need Matt's call.
 - Counter word ≠ counter item for the non-default villains (e.g. Smaug: SCARED OF THE CUP, battle 2 uses the Frost Shield); only EvilRilla fits. Reachable only with picks/random villain on.
 - Heavy items get `ultracode: true` front-matter (Matt, 2026-10-18); it is launch-only, a mid-run `tell:` does nothing.
 
