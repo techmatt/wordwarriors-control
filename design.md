@@ -5,7 +5,7 @@ Learn-to-read game for Julia (4; knows letter names, not letter sounds; comforta
 ## Episode loop (~10–15 min)
 
 1. **Bedroom.** Julia wakes up. Dada Matt (or the helper) wakes her: "Good news, Julia! <Helper> is here to play! Bad news, <Villain> is coming, and he's going to <threat>!" The bedroom is cluttered with cool objects that react when she presses green on them; no reading there. The bedroom comes in variants, and the villain overlays the house's mood (evil Elsa freezes it white; EvilRilla leaves footprints and cracks).
-2. **Hub.** A small, slightly modular main house. The helper is there and teaches Julia a spell, which becomes one of her battle move words. Two side-room doors lead off it.
+2. **Hub.** A small, slightly modular main house. The helper is there and teaches Julia a spell, which becomes one of her battle move words. Two side-room doors lead off it. A door that isn't usable yet is not shown at all (the front door appears only when it's time to leave).
 3. **Two side rooms:** a sentence game each. What she fetches shows up in the battle.
 4. **Battle part 1:** the heroes lose to the villain's over-the-top ultimate and retreat. Scripted; never framed as her failure.
 5. **Back in the hub:** one more sentence game fetches the counter.
@@ -19,7 +19,7 @@ Modelled on how Matt reads with Julia: sentences like JULIA LOVES SPAGHETTI, sou
 
 - A sentence, e.g. EVILRILLA IS SCARED OF MICE. The last word is the key word and is never spoken until she answers.
 - Pass 1: voiced karaoke highlight, word by word; at the key word, silence and a pulse.
-- Pass 2: silent; each green press steps the highlight one word while a parent reads along. The hint says a frame word, and only sounds out the key word letter by letter.
+- Pass 2: each green press steps the highlight one word and speaks it, except the key word, which stays silent. The hint says a frame word, and only sounds out the key word letter by letter.
 - She walks to the object the key word names (one of 3) and presses green; then the full sentence is read and the item goes into her bag.
 - Sentences come from a few repeating frames so the little words become sight words; a frame she knows well skips pass 1.
 
@@ -29,7 +29,7 @@ Variants for later: picture-swap (a picture in the sentence, find the written wo
 
 - Everything is voiced except the word she must read. That word is spoken only after she answers, as confirmation. Letter SOUNDS (not names) are voiced as teaching. A hint may sound out letters one by one but never blends the word.
 - Selection is always walking to a place and pressing green, never coloured buttons.
-- Battle choices: mid-battle, two or three move words (e.g. FIRE / ICE / ZAP) appear as places in the arena. The partner says which to pick and she walks to the written word. A right pick fires a supercharged version; a wrong pick fires that move, plainer. Practice only; it changes nothing else.
+- Battle choices: mid-battle, two or three move words (e.g. FIRE / ICE / ZAP) appear as places in the arena. The partner says which to pick and she walks to the written word. A wrong pick fires nothing: the fight stays paused and the partner says what she picked and what to find ("That wasn't ICE, that was HUG! Find ICE!") until she gets it; the right pick fires a supercharged version.
 - Every spoken line is data with an id. edge-tts placeholders now; Adobe (Firefly) voices later via Seraphina's recorded-clip override loop.
 - Letter sounds: edge-tts cannot say unvoiced consonants and SSML is impossible, so placeholders by sound class; real phoneme clips later (likely Matt-recorded, ~26–44 clips, one sitting). Each sound is its own line id.
 - Narrator: instructions are spoken by the episode's helper, else Dada Matt. Interjections ("Ha!") are SFX, not voice lines.
