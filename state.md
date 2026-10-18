@@ -14,13 +14,12 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-- `wordwarriors/006_art_batch_1`: real art for the default episode (done: 68 ids, no refusals), then the rest in order. PNGs palette-quantized with `sharp`; stops committing new art at 20 MB for the batch (an unanswered ask's default) until Matt OKs more.
+nothing
 
 ## Waiting on Matt
 
-- Playing v0.2.
-- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). ~40 s per image; 68+ images used ~15% of a 5-hour window. Elsa is a white-and-gold winter queen (the film-like designs were refused). Julia's art is the generic placeholder description until Matt describes her.
-- Whether to commit art past 20 MB (all ~190 ids quantized ≈ 25 MB).
+- Playing v0.2 with real art.
+- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). All 183 art ids are real art (006), palette-quantized; `public/art` is 15 MB. ~35 s per image, three streams in parallel; ~0.3% of the 5-hour window per image. Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna a copper curly bob in moss green, Jasmine short black curls in coral and saffron. Weakest: Rilla footprints, the bedroom's doubled teddy/rocket, Anna vs Seraphina too alike, a bare street arena. Contact sheet: `C:\Code\wordwarriors\scratch\art_contact_006.png`. Julia's art is the generic placeholder description until Matt describes her.
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
 ## Flags
