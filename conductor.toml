@@ -5,8 +5,9 @@ locks = []
 max_hours = 2
 ask_default_minutes = 10
 
-[repos]
-wordwarriors = "../wordwarriors"
+[repos.wordwarriors]
+path = "../wordwarriors"
+shared = ["art-originals", "scratch"]
 
 [run.game]
 repo = "wordwarriors"
