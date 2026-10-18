@@ -18,18 +18,20 @@ nothing
 
 ## Waiting on Matt
 
-- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). All 183 art ids are real art (006), palette-quantized; `public/art` is 15 MB. ~35 s per image, three streams in parallel; ~0.3% of the 5-hour window per image. Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna a copper curly bob in moss green, Jasmine short black curls in coral and saffron. Weakest: Rilla footprints, the bedroom's doubled teddy/rocket, Anna vs Seraphina too alike, a bare street arena. Contact sheet: `C:\Code\wordwarriors\scratch\art_contact_006.png`. The family (Julia in a rainbow twirl dress, Ellie, Dada Matt the builder, Dada Jason the chef) is drawn from Matt's photos (007): crops attached via `REFS` in `content/art/prompts.ts`, photos only in git-ignored `art-originals/refs/`. Slightly off: Ellie's hair too golden-orange, Dada Matt a bit balder, Julia's face card has her tongue out.
+- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). All 183 art ids are real art (006), palette-quantized; `public/art` is 15 MB. ~35 s per image, three streams in parallel; ~0.3% of the 5-hour window per image. Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna a copper curly bob in moss green, Jasmine short black curls in coral and saffron. The family (Julia in a rainbow twirl dress, Ellie, Dada Matt the builder, Dada Jason the chef) is drawn from Matt's photos (007): crops attached via `REFS` in `content/art/prompts.ts`, photos only in git-ignored `art-originals/refs/`.
+- **Art picks (009):** 3 candidates each for 13 ids (Ellie ×3, Dada Matt ×3, face_julia, decal_rilla_footprint, room_bedroom_julia, Anna ×3, arena_street) in `art-originals/alts/<id>-<n>.png`; sheets `scratch/art_alts_009_*.png` (current first). Game art unchanged until picked: `npm run art:pick -- <id> <n>` (`0` restores the original). Anna was redesigned (dark-brown ponytail, purple bow, plum/magenta), and Ellie's and Dada Matt's roster looks now carry the hair fixes; keeping `current` for any of those ids means reverting that look text for it. To be picked with the conductor picker (13) once it lands; 009 wrote no manifest, so a short item makes one.
 - Voice recordings: Matt will do them at some point, not immediately.
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
-## Top of next session (Matt, 2026-10-18)
+## Conductor (hand-pasted)
 
-- **Likeness fixes, attempted as alternatives:** Ellie's hair (too golden-orange; should be pale, wispy strawberry-blonde), Dada Matt drawn a bit too bald, Julia's face card (tongue out), Dada Matt's face card (crowded by the hammer). Generate new candidates; keep the current ones. Show Matt side-by-side contact sheets; he picks favourites per id.
-- **Other weak art, same "show both, Matt picks" approach:** `decal_rilla_footprint` (reads as bare feet), `room_bedroom_julia` (its own teddy/rocket duplicate the game's toys), Anna vs Seraphina too alike, `arena_street` (bare asphalt).
-- **Counter word ≠ counter item** for the 7 non-default villains (e.g. Smaug: SCARED OF THE CUP vs Frost Shield in battle 2): make each villain's counter sentence name its actual counter item.
-- **Conductor 12a** (`C:\Code\claude-conductor\prompts\12a_audit_pending_indicator.md`): optional rewording of the shipped "N audit notes" to "cleanup pending"; Matt pastes it or skips it.
+- 12a (optional "cleanup pending" wording): paste or skip.
+- 13 picker (`C:\Code\claude-conductor\prompts\13_picker.md`): generic pick-one-per-row browser page; saved choices land in `picks/`, the planner carries them into the next prompt.
 
 ## Flags
+
+- Counter sentences now name the battle-2 item for all 15 villains (009; table in the repo's `docs/content.md`, guarded by a test). The parked Spell the Spell `counter.words` no longer match: fix if it's unparked.
+- 009 left 1 audit note (the audit test run); a **cleanup wordwarriors** would use it.
 
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge.
 - Generated voice (~42 MB) left git in 008; ~50 MB of old voice remains in git history.; narration is composed per possible friend. More narrators or many more lines need Matt's call.
