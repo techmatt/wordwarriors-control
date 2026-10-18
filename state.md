@@ -14,7 +14,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-nothing
+- `wordwarriors/008_drive_storage`: storage policy (Matt, 2026-10-18): one home per file — git / Drive (`C:\Code\gdrive-sync\wordwarriors\`, junctioned into the main checkout) / nowhere. Moves `art-originals` and the generated edge-tts audio (new untracked `public/voice-gen/`) into Drive; recordings stay tracked. After it merges: send the `conductor.toml` request adding `public/voice-gen` to `shared`.
 
 ## Waiting on Matt
 
