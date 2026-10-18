@@ -21,6 +21,7 @@ No fail states: wrong answers get a gentle retry, no penalty. Outfits remain usa
 - Letter sounds: edge-tts cannot say unvoiced consonants (s, f, th, h come out as letter names) and SSML is impossible. Placeholders by sound class (voiced continuants doubled, stops/fricatives as "Buh"/"Suh"); real phoneme clips later (likely Matt-recorded, ~26–44 clips, one sitting). Each sound is its own line id.
 - Narrator: instructions are spoken by the episode's ally, else Dada Matt. Interjections ("Ha!") are SFX, not voice lines.
 - Progress is tracked per letter sound and per word; minigames lean toward her shaky items. A simple parent screen shows it.
+- As built (v0.1): word pictures never show the word; spelling says its word first (it is writing); letter sounds are never captioned. The repo's `CLAUDE.md` owns the full speech and reading-target rules.
 
 ## Movement and minigames
 
