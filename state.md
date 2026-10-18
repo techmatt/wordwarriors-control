@@ -4,20 +4,27 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Repos
 
-- `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174).
+- `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Done
+## Where it stands
 
-- 001_seraphina_audit: reuse plan of record (stack, voice pipeline, Controls fixes, skeleton).
+- One full episode plays end to end (picks → alarm → two rotating prep games → battle 1 → camp + Spell the Spell → battle 2 → victory recap), with placeholder name cards and edge-tts. Grown-ups page: F9, or LB+RB on the title.
+- Verified headless only: no real pad, nobody has listened yet.
 
 ## Queued and running
 
-- `wordwarriors/002_overnight_build` (~8h, unattended): CLAUDE.md contract, skeleton, foundations, placeholder art + `docs/art.md`, full episode flow, four minigames, battle sim with roster, parent progress screen.
+nothing
 
-## Next (Matt raises each step)
+## Waiting on Matt
 
-- After 002: AI image prompts (style block + per-asset prompts from `docs/art.md`); letter-sound clip plan.
+- Play it with a real pad and listen.
+- Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z became Luh/Nuh/Err/Vuh/Zuh (inferred from timing, unheard). Real clips via `npm run voice:clip` (26 letter sounds).
+- Real art drops into `public/art/<id>.png`; ids in the repo's `docs/art.md` (source for the AI image prompts).
+
+## Flags
+
+- Voice is ~20 MB committed; narration is composed per possible friend (1,684 lines, ~1.4 MB per extra narrator). More narrators or many more lines need Matt's call.
 
 ## Open questions
 
-- Who records the real letter-sound clips (Matt's own voice is the audit's recommendation) — not blocking.
+none blocking
