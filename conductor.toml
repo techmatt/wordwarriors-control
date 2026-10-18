@@ -1,0 +1,9 @@
+project = "wordwarriors"
+locks = []
+
+[defaults]
+max_hours = 2
+ask_default_minutes = 10
+
+[repos]
+wordwarriors = "../wordwarriors"

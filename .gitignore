@@ -1,0 +1,11 @@
+queue/
+proposed/
+running/
+done/
+reports/
+questions/
+requests/
+signals/
+inbox.md
+events.db*
+.conductor/
