@@ -7,3 +7,9 @@ ask_default_minutes = 10
 
 [repos]
 wordwarriors = "../wordwarriors"
+
+[run.game]
+repo = "wordwarriors"
+command = "npm install && npm run dev -- --port 5174"
+url = "http://localhost:5174/"
+ready_seconds = 180

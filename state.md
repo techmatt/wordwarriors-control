@@ -4,16 +4,20 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Repos
 
-- `wordwarriors`: ../wordwarriors (empty at start; game code)
+- `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174).
+
+## Done
+
+- 001_seraphina_audit: reuse plan of record (stack, voice pipeline, Controls fixes, skeleton).
 
 ## Queued and running
 
-- `wordwarriors/001_seraphina_audit` (readonly): what to reuse from `C:\Code\seraphinas\seraphinas-secret`, plus a recommended skeleton.
+- `wordwarriors/002_overnight_build` (~8h, unattended): CLAUDE.md contract, skeleton, foundations, placeholder art + `docs/art.md`, full episode flow, four minigames, battle sim with roster, parent progress screen.
 
-## Plan (Matt raises each next step)
+## Next (Matt raises each step)
 
-- After the audit: the repo's `CLAUDE.md` standing contract as the first writing item, then the skeleton.
+- After 002: AI image prompts (style block + per-asset prompts from `docs/art.md`); letter-sound clip plan.
 
 ## Open questions
 
-none
+- Who records the real letter-sound clips (Matt's own voice is the audit's recommendation) — not blocking.
