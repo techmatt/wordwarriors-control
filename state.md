@@ -14,23 +14,21 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-- `wordwarriors/005_art_pipeline_test`: Codex `$imagegen` → `public/art/` pipeline, 6-image test batch + contact sheet (`scratch/art_contact.png`).
+- `wordwarriors/006_art_batch_1`: real art for the default episode (done: 68 ids, no refusals), then the rest in order. PNGs palette-quantized with `sharp`; stops committing new art at 20 MB for the batch (an unanswered ask's default) until Matt OKs more.
 
 ## Waiting on Matt
 
 - Playing v0.2.
-- Art: Codex CLI is installed and logged in on the box (ChatGPT Plus, no API key); 005 is proving the pipeline. Julia's own character art should come from Matt's description, not a guess.
+- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). ~40 s per image; 68+ images used ~15% of a 5-hour window. Elsa is a white-and-gold winter queen (the film-like designs were refused). Julia's art is the generic placeholder description until Matt describes her.
+- Whether to commit art past 20 MB (all ~190 ids quantized ≈ 25 MB).
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
 ## Flags
 
+- `art-originals/` and `scratch/` are shared untracked folders across worktrees (conductor.toml), so full-res originals and contact sheets survive cleanup.
 - Voice folder is ~42 MB committed (v0.2 added 16.2 MB, 004 another 6 MB); narration is composed per possible friend. More narrators or many more lines need Matt's call.
 - Counter word ≠ counter item for the non-default villains (e.g. Smaug: SCARED OF THE CUP, battle 2 uses the Frost Shield); only EvilRilla fits. Reachable only with picks/random villain on.
 - Prompts that benefit get "Use ultracode." in their text (Matt, 2026-10-18); a mid-run `tell:` delivers the words but it is unconfirmed that it switches the mode.
-
-## Parked for the next wordwarriors prompt
-
-- Worktree test runs keep attaching to the main checkout's dev server on 5174 (the `game` run target) through Playwright's `reuseExistingServer`; make tests use their own port by default instead of a README workaround.
 
 ## Open questions (not blocking)
 
