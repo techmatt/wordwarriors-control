@@ -18,14 +18,14 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-- `019_test_perf` (test_perf template): test cost, fast/slow lanes, faster tests; report gives timings.
+- `019_test_perf` (running, test_perf template): test cost, fast/slow lanes, faster tests; report gives timings.
+- `020_fixes_and_calls`: Tiamat's "bow" (and other homographs), text wrapping everywhere, 017 calls (drop `CounterItem.words`, `pic_` swarm, gold item glow, IS NO MATCH FOR THE), picks pic_zap 1 / pic_pow 1.
+- `021_casting_and_quests` (ultracode): random villain (all evil roster + evil forms, no repeat) and ally; primary dad 60% Matt / 40% Jason, other dad present 50%; dads sometimes ally; new forms weightlifter Dada Matt and a second Dada Jason form (good + evil); ally quests (place + setup line, new backgrounds); rooms sample minigames from a pool.
+- `022_word_machine` (ultracode): word-family minigame mode 1 "make the picture" in the pool.
+- `023_victory_scenes` (ultracode): random short warm scenes (dessert, picnic, mountain…) with the reformed villain, before the recap.
 
 ## Waiting on Matt
 
-- **Picks:** `art_alts_016_julia_chef` (face_julia_chef; 2 promoted) and `art_alts_018_moves` (20 new move-word pictures; executor's best promoted). Choices that differ need an apply item.
-- **017 deferred calls:** (1) the parked Spell the Spell triple `CounterItem.words`: drop it and give the parked game its own lists (executor's pick), regenerate from `word`, or leave; (2) the scare swarm for named `scare` counters (Brave Rat) uses an emoji: use `pic_<word>` when it exists (executor's pick), a `swarm` art id, or keep; (3) per-branch voice manifest / content-hashed mp3 names (pipeline change; documented only); (4) `item_*` green halo: change the item brief to a gold glow (executor's pick) or default items to `NO_GREEN`.
-- **016 questions:** Ellie's sword move word ZIP or BAM; an asleep-in-bed chef Julia image (one `art:alts` run).
-- **Word-family minigame** (CAT/HAT/BAT, SIT/FIT/PIT): planner proposed a "word machine" side room — (1) make the picture: fixed rime, walk to the onset tile that builds the pictured word; (2) flip it: machine swaps the onset, she picks the matching picture; (3) real or silly: nonsense words make it burp. Progress per rime. Suggested mode 1 first. Matt to choose.
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape while Evil Anna is still the old copper-curl design (a redraw makes them match), Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Voice recordings: Matt will do them at some point, not immediately.
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
@@ -43,9 +43,8 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 - Heavy items get `ultracode: true` front-matter (Matt, 2026-10-18); it is launch-only, a mid-run `tell:` does nothing.
 - A rewrite of a queued item's file is not picked up (015 ran its original text); queue a new item instead (conductor HANDOFF *Open*).
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
+- Ruled (Matt, 2026-10-18): keep the 3× named-counter boost; Ellie's sword word stays ZIP; no asleep chef-Julia image for now; voice-manifest hashing deferred until items that change voice run concurrently. Later word-machine modes: flip it, real or silly.
 
 ## Open questions (not blocking)
 
-- 015: keep the 3× boost for the villain's own named counter word (Magic Hat), or plain random? (planner leans keep)
-- Replace the CAN NOT STAND THE frame with IS NO MATCH FOR THE? (Matt: legal but not great phrasing)
 - Who records the real letter-sound clips (the audit recommends Matt's own voice).
