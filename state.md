@@ -18,7 +18,6 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-- `019_test_perf` (running, test_perf template): test cost, fast/slow lanes, faster tests; report gives timings.
 - `020_fixes_and_calls`: Tiamat's "bow" (and other homographs), text wrapping everywhere, 017 calls (drop `CounterItem.words`, `pic_` swarm, gold item glow, IS NO MATCH FOR THE), picks pic_zap 1 / pic_pow 1.
 - `024_speaker_ui` (ultracode): speaker face cards shown prominently with every line, one dialogue-box style for non-battle scenes, polish from screenshot review; before/after in `scratch/ui_024_before_after.png`.
 - `025_casting_and_quests` (ultracode, 6h): random villain (all evil roster + evil forms, no repeat) and ally; primary dad 60% Matt / 40% Jason, other dad present 50%; dads sometimes ally; new forms with good + evil + face + kit + quest: Matt weightlifter, programmer/cyberdecker, spell-blade; Jason fantasy warrior, warlock (original, nothing WoW-specific); ally quests (place + setup line, new backgrounds); rooms sample minigames from a pool.
