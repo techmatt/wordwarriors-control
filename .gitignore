@@ -9,3 +9,4 @@ signals/
 inbox.md
 events.db*
 .conductor/
+picks/
