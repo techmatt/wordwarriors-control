@@ -62,5 +62,6 @@ Browser game: Phaser ^3.90 (not 4) + TypeScript + Vite + Playwright, dev port 51
 - Each ally has a quest: they take Julia to their own place to train (weightlifter Matt's secret forest gym, chef Jason's secret kitchen…), set up with an imaginative line. The side rooms are set there; their minigames are sampled from a pool (sentence game, word machine, …) independent of the quest.
 - Active cast (Matt, 2026-10-18; data, to grow toward almost all pairs): allies Dada Matt, Dada Jason, Scar (a tiny gold robot, just shorter than Julia), Ellie; villains Jörmungandr, Smaug, Bavmorda, Tiamat.
 - Fights vary by style per villain: Magicka-style brawls, races, cook-offs, spell-beam clashes, building contests, dance-offs… always over-the-top particles, character moves and teamwork, same reading beats and fixed outcome.
+- Before leaving for the quest place, a home warm-up: the ally asks for one of 9 labelled objects by letter names then letter sounds (the whole word only at the easiest ramp level); she finds it; per-word ramp, starting without the word (Matt, 2026-10-19).
 - Whoever is speaking is shown by a prominent face-card portrait beside their words.
 - After battle 2, a short random victory scene (dessert at the table, a picnic, climbing a mountain…) with everyone, the villain now good, and a few lines, then the recap.
