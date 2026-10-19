@@ -15,6 +15,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 ## Queued and running
 
 - `011_apply_art_picks`: promotes Matt's 7 picks from `art_alts_009` (Ellie ×3, Rilla footprint, bedroom, Anna good + face), keeps the other 6 current and reverts their 009 text; Anna's look split so good (redesign) and evil (old) each match.
+- `012_julia_chef`: new id `char_julia_chef` (Julia as a chef, for a future scenario; not used in any scene yet); 3 candidates + manifest, best promoted, sheet opened in Explorer.
 
 ## Waiting on Matt
 
