@@ -14,7 +14,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-nothing
+- `013_tiamat`: new roster character Tiamat (giant purple dragon, she; good + evil), full entry like Ellie's; 3 candidates per art id, best promoted, one picker manifest.
 
 ## Waiting on Matt
 
