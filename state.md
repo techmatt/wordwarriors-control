@@ -6,42 +6,46 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Where it stands (v0.2)
+## Where it stands (v0.3)
 
-- v0.2 plays end to end: bedroom wake-up (Dada Matt, good/bad news, the villain's house overlay) → hub (the ally teaches a spell) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence (counter sentence) → battle 2 → victory recap. Defaults Julia + Ellie vs Evil Tiamat (`EPISODE_DEFAULTS`, 014; Matt 2026-10-18): Ellie teaches ZIP (Sword Fling) with summoned silver swords; Tiamat is staged as a giant; counter word drawn each episode (015); HAT (Magic Hat swallows her storm) is her named counter, drawn 3× as often. Elsa and EvilRilla stay in the 16-character roster; pick screens, v0.1 prep games, alarm and camp parked.
-- Word bag (015): all key words (side rooms + attic) come from a per-player bag of 30 decodable CVC words, spent only when read right first time, leaning to shaky words, none repeated in an episode, nothing said or shown earlier in the episode. Frames: 5 fetch (incl. JULIA NEEDS THE), 4 counter (SCARED OF THE, HATES THE, RUNS FROM THE, CAN NOT STAND THE). Battle 2 with a drawn word: a swarm of its picture, villain shrieks "NOT THE MOP!". Grown-ups page (F9) shows the bag. MICE is no longer used (not decodable). `voice:build --prune` would clear 20 orphaned mp3s.
+- The episode plays end to end: bedroom wake-up (Dada Matt, good/bad news, the villain's house overlay) → hub (the ally teaches a spell) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence → battle 2 → the reformed villain speaks → victory recap with a picture per word. Pick screens, v0.1 prep games, alarm and camp parked.
+- **Defaults (Matt, 2026-10-18):** Julia + Ellie vs Evil Tiamat (`EPISODE_DEFAULTS` in `src/config.ts`). Ellie is a bubble fighter (Giant Bubbles = BIG, her spell; Bubble Trap POP; Bubble Shield; Peekaboo HOP; one sword move, Spinny Swords ZIP; Mega Bubble Storm); team move Star Bubble Spin. Tiamat (013) is the biggest roster character, staged as a giant; her named counter is HAT (Magic Hat swallows her storm), drawn 3× as often. Roster: 16 characters.
+- **Julia's forms (016):** data in `content/battle/forms.ts`; chef Julia (`char_julia_chef`, `face_julia_chef`) when the ally is `dada_jason`, from the wake-up burst on. Chef episode = change `ally: 'ellie'` → `ally: 'dada_jason'` in `EPISODE_DEFAULTS`; `?ally=dada_jason` tries it.
+- **Word bag (015):** key words (side rooms + attic) from a per-player bag of 30 decodable CVC words, spent only when read right first time, leaning to shaky words, none repeated in an episode, nothing said or shown earlier. Frames: 5 fetch (incl. JULIA NEEDS THE), 4 counter (SCARED OF THE, HATES THE, RUNS FROM THE, CAN NOT STAND THE). A drawn counter word sends a swarm of its picture ("NOT THE MOP!"). F9 grown-ups page shows the bag. MICE unused (not decodable). `voice:build --prune` would clear 20 orphaned mp3s.
+- **Move words (018):** pool of 26; each fighter answers to 6–10; per episode two choices per battle part (first is the spell), the rest from a per-player move bag; wrong pads unseen this episode; a super throws its word's picture. Lines that would say a pad word still to come are skipped. Every character has two `reformed` lines. Speech bubbles are upper case.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
-- Julia's first play (2026-10-18) fixed by 004: doors that aren't usable yet aren't drawn (finished side doors stay, with prize badge); a wrong move pick holds the fight and the partner says "That wasn't ICE, that was HUG! Find ICE!" until she's right; the read pass speaks each word as it lights (key word silent).
+- Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `016_bubbles_and_julia_forms` (after 015, ultracode): applies Matt's 013/014 picks (Tiamat good 3, evil 3, hat 1; sword 3; Ellie 0); Ellie back to a bubble kit with one sword move; Julia gets data-driven forms, with chef Julia when chef Dada Jason is the ally (chef scenario selectable as default by one data line).
-- `017_cleanup` (after 016, cleanup template, ultracode): acts on 009's audit note; design calls come back as **Deferred**.
-- `018_moves_and_ending` (after 016, ultracode): wider varied move-word pool; reformed villain says a voiced line; recap shows a picture per word (new `pic_*` art via the picker). These were added to 015 after it was enqueued and never ran (conductor gap, in HANDOFF *Open*).
-- `019_test_perf` (after 018, test_perf template): measures test cost, splits fast/slow lanes, speeds tests up; report gives timings.
+- `019_test_perf` (test_perf template): test cost, fast/slow lanes, faster tests; report gives timings.
 
 ## Waiting on Matt
 
-- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). All art ids are real art (006 onward), palette-quantized; `public/art` is 15 MB. ~35 s per image, three streams in parallel; ~0.3% of the 5-hour window per image. Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face, 009/011) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, while Evil Anna is still the old copper-curl design (a redraw of `char_anna_evil` makes them match if Matt wants), Jasmine short black curls in coral and saffron. The family (Julia in a rainbow twirl dress, Ellie, Dada Matt the builder, Dada Jason the chef) is drawn from Matt's photos (007): crops attached via `REFS` in `content/art/prompts.ts`, photos only in git-ignored `art-originals/refs/`. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). `char_julia_chef` (012, Julia as a little chef with a wooden spoon) exists for a future scenario, used in no scene; Matt kept candidate 3.
-- Picks for 013/014 saved (Matt, 7:30pm) and carried in 016.
+- **Picks:** `art_alts_016_julia_chef` (face_julia_chef; 2 promoted) and `art_alts_018_moves` (20 new move-word pictures; executor's best promoted). Choices that differ need an apply item.
+- **017 deferred calls:** (1) the parked Spell the Spell triple `CounterItem.words`: drop it and give the parked game its own lists (executor's pick), regenerate from `word`, or leave; (2) the scare swarm for named `scare` counters (Brave Rat) uses an emoji: use `pic_<word>` when it exists (executor's pick), a `swarm` art id, or keep; (3) per-branch voice manifest / content-hashed mp3 names (pipeline change; documented only); (4) `item_*` green halo: change the item brief to a gold glow (executor's pick) or default items to `NO_GREEN`.
+- **016 questions:** Ellie's sword move word ZIP or BAM; an asleep-in-bed chef Julia image (one `art:alts` run).
+- **Word-family minigame** (CAT/HAT/BAT, SIT/FIT/PIT): planner proposed a "word machine" side room — (1) make the picture: fixed rime, walk to the onset tile that builds the pictured word; (2) flip it: machine swaps the onset, she picks the matching picture; (3) real or silly: nonsense words make it burp. Progress per rime. Suggested mode 1 first. Matt to choose.
+- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape while Evil Anna is still the old copper-curl design (a redraw makes them match), Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Voice recordings: Matt will do them at some point, not immediately.
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
 ## Conductor (hand-pasted)
 
 - 12a (optional "cleanup pending" wording): paste or skip.
-- 13 picker shipped: `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
+- Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
 
 ## Flags
 
-- Counter sentences now name the battle-2 item for all 15 villains (009; table in the repo's `docs/content.md`, guarded by a test). The parked Spell the Spell `counter.words` no longer match: fix if it's unparked.
-- Every worktree starts without `node_modules`, so executors run `npm ci` first (~1 min each; 009–012). `setup = ["npm ci"]` in conductor.toml would do it up front: Matt's call.
-- Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge.
-- Generated voice (~42 MB) left git in 008; ~50 MB of old voice remains in git history; narration is composed per possible friend. More narrators or many more lines need Matt's call.
+- Every worktree starts without `node_modules`, so executors run `npm ci` first (~1 min each; README *Run it* says so). `setup = ["npm ci"]` in conductor.toml would do it up front: Matt's call.
+- Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
+- Generated voice (~5,100 lines) left git in 008; ~50 MB of old voice remains in git history.
 - Heavy items get `ultracode: true` front-matter (Matt, 2026-10-18); it is launch-only, a mid-run `tell:` does nothing.
+- A rewrite of a queued item's file is not picked up (015 ran its original text); queue a new item instead (conductor HANDOFF *Open*).
+- Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 
 ## Open questions (not blocking)
 
-- 015: keep the 3× boost for the villain's own named counter word (Magic Hat), or plain random?
-- 015: keep CAN NOT STAND THE as a counter frame, or drop it as too long for her?
+- 015: keep the 3× boost for the villain's own named counter word (Magic Hat), or plain random? (planner leans keep)
+- Replace the CAN NOT STAND THE frame with IS NO MATCH FOR THE? (Matt: legal but not great phrasing)
 - Who records the real letter-sound clips (the audit recommends Matt's own voice).
