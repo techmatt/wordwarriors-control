@@ -16,6 +16,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 - `015_word_variety` (after 014, ultracode): key words drawn without replacement from a per-player bag (leaning to shaky words, none repeated in an episode); counter is a random pictured word (any villain, nonsense fine); 3–5 counter frames and a few fetch frames; prefix clips for every frame.
 - `016_bubbles_and_julia_forms` (after 015, ultracode): applies Matt's 013/014 picks (Tiamat good 3, evil 3, hat 1; sword 3; Ellie 0); Ellie back to a bubble kit with one sword move; Julia gets data-driven forms, with chef Julia when chef Dada Jason is the ally (chef scenario selectable as default by one data line).
+- `017_cleanup` (after 016, cleanup template, ultracode): acts on 009's audit note; design calls come back as **Deferred**.
 
 ## Waiting on Matt
 
@@ -32,7 +33,6 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 ## Flags
 
 - Counter sentences now name the battle-2 item for all 15 villains (009; table in the repo's `docs/content.md`, guarded by a test). The parked Spell the Spell `counter.words` no longer match: fix if it's unparked.
-- 009 left 1 audit note (the audit test run); a **cleanup wordwarriors** would use it.
 - Every worktree starts without `node_modules`, so executors run `npm ci` first (~1 min each; 009–012). `setup = ["npm ci"]` in conductor.toml would do it up front: Matt's call.
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge.
 - Generated voice (~42 MB) left git in 008; ~50 MB of old voice remains in git history; narration is composed per possible friend. More narrators or many more lines need Matt's call.
