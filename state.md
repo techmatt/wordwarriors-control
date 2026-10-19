@@ -18,6 +18,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 - `016_bubbles_and_julia_forms` (after 015, ultracode): applies Matt's 013/014 picks (Tiamat good 3, evil 3, hat 1; sword 3; Ellie 0); Ellie back to a bubble kit with one sword move; Julia gets data-driven forms, with chef Julia when chef Dada Jason is the ally (chef scenario selectable as default by one data line).
 - `017_cleanup` (after 016, cleanup template, ultracode): acts on 009's audit note; design calls come back as **Deferred**.
 - `018_moves_and_ending` (after 016, ultracode): wider varied move-word pool; reformed villain says a voiced line; recap shows a picture per word (new `pic_*` art via the picker). These were added to 015 after it was enqueued and never ran (conductor gap, in HANDOFF *Open*).
+- `019_test_perf` (after 018, test_perf template): measures test cost, splits fast/slow lanes, speeds tests up; report gives timings.
 
 ## Waiting on Matt
 
