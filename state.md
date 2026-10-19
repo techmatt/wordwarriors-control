@@ -20,9 +20,11 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 - `019_test_perf` (running, test_perf template): test cost, fast/slow lanes, faster tests; report gives timings.
 - `020_fixes_and_calls`: Tiamat's "bow" (and other homographs), text wrapping everywhere, 017 calls (drop `CounterItem.words`, `pic_` swarm, gold item glow, IS NO MATCH FOR THE), picks pic_zap 1 / pic_pow 1.
-- `021_casting_and_quests` (ultracode): random villain (all evil roster + evil forms, no repeat) and ally; primary dad 60% Matt / 40% Jason, other dad present 50%; dads sometimes ally; new forms weightlifter Dada Matt and a second Dada Jason form (good + evil); ally quests (place + setup line, new backgrounds); rooms sample minigames from a pool.
-- `022_word_machine` (ultracode): word-family minigame mode 1 "make the picture" in the pool.
-- `023_victory_scenes` (ultracode): random short warm scenes (dessert, picnic, mountain…) with the reformed villain, before the recap.
+- `024_speaker_ui` (ultracode): speaker face cards shown prominently with every line, one dialogue-box style for non-battle scenes, polish from screenshot review; before/after in `scratch/ui_024_before_after.png`.
+- `025_casting_and_quests` (ultracode, 6h): random villain (all evil roster + evil forms, no repeat) and ally; primary dad 60% Matt / 40% Jason, other dad present 50%; dads sometimes ally; new forms with good + evil + face + kit + quest: Matt weightlifter, programmer/cyberdecker, spell-blade; Jason fantasy warrior, warlock (original, nothing WoW-specific); ally quests (place + setup line, new backgrounds); rooms sample minigames from a pool.
+- `026_word_machine` (ultracode): word-family minigame mode 1 "make the picture" in the pool.
+- `027_victory_scenes` (ultracode): random short warm scenes (dessert, picnic, mountain…) with the reformed villain, before the recap.
+- (021–023 were cancelled and requeued as 025–027 to add the new Dada forms and put the speaker UI first.)
 
 ## Waiting on Matt
 

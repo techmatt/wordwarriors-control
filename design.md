@@ -58,6 +58,7 @@ Browser game: Phaser ^3.90 (not 4) + TypeScript + Vite + Playwright, dev port 51
 
 ## Casting, quests and endings (Matt, 2026-10-18)
 
-- Each episode casts at random: the villain from every evil roster version and evil form (no repeat of the last one); the ally from the good roster, sometimes a dad. The primary dad (wakes Julia, narrates when needed) is Dada Matt 60% / Dada Jason 40%; half the time the other dad is also in the bedroom. Dada Matt's forms: builder, weightlifter; Dada Jason's: chef and a second form. Julia's form follows a matching ally form (chef Julia with chef Jason).
+- Each episode casts at random: the villain from every evil roster version and evil form (no repeat of the last one); the ally from the good roster, sometimes a dad. The primary dad (wakes Julia, narrates when needed) is Dada Matt 60% / Dada Jason 40%; half the time the other dad is also in the bedroom. Dada Matt's forms: builder, weightlifter, programmer/cyberdecker, spell-blade; Dada Jason's: chef, fantasy warrior, warlock. Julia's form follows a matching ally form (chef Julia with chef Jason).
 - Each ally has a quest: they take Julia to their own place to train (weightlifter Matt's secret forest gym, chef Jason's secret kitchen…), set up with an imaginative line. The side rooms are set there; their minigames are sampled from a pool (sentence game, word machine, …) independent of the quest.
+- Whoever is speaking is shown by a prominent face-card portrait beside their words.
 - After battle 2, a short random victory scene (dessert at the table, a picnic, climbing a mountain…) with everyone, the villain now good, and a few lines, then the recap.
