@@ -14,12 +14,11 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-nothing
+- `011_apply_art_picks`: promotes Matt's 7 picks from `art_alts_009` (Ellie ×3, Rilla footprint, bedroom, Anna good + face), keeps the other 6 current and reverts their 009 text; Anna's look split so good (redesign) and evil (old) each match.
 
 ## Waiting on Matt
 
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free; `--sheet` rebuilds the contact sheet). All 183 art ids are real art (006), palette-quantized; `public/art` is 15 MB. ~35 s per image, three streams in parallel; ~0.3% of the 5-hour window per image. Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna a copper curly bob in moss green, Jasmine short black curls in coral and saffron. The family (Julia in a rainbow twirl dress, Ellie, Dada Matt the builder, Dada Jason the chef) is drawn from Matt's photos (007): crops attached via `REFS` in `content/art/prompts.ts`, photos only in git-ignored `art-originals/refs/`.
-- **Art picks (009):** 3 candidates each for 13 ids (Ellie ×3, Dada Matt ×3, face_julia, decal_rilla_footprint, room_bedroom_julia, Anna ×3, arena_street) in `art-originals/alts/<id>-<n>.png`; sheets `scratch/art_alts_009_*.png` (current first). Game art unchanged until picked: `npm run art:pick -- <id> <n>` (`0` restores the original). Anna was redesigned (dark-brown ponytail, purple bow, plum/magenta), and Ellie's and Dada Matt's roster looks now carry the hair fixes; keeping `current` for any of those ids means reverting that look text for it. Picker manifest `scratch/art_alts_009.json` (010; previews processed as in game). After Matt saves, the next prompt applies `picks/art_alts_009.choices.json` via `art:pick` and his notes. `art:alts` now writes a manifest on every run (`--manifest-only` to rebuild one).
 - Voice recordings: Matt will do them at some point, not immediately.
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
