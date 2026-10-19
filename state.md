@@ -24,6 +24,8 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 - `025_casting_and_quests` (ultracode, 6h): random villain (all evil roster + evil forms, no repeat) and ally; primary dad 60% Matt / 40% Jason, other dad present 50%; dads sometimes ally; new forms with good + evil + face + kit + quest: Matt weightlifter, programmer/cyberdecker, spell-blade; Jason fantasy warrior, warlock (original, nothing WoW-specific); ally quests (place + setup line, new backgrounds); rooms sample minigames from a pool.
 - `026_word_machine` (ultracode): word-family minigame mode 1 "make the picture" in the pool.
 - `027_victory_scenes` (ultracode): random short warm scenes (dessert, picnic, mountain…) with the reformed villain, before the recap.
+- `028_cast_and_scar` (ultracode): active cast as data — allies Dada Matt (4 forms), Dada Jason (3 forms), Scar, Ellie; villains Jörmungandr, Smaug, Bavmorda, Tiamat; every pair played; Scar redesigned as a tiny gold-and-black robot just shorter than Julia (Matt's reference `art-originals/refs/scar_reference.png`, private).
+- `029_fight_styles` (ultracode, 5h): fight style as villain data — races, cook-offs, beam clashes, contests alongside Magicka brawls; same part-1-lose / part-2-win shape and move words; starts with the active villains, plus a cook-off chef Jason triggers.
 - (021–023 were cancelled and requeued as 025–027 to add the new Dada forms and put the speaker UI first.)
 
 ## Waiting on Matt

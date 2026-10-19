@@ -46,7 +46,7 @@ Stardew-style walking. Her character is the cursor: answers are places in the ro
 
 Magicka-style free simulation, not a scripted director. Every fighter moves in their own style and uses abilities on their own cooldowns, each with a taunt: summons on both sides, spells (e.g. polymorph), warriors twirling through the crowd, giants that barely move, dodgers with afterimages. Colorful, overdone particles; teamwork moves. Health bars are cosmetic and steered, so the outcome is fixed: part 1 ends with the villain's ultimate, part 2 with the counter and the heroes' win. Fetched items appear in the fight. Characters, abilities, ultimates, counters and vocab are data.
 
-Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot), Tiamat (a giant purple dragon); more welcome.
+Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a tiny gold robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot), Tiamat (a giant purple dragon); more welcome.
 
 ## Art
 
@@ -60,5 +60,7 @@ Browser game: Phaser ^3.90 (not 4) + TypeScript + Vite + Playwright, dev port 51
 
 - Each episode casts at random: the villain from every evil roster version and evil form (no repeat of the last one); the ally from the good roster, sometimes a dad. The primary dad (wakes Julia, narrates when needed) is Dada Matt 60% / Dada Jason 40%; half the time the other dad is also in the bedroom. Dada Matt's forms: builder, weightlifter, programmer/cyberdecker, spell-blade; Dada Jason's: chef, fantasy warrior, warlock. Julia's form follows a matching ally form (chef Julia with chef Jason).
 - Each ally has a quest: they take Julia to their own place to train (weightlifter Matt's secret forest gym, chef Jason's secret kitchen…), set up with an imaginative line. The side rooms are set there; their minigames are sampled from a pool (sentence game, word machine, …) independent of the quest.
+- Active cast (Matt, 2026-10-18; data, to grow toward almost all pairs): allies Dada Matt, Dada Jason, Scar (a tiny gold robot, just shorter than Julia), Ellie; villains Jörmungandr, Smaug, Bavmorda, Tiamat.
+- Fights vary by style per villain: Magicka-style brawls, races, cook-offs, spell-beam clashes, building contests, dance-offs… always over-the-top particles, character moves and teamwork, same reading beats and fixed outcome.
 - Whoever is speaking is shown by a prominent face-card portrait beside their words.
 - After battle 2, a short random victory scene (dessert at the table, a picnic, climbing a mountain…) with everyone, the villain now good, and a few lines, then the recap.
