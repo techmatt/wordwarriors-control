@@ -8,13 +8,14 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Where it stands (v0.2)
 
-- v0.2 plays end to end: bedroom wake-up (Dada Matt, good/bad news, EvilRilla's overlay) → hub (Elsa teaches ICE) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence (EVILRILLA IS SCARED OF MICE) → battle 2 → victory recap. Defaults Julia + Elsa vs EvilRilla (`EPISODE_DEFAULTS`); pick screens, v0.1 prep games, alarm and camp parked.
+- v0.2 plays end to end: bedroom wake-up (Dada Matt, good/bad news, EvilRilla's overlay) → hub (Elsa teaches ICE) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence (EVILRILLA IS SCARED OF MICE) → battle 2 → victory recap. Defaults Julia + Elsa vs EvilRilla (`EPISODE_DEFAULTS`; becoming Julia + Ellie vs Evil Tiamat in 014, Matt 2026-10-18); pick screens, v0.1 prep games, alarm and camp parked.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: doors that aren't usable yet aren't drawn (finished side doors stay, with prize badge); a wrong move pick holds the fight and the partner says "That wasn't ICE, that was HUG! Find ICE!" until she's right; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
 - `013_tiamat`: new roster character Tiamat (giant purple dragon, she; good + evil), full entry like Ellie's; 3 candidates per art id, best promoted, one picker manifest.
+- `014_tiamat_episode` (after 013, ultracode): default episode becomes Julia + Ellie (ally) vs Evil Tiamat (villain), every scene, line and fight beat; Ellie fights with summoned spinning silver swords (new sword art via the picker; Matt's Ellie picks kept).
 
 ## Waiting on Matt
 
