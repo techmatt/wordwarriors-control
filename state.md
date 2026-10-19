@@ -8,15 +8,16 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Where it stands (v0.2)
 
-- v0.2 plays end to end: bedroom wake-up (Dada Matt, good/bad news, the villain's house overlay) → hub (the ally teaches a spell) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence (counter sentence) → battle 2 → victory recap. Defaults Julia + Ellie vs Evil Tiamat (`EPISODE_DEFAULTS`, 014; Matt 2026-10-18): Ellie teaches ZIP (Sword Fling) with summoned silver swords; Tiamat is staged as a giant; counter EVIL TIAMAT IS SCARED OF THE HAT (Magic Hat swallows her storm) until 015 makes counters random. Elsa and EvilRilla stay in the 16-character roster; pick screens, v0.1 prep games, alarm and camp parked.
+- v0.2 plays end to end: bedroom wake-up (Dada Matt, good/bad news, the villain's house overlay) → hub (the ally teaches a spell) → two sentence rooms → battle 1 (fetched items used; walk-onto word pads for move choices) → retreat to hub, attic counter sentence (counter sentence) → battle 2 → victory recap. Defaults Julia + Ellie vs Evil Tiamat (`EPISODE_DEFAULTS`, 014; Matt 2026-10-18): Ellie teaches ZIP (Sword Fling) with summoned silver swords; Tiamat is staged as a giant; counter word drawn each episode (015); HAT (Magic Hat swallows her storm) is her named counter, drawn 3× as often. Elsa and EvilRilla stay in the 16-character roster; pick screens, v0.1 prep games, alarm and camp parked.
+- Word bag (015): all key words (side rooms + attic) come from a per-player bag of 30 decodable CVC words, spent only when read right first time, leaning to shaky words, none repeated in an episode, nothing said or shown earlier in the episode. Frames: 5 fetch (incl. JULIA NEEDS THE), 4 counter (SCARED OF THE, HATES THE, RUNS FROM THE, CAN NOT STAND THE). Battle 2 with a drawn word: a swarm of its picture, villain shrieks "NOT THE MOP!". Grown-ups page (F9) shows the bag. MICE is no longer used (not decodable). `voice:build --prune` would clear 20 orphaned mp3s.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: doors that aren't usable yet aren't drawn (finished side doors stay, with prize badge); a wrong move pick holds the fight and the partner says "That wasn't ICE, that was HUG! Find ICE!" until she's right; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `015_word_variety` (after 014, ultracode): key words drawn without replacement from a per-player bag (leaning to shaky words, none repeated in an episode); counter is a random pictured word (any villain, nonsense fine); 3–5 counter frames and a few fetch frames; prefix clips for every frame.
 - `016_bubbles_and_julia_forms` (after 015, ultracode): applies Matt's 013/014 picks (Tiamat good 3, evil 3, hat 1; sword 3; Ellie 0); Ellie back to a bubble kit with one sword move; Julia gets data-driven forms, with chef Julia when chef Dada Jason is the ally (chef scenario selectable as default by one data line).
 - `017_cleanup` (after 016, cleanup template, ultracode): acts on 009's audit note; design calls come back as **Deferred**.
+- `018_moves_and_ending` (after 016, ultracode): wider varied move-word pool; reformed villain says a voiced line; recap shows a picture per word (new `pic_*` art via the picker). These were added to 015 after it was enqueued and never ran (conductor gap, in HANDOFF *Open*).
 
 ## Waiting on Matt
 
@@ -40,4 +41,6 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Open questions (not blocking)
 
+- 015: keep the 3× boost for the villain's own named counter word (Magic Hat), or plain random?
+- 015: keep CAN NOT STAND THE as a counter frame, or drop it as too long for her?
 - Who records the real letter-sound clips (the audit recommends Matt's own voice).
