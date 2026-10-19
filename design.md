@@ -11,7 +11,7 @@ Learn-to-read game for Julia (4; knows letter names, not letter sounds; comforta
 5. **Back in the hub:** one more sentence game fetches the counter.
 6. **Battle part 2:** the counter (a random thing; see below) beats the ultimate; the heroes win.
 
-Room exploration stays short. Testing defaults: Julia is always the one woken; the helper is Ellie, who fights with summoned spinning silver swords; the villain is Evil Tiamat (a giant purple dragon). Matt changed these on 2026-10-18; they were Elsa and EvilRilla. Normally they'll be a random good/bad pair. No fail states: wrong answers get a gentle retry, no penalty. Outfits remain usable as a secondary reward.
+Room exploration stays short. Testing defaults: Julia is always the one woken; the helper is Ellie, a bubble fighter with one summoned-silver-sword move; the villain is Evil Tiamat (a giant purple dragon). Matt changed these on 2026-10-18; they were Elsa and EvilRilla. Normally they'll be a random good/bad pair. No fail states: wrong answers get a gentle retry, no penalty. Outfits remain usable as a secondary reward.
 
 ## The sentence game (the one game for now)
 
@@ -46,7 +46,7 @@ Stardew-style walking. Her character is the cursor: answers are places in the ro
 
 Magicka-style free simulation, not a scripted director. Every fighter moves in their own style and uses abilities on their own cooldowns, each with a taunt: summons on both sides, spells (e.g. polymorph), warriors twirling through the crowd, giants that barely move, dodgers with afterimages. Colorful, overdone particles; teamwork moves. Health bars are cosmetic and steered, so the outcome is fixed: part 1 ends with the villain's ultimate, part 2 with the counter and the heroes' win. Fetched items appear in the fight. Characters, abilities, ultimates, counters and vocab are data.
 
-Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot), Tiamat (a giant purple dragon); more welcome.
+Julia has **forms** chosen by the episode's scenario (default: rainbow twirl dress; chef Julia when chef Dada Jason is the ally, and a chef scenario may be the default). Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot), Tiamat (a giant purple dragon); more welcome.
 
 ## Art
 
