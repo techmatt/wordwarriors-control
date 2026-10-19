@@ -16,6 +16,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 - `013_tiamat`: new roster character Tiamat (giant purple dragon, she; good + evil), full entry like Ellie's; 3 candidates per art id, best promoted, one picker manifest.
 - `014_tiamat_episode` (after 013, ultracode): default episode becomes Julia + Ellie (ally) vs Evil Tiamat (villain), every scene, line and fight beat; Ellie fights with summoned spinning silver swords (new sword art via the picker; Matt's Ellie picks kept).
+- `015_word_variety` (after 014, ultracode): key words drawn without replacement from a per-player bag (leaning to shaky words, none repeated in an episode); counter is a random pictured word (any villain, nonsense fine); 3–5 counter frames and a few fetch frames; prefix clips for every frame.
 
 ## Waiting on Matt
 

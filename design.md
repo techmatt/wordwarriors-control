@@ -9,9 +9,9 @@ Learn-to-read game for Julia (4; knows letter names, not letter sounds; comforta
 3. **Two side rooms:** a sentence game each. What she fetches shows up in the battle.
 4. **Battle part 1:** the heroes lose to the villain's over-the-top ultimate and retreat. Scripted; never framed as her failure.
 5. **Back in the hub:** one more sentence game fetches the counter.
-6. **Battle part 2:** the counter beats the ultimate; the heroes win.
+6. **Battle part 2:** the counter (a random thing; see below) beats the ultimate; the heroes win.
 
-Room exploration stays short. Testing defaults: Julia is always the one woken; the helper is good Elsa; the villain is EvilRilla (a giant gorilla robot). Normally they'll be a random good/bad pair. No fail states: wrong answers get a gentle retry, no penalty. Outfits remain usable as a secondary reward.
+Room exploration stays short. Testing defaults: Julia is always the one woken; the helper is Ellie, who fights with summoned spinning silver swords; the villain is Evil Tiamat (a giant purple dragon). Matt changed these on 2026-10-18; they were Elsa and EvilRilla. Normally they'll be a random good/bad pair. No fail states: wrong answers get a gentle retry, no penalty. Outfits remain usable as a secondary reward.
 
 ## The sentence game (the one game for now)
 
@@ -21,7 +21,9 @@ Modelled on how Matt reads with Julia: sentences like JULIA LOVES SPAGHETTI, sou
 - Pass 1: voiced karaoke highlight, word by word; at the key word, silence and a pulse.
 - Pass 2: each green press steps the highlight one word and speaks it, except the key word, which stays silent. The hint says a frame word, and only sounds out the key word letter by letter.
 - She walks to the object the key word names (one of 3) and presses green; then the full sentence is read and the item goes into her bag.
-- Sentences come from a few repeating frames so the little words become sight words; a frame she knows well skips pass 1.
+- Sentences come from a few repeating frames so the little words become sight words; a frame she knows well skips pass 1. The counter sentence has several frames (IS SCARED OF, RUNS FROM, HATES…), not one.
+- Key words are drawn without replacement from a per-player bag (no repeats until it has gone round, never twice in one episode), leaning toward her shaky words.
+- A villain's counter is a random pictured word each episode and needn't make sense (EvilRilla can be beaten by a mop); battle 2 shows that thing beating the villain.
 
 Variants for later: picture-swap (a picture in the sentence, find the written word), yes/no doors (DADA MATT IS A BANANA), do-what-it-says (JUMP ON THE BED), a sentence wall in the bedroom. The v0.1 games (sound → letter, blend path, word → picture, spell the spell) are parked, not deleted.
 
@@ -44,7 +46,7 @@ Stardew-style walking. Her character is the cursor: answers are places in the ro
 
 Magicka-style free simulation, not a scripted director. Every fighter moves in their own style and uses abilities on their own cooldowns, each with a taunt: summons on both sides, spells (e.g. polymorph), warriors twirling through the crowd, giants that barely move, dodgers with afterimages. Colorful, overdone particles; teamwork moves. Health bars are cosmetic and steered, so the outcome is fixed: part 1 ends with the villain's ultimate, part 2 with the counter and the heroes' win. Fetched items appear in the fight. Characters, abilities, ultimates, counters and vocab are data.
 
-Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot); more welcome.
+Characters (each has good and evil versions): Julia (rainbow twirl dress), Ellie (her toddler sister), Seraphina (a girl who keeps dragons), Dada Matt (beefy builder with a hammer), Dada Jason (a chef), Jasmine, Elsa, Anna, Ozymandias, Jörmungandr, Smaug, Scar (a robot), Moriarty, Bavmorda, EvilRilla (a giant gorilla robot), Tiamat (a giant purple dragon); more welcome.
 
 ## Art
 
