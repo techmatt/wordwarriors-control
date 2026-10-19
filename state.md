@@ -21,10 +21,11 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 - `030_cast_and_scar_resume` (ultracode): 028 was killed at ~3:55am by low memory (art generation + 36 browser pair-plays at once); red, worktree kept with uncommitted changes. 030 salvages it and finishes: active cast (allies Dada Matt ×4 forms, Dada Jason ×3, Scar, Ellie; villains Jörmungandr, Smaug, Bavmorda, Tiamat; every pair played) and Scar as a tiny gold robot just shorter than Julia; memory rule (never art + browser at once).
 - `031_fight_styles` (after 030, ultracode): fight style as villain data — races, cook-offs, beam clashes, contests alongside brawls. (029 cancelled and requeued as 031 since its dependency went red.)
+- `032_picks_and_lifter`: applies Matt's 025–027 picks (18 + word machine 3, re-fit its window/panel + fort 3), and redraws weightlifter Dada Matt (good, evil, face): less buff, sleeved weightlifting T-shirt, a modest dumbbell, no Olympic lift.
 
 ## Waiting on Matt
 
-- **Picks:** `art_alts_025` (74 ids: dad forms, knight Julia, quest places, counters), `art_alts_026` (word machine and tile; another machine pick may need `WINDOW`/`PANEL` nudged), `art_alts_027` (8 victory backgrounds, 7 props). Executor's best already promoted.
+- Picks for 025–027 saved (Matt, 2026-10-19) and carried in 032.
 - Word families -IT/-OP/-UG need new pictured words (e.g. MUG/RUG/JUG, MOP is a key word) — Matt's call whether to add.
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape while Evil Anna is still the old copper-curl design (a redraw makes them match), Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Voice recordings: Matt will do them at some point, not immediately.
