@@ -76,6 +76,12 @@ nothing
 - Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
 - Ruled (Matt, 2026-10-18): keep the 3× named-counter boost; Ellie's sword word stays ZIP; no asleep chef-Julia image for now; voice-manifest hashing deferred until items that change voice run concurrently. Later word-machine modes: flip it, real or silly.
 
+## Next checkpoint (Matt, 2026-10-20)
+
+Agreed in session 6's pipeline review; start at the next checkpoint, not before.
+- **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
+- **Conductor preamble:** add one line enforcing "tests only for an unfixed red" in reports (053's report still had a test section). Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
+
 ## Open questions
 
 none
