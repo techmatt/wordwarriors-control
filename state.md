@@ -32,13 +32,14 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Audit follow-ups (047):** the warm-up word avoids everything said before battle (stemmed); roster abilities carry one `words` list; `lines.json` is one object per line; Playwright serves itself on `CONDUCTOR_PORT`, else `TEST_PORT` 5184 (kept off the 5174 dev port).
 - **Charge the Spell + dad buttons (053):** keys `1` no / `2` yes (`src/input/dadButtons.ts`, Numpad too, live under dad lock, F4 = yes; cue bottom right); `src/scenes/ChargeRoom.ts`, rules `src/rules/charge.ts`, runes `content/phonics/runes.ts`. Six runes a round; help level 1 sound + gesture, 2 gesture cloze, 3 rune alone; a no or 8 s = help, two helps then "together"; per-sound `chargeLevels`; charged runes fire in battle at 1.3×; parent page shows levels. Tier 1 continuous sounds + vowels, then quick sounds, then SH CH TH; Q, X, CK out until real recordings. The helper performs gestures (bob + emoji prop; no gesture art). Altar/stone art are placeholders (`prop_rune_altar`, `prop_rune_stone`), ready for an `art:alts` round.
 - **Stretchy Bridge (054):** `src/scenes/BridgeRoom.ts`; the gap is drawn per place (`GAP_BY_PLACE`); one stone per sound unit; held sounds cut per clip by `src/audio/holdSound.ts` (placeholders and recordings alike); 2–3 far-bank pictures share the start; three words a visit, each a battle item; `bridgeLevels` per word; wrong picks sound out her pick and say where it differs, two misses sparkle the answer. Added familiar words MAT MAN LID LOCK. `FORCE_PHONICS_ROOM` picks Charge or Bridge 50/50 (`PHONICS_GAMES`); `?room=bridge`. Placeholder short A and short O sound nearly alike on the bridge.
+- **Word bank coverage (056):** `COVERAGE` in `content/phonics/bank.ts` (targets with reasons; `tests/unit/coverage.test.ts` fails a row under target; `npm run bank:audit` prints the table). 28 new pictured words + QUEST (action), QUILT odd; QU, NG and doubled letters (FF LL SS ZZ GG) are units; long-vowel/magic-E words are level 3 (`late`), silent E is a lit, unspoken unit; new sounds `ng`, `th_voiced`, `long_a/i/u` (placeholders). Z has no pictured word (ZIP stays an action). Codex: 9% of a 5-hour window.
 - **Phonics recorder** (not in git): `C:\Code\gdrive-sync\wordwarriors\recorder\phonics-recorder.html`, one self-contained page Matt sends (or hosts on HTTPS) to whoever records letter sounds: 12 cards of 3 (word, then its sound ×3; target letters in red), first take auto-saves, later takes compared, zip = `manifest.json` + one WAV per card. 36 entries: 26 letters, SH CH TH (both), NG, QU, long A E I O U. 055's prototype split a real sample cleanly (12 of 12; a silent take refused); 057 moves the page into `tools/recorder/` and builds `voice:import`.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- 056 word-bank audit running (finish ~5:35pm; took its question's default: new long-vowel/magic-e words (QUEEN GOAT JEEP SHEEP THREE, KITE VASE CAKE BIKE) at level 3, QUILT odd, Z = ZIP only, documented exemptions), then 057 recorder into the repo + `voice:import` + `holdSound.ts` sample-rate fix (queued 4:00pm).
+- 057 running: recorder into `tools/recorder/`, `voice:import` (importing Matt's full `phonics-recording-2.zip`), `holdSound.ts` rate fix (done), and the `text.spec` longest-caption red since 054 (amended).
 
 ## Maintenance
 
@@ -80,6 +81,7 @@ nothing
 
 Agreed in session 6's pipeline review; start at the next checkpoint, not before.
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
+- **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Conductor preamble:** add one line enforcing "tests only for an unfixed red" in reports (053's report still had a test section). Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
 
 ## Open questions
