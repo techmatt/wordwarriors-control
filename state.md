@@ -30,7 +30,8 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 ## Queued and running
 
 - `042_general_audit` (running, ETA ~10am; template, ultracode): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
-- `043_design_calls_and_ky_words` (staged, after 042; amended with Matt's 040 pick CHEST 3): Matt's rulings on 039's M1–M6 (all as recommended: caption hides the word, Matt's face only when he's in the episode, she can walk during story lines/clues, two-row banners at 56 px, stick hint after 4 s, team steps back off the pad row); PIN familiar again (short-i family back); pictured K and Y words (KEY and others); picker `art_alts_043_words`.
+- `043_art_round_evil_chef_and_cyber_face` (readonly, running beside 042): candidate round only, picker `art_alts_044`: evil chef Jason (no mustache/whiskers; 5 briefs: sauce ladle, sparking rolling pin, burnt cupcakes, noodle-tentacle soup pot, lightning whisk) and cyber Matt's face card in the gauntlet-engineer look (4 briefs).
+- `044_design_calls_and_ky_words` (after 042; renumbered from 043, so it launches fresh; three amendments ride with it): M1–M6 rulings, PIN familiar, pictured K/Y words (KEY…), picker `art_alts_043_words`; Matt's 040 pick CHEST 3; promote cyber Matt candidate 10 (gauntlet engineer) and write its brief into the roster `look`; matching evil cyber Matt round (picker `art_alts_043_cyber_matt`; the face is 043's).
 
 ## Maintenance
 
