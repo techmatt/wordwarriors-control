@@ -30,6 +30,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `041_art_briefs_and_cyber_matt` (running, ETA ~9:15am): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
 - `042_general_audit` (staging; template, ultracode, depends on 041): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
+- `043_design_calls_and_ky_words` (after 042): Matt's rulings on 039's M1–M6 (all as recommended: caption hides the word, Matt's face only when he's in the episode, she can walk during story lines/clues, two-row banners at 56 px, stick hint after 4 s, team steps back off the pad row); PIN familiar again (short-i family back); pictured K and Y words (KEY and others); picker `art_alts_043_words`.
 
 ## Maintenance
 
@@ -69,12 +70,12 @@ nothing
 
 ## Open questions
 
-- 039's design calls M1–M6 (asked 2026-10-20 8:03am; recommended pick in brackets): M1 move-choice caption shows the word [hide it: "USE ...!"]; M2 Dada Matt's face on every phonics line [only when he's in the episode]; M3 long no-control waits [she can walk during story lines and clues]; M4 long banner shrinks to 40 px [two rows at 56 px first]; M5 no hint she can walk in a move choice [stick hint after 4 s]; M6 pad signs hide a tall ally [team steps back during a choice].
+none
 
 ## Paged
 
 - **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
-- **Bank thin spots (040):** no pictured K or Y word (KICK, YUM pads only); G, V, W 1–2 each; no short-i word-machine family (bringing -IN/-IG back needs PIN or WIG declared familiar, or a new word); PL/SL/TW blend pictures gone.
+- **Bank thin spots (040):** G, V, W 1–2 pictured words each; PL/SL/TW blend pictures gone (K, Y and short-i are 043's).
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
 - **More fight styles:** a building contest for builder Matt, a sea race.
