@@ -24,21 +24,20 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Dad lock (038):** backquote/tilde toggles it anywhere (`src/input/dadLock.ts`); she can walk, no press or letter does anything, re-prompts wait, a 🔒 badge shows bottom-left; F9 still works. **Villain names (038):** reading sentences and the narrator's need lines use the bare name (JORMUNGANDR, RILLA); "Evil" stays where the villain is announced (wake-up bad news, name barks, nameplates). **Pads and gifts (038):** wrong pads rotate through a pad bag; casters (`CASTERS` in `content/house/scenes.ts`: Elsa, Bavmorda, Tiamat, Moriarty, warlock Jason, spell-blade Matt) give spell-flagged words ~82% of the time; DET/LAN are no longer silly words.
 - **Familiar words (040):** bank entries carry an `odd` flag; only familiar words fill picture roles (rooms, counter, warm-up, word machine, fetch); odd action words stay pads/gift only. Out of play as unfamiliar: YAK VAT PEG FIG KIT COG ROD POD SUB HUT GUM WIG PIN RAFT PLUG SLUG TWIG VEST SLED PLUM MOTH SHED; pads/gift only: RAM TOP JET FIN. Added familiar: VET CHEST BIN ROCK CLOCK STICK BRUSH TRUCK BATH PLANT CRIB. 68 pictured words now; word-machine families -AN -AP -AT -EN -ET -OG -OX -UG -UN (no short-i family). **Variety (040):** 3 variants of the wake-up/good-news/door lines, villain taunts drawn from 3, reformed lines 3 sorry + 3 ending each, counter frames + CAN NOT BEAT THE / HIDES FROM THE / DOES NOT LIKE THE / SAYS YUCK TO THE. **039's fixes (52)** landed with 040.
 - **Art briefs (041):** `art:alts --brief=<scratch file>` draws a candidate round from a brief; a round writes only `art-originals/alts` and `scratch`, so it can run as a readonly item. Promotion (`art:pick`) is a normal item and writes the printed brief into the roster `look` (characters) or a `HAND` entry in `prompts.ts`. **Cyber Dada Matt:** 10 candidates (4–13: netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight) in picker `art_alts_041_cyber_matt`, slimmer than the current art; evil + face follow his pick.
+- **Palette round (044, picker `art_alts_045_palettes`):** forest-green good Jason (chef 1/2, warrior 4/5, warlock 4/5) and blue builder (4/5) / lifter (7/8) Matt candidates; the picker was cut with green allowed. **Promoting a green Jason form must take its good, evil and face ids out of `FAMILY_ART` / `NO_GREEN` in `content/art/prompts.ts` in the same commit**, or `art:pick` washes the green out.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `042_general_audit` (running, ETA ~10am; template, ultracode): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
 - `043_art_round_evil_chef_and_cyber_face` (readonly, running beside 042): candidate round only, picker `art_alts_044`: evil chef Jason (no mustache/whiskers; 5 briefs: sauce ladle, sparking rolling pin, burnt cupcakes, noodle-tentacle soup pot, lightning whisk) and cyber Matt's face card in the gauntlet-engineer look (4 briefs).
-- `044_art_round_palettes` (readonly, running): candidate round, picker `art_alts_045_palettes`: forest-green variants of good Dada Jason (chef, warrior, warlock), blue variants of good builder and lifter Matt; 2 each; faces wait for picks.
-- `045_design_calls_and_ky_words` (after 042; renumbered twice, launches fresh; three amendments ride with it): M1–M6 rulings, PIN familiar, pictured K/Y words (KEY…), picker `art_alts_043_words`; Matt's 040 pick CHEST 3; promote cyber Matt candidate 10 (gauntlet engineer) and write its brief into the roster `look`; matching evil cyber Matt round (picker `art_alts_043_cyber_matt`; the face is 043's).
+- `045_design_calls_and_ky_words` (running since 8:49am, ETA ~10:35am; three amendments delivered): M1–M6 rulings, PIN familiar, pictured K/Y words (KEY…), picker `art_alts_043_words`; Matt's 040 pick CHEST 3; promote cyber Matt candidate 10 (gauntlet engineer) and write its brief into the roster `look`; matching evil cyber Matt round (picker `art_alts_043_cyber_matt`; the face is 043's).
 
 ## Maintenance
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
+- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (2026-10-20; ids/draw/voice-id/font consolidation, dead code out). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
@@ -72,7 +71,7 @@ nothing
 
 ## Open questions
 
-none
+- 042's deferred calls (asked 2026-10-20 8:53am; planner's pick in brackets): POW/ICE as ability flavour only [keep]; parked v0.1 games on the old draw [leave parked]; warm-up avoid list not unified with the other draws [unify]; fold roster `word` + `words` into one list [fold; rule becomes "at least two abilities with words"]; `lines.json` one object per line [do it when no other item touches voice].
 
 ## Paged
 
