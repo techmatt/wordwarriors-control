@@ -31,7 +31,8 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 ## Queued and running
 
 - `045_design_calls_and_ky_words` (running since 8:49am, ETA ~10:35am; three amendments delivered): M1–M6 rulings, PIN familiar, pictured K/Y words (KEY…), picker `art_alts_043_words`; Matt's 040 pick CHEST 3; promote cyber Matt candidate 10 (gauntlet engineer) and write its brief into the roster `look`; matching evil cyber Matt round (picker `art_alts_043_cyber_matt`; the face is 043's).
-- `046_promote_dad_art` (after 045): promote Matt's palette picks (Jason chef 2, warrior 5, warlock 4; Matt builder 4, lifter 7) with Jason's good forms taken out of `NO_GREEN`, briefs into the roster looks; matching face round (picker `art_alts_046_faces`); README lines owed by 043/044. Matt's `art_alts_044` picks (evil chef Jason 1–10, cyber face 4–11) get written in before launch once saved.
+- `046_promote_dad_art` (after 045): promote Matt's palette picks (Jason chef 2, warrior 5, warlock 4; Matt builder 4, lifter 7) with Jason's good forms taken out of `NO_GREEN`, briefs into the roster looks; matching face round (picker `art_alts_046_faces`); README lines owed by 043/044. Amended with Matt's `art_alts_044` picks: evil chef Jason 1 (sauce ladle), cyber Matt face 4 (hologram wrench).
+- `047_audit_followups` (after 046): 042's calls as ruled: unify the warm-up's avoid list with the other draws; fold roster `word` + `words`; `lines.json` one object per line. POW/ICE stay flavour; parked v0.1 games stay parked.
 
 ## Maintenance
 
@@ -71,7 +72,7 @@ nothing
 
 ## Open questions
 
-- 042's deferred calls (asked 2026-10-20 8:53am; planner's pick in brackets): POW/ICE as ability flavour only [keep]; parked v0.1 games on the old draw [leave parked]; warm-up avoid list not unified with the other draws [unify]; fold roster `word` + `words` into one list [fold; rule becomes "at least two abilities with words"]; `lines.json` one object per line [do it when no other item touches voice].
+none
 
 ## Paged
 
