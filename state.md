@@ -27,8 +27,8 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- `039_bug_hunt` (running since 11:04pm, ETA ~4:45am, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
-- `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
+- `039_bug_hunt`: killed overnight (~1–2am, the box ran low on memory; daemon died too) after ~50 fixes, the QA checker (`tests/qa/`) and `docs/qa-findings.md`, all on unmerged branch `conductor/039_bug_hunt` (worktree kept). Recovered by an amendment to 040 (7:03am): merge that branch first, finish 039's real-speed run and full test run, report 039's Deferred calls under **039 recovery**.
+- `040_familiar_words_and_variety` (next; amended with the 039 recovery and a low-memory instruction): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
 - `041_art_briefs_and_cyber_matt` (after 040): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
 - `042_general_audit` (template, ultracode, depends on 041): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
 
@@ -36,7 +36,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- Bug hunt: 039 (running). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
+- Bug hunt: 039 (2026-10-19, interrupted; recovered in 040). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
@@ -50,6 +50,7 @@ nothing
 
 ## Flags
 
+- Memory (2026-10-20): the box ran out of memory overnight during 039's Chromium sweeps with ultracode on; the daemon and executor died silently. Conductor 20 (postmortem, sampler, pressure guards, orphan-process cleanup) is written for Matt to run. Until then, heavy browser items should run one worker.
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Generated voice (~5,100 lines) left git in 008; ~50 MB of old voice remains in git history.
