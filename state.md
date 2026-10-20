@@ -28,7 +28,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `038_dad_lock_and_villain_names` (running; also told at 10:35pm: wrong pads from a bag, spell-like gift words for casters, DET/LAN silly-word fixes): the backquote/tilde key toggles dad lock (she can walk, no action is processed, a small padlock shows); villains named without "EVIL" in reading sentences.
 - `039_bug_hunt` (after 038, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
-- `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. Matt's `art_alts_037_words` picks get written into it (rewrite before launch) once saved.
+- `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
 
 ## Waiting on Matt
 
@@ -37,7 +37,7 @@ nothing
 ## Conductor (hand-pasted)
 
 - Parked for the next conductor prompt (after 18): a **run next prompt** rule in conductor's `CLAUDE.md` — next = lowest prompt after the newest one with a report (natural order, 12 < 12a < 13); run exactly that one, naming it first, never chaining; none → one line saying so (latest + report in), no invented work or reruns; older unreported prompts are only mentioned, never run; with several waiting, say how many remain. No "run all prompts" phrase unless Matt asks.
-- In flight: conductor 18 (read-only items skip the repo lock + per-item ports; a planner-reviewed marker for conductor reports in HANDOFF *Status*, so **review all** covers them). 15–17 are in code but need a daemon restart to go live.
+- Conductor 15–18 are in code but go live only when Matt restarts the daemon: Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
 
