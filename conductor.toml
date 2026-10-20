@@ -1,5 +1,6 @@
 project = "wordwarriors"
 locks = []
+open_roots = ["C:/Code/gdrive-sync/wordwarriors"]
 
 [defaults]
 max_hours = 2
