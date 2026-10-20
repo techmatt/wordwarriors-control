@@ -35,7 +35,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-nothing (queue empty since 11:34am). Parked, rides the next wordwarriors prompt: delete the leftover candidates and `scratch/` previews of 040's dropped words (CHIN DISH SAND TEN) and 009's four kept-current rows (`arena_street`, `char_anna_evil`, `char_dada_matt_evil`, `face_julia`); delete 052's saved `scratch/052_uncommitted_028_*` (030 finished that work).
+- 053 dad buttons + Charge the Spell (letter sounds; carries 052's parked deletions), then 054 Stretchy Bridge (continuous blending); both ultracode, queued 2:14pm (Matt). `FORCE_PHONICS_ROOM` puts one of the two in every episode for beta testing; long term they are weighted pool entries.
 
 ## Maintenance
 
@@ -50,7 +50,7 @@ nothing
 ## Conductor (hand-pasted)
 
 - Conductor 24 (lean session start) is committed but needs a daemon restart to go live: `session: start` writes a checkpoint, `session.md` (inbox since the read mark, conductor reports past HANDOFF's marker, maintenance facts) and moves the read mark; planners read `planner.md` (not the whole new-project doc) plus `state.md` and `session.md`. Live in the 11:06am daemon (detached, heartbeat): everything through conductor 23. Reports carry `slow:` (21; feeds maintenance triggers). The Repos tab is a split with the selected item's **Conversation** thread (22: tells with tagged replies, amendments, questions, progress, finish; Tell… / Outline? / Amend… at the bottom). **Outline** (23): executors post a terse section list with finish times (pinned in Conversation, one line in the inbox *Now*); **outline X** requests a fresh one. Memory sampling, pressure pauses, orphan reaping and `daemon_died` (20). The 11:06am `daemon_died` red (last heartbeat 7:01am, "4h05m") is an artifact of the old code having no heartbeat; it ran until ~10:41am and lost nothing.
-- Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker (now 24).
+- Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker (now 25).
 - Planner: write conductor's `HANDOFF.md` marker only when no conductor prompt is running, from a fresh stage (a stale write at 10:32am clobbered 22's Status; 23 restored it).
 
 ## Flags

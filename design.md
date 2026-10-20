@@ -67,3 +67,20 @@ Browser game: Phaser ^3.90 (not 4) + TypeScript + Vite + Playwright, dev port 51
 - Before leaving for the quest place, a home warm-up: the ally asks for one of 9 labelled objects by letter names then letter sounds (the whole word only at the easiest ramp level); she finds it; per-word ramp, starting without the word (Matt, 2026-10-19).
 - Whoever is speaking is shown by a prominent face-card portrait beside their words.
 - After battle 2, a short random victory scene (dessert at the table, a picnic, climbing a mountain…) with everyone, the villain now good, and a few lines, then the recap.
+
+## Phonics games that force the phonics (Matt, 2026-10-20)
+
+The older games can be won from letter names (first-letter matching) or by sweeping through the choices, and she never has to say anything. The new games follow five rules:
+
+- She says sounds aloud and Dad confirms with keyboard `1` (no / help) or `2` (yes). There is no speech recognition. Assistance is normal: she sometimes won't say sounds on request, so a "no", or no answer, makes the game model the sound for her to copy, and it never gets stuck.
+- Choices can't be won from the first letter: they share the start and differ later.
+- Help fades per item (voiced → on request → none).
+- A wrong pick is never punished, but guessing is slower than reading.
+- Blending is continuous ("mmmaaat"); words starting with a sound you can hold come before words starting with a stop sound.
+
+The two games:
+
+- **Charge the Spell:** a letter rune; she says its sound, Dad presses 2, and the rune charges a move for the next battle. Each sound has a gesture (Jolly Phonics style). Help fades from sound + gesture, to gesture only, to the rune alone.
+- **Stretchy Bridge:** letter stepping stones across a gap. Each sound plays held while she stands on it, so how slowly she slides is how slowly she stretches the word. Then she picks among pictures that share the word's start. At the top level she says the word before the pictures appear.
+
+For beta testing, one of the two is in every episode; long term they are random pool entries. Matt's real letter-sound recordings matter most for the bridge, because the placeholders add "uh" to stop sounds.
