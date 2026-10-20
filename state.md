@@ -35,13 +35,13 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- 050 claude.md cleanup, then 051 disk space audit (queued 11:17am, Matt)
+- 051 disk space audit (running since 11:20am)
 
 ## Maintenance
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (2026-10-20; ids/draw/voice-id/font consolidation, dead code out). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: 050 queued 2026-10-20 (CLAUDE.md ~22 KB). Disk space audit: 051 queued 2026-10-20 (037 added 243 art candidates and 3,708 voice lines).
+- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (2026-10-20; ids/draw/voice-id/font consolidation, dead code out). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: 050 (2026-10-20; 235 → 211 lines, history cut, stale facts fixed). Disk space audit: 051 running 2026-10-20 (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
