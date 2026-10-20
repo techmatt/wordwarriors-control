@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Where it stands (v0.6; session 5 closed 2026-10-20 11:10am, queue empty)
+## Where it stands (v0.6; session 6 open 2026-10-20)
 
 - The episode: bedroom wake-up (primary dad, maybe the other dad, the ally, good/bad news, the villain's house overlay, the ally's quest line) → entry-hall warm-up (033) → the quest place's hub (the ally's short story scene ends with a gift word) → two rooms drawn from the minigame pool → battle 1 → retreat, attic counter sentence → battle 2 → the reformed villain's sorry → a victory scene (8 scenes, 2–5 people, ~20 s) → recap with a picture per word.
 - **Casting (025):** every episode draws its own cast (`src/rules/cast.ts`, `CAST_ODDS`): villain from all characters (her last 4 avoided), any good ally, primary dad Matt 60% / Jason 40%, other dad present 50%. Dad forms are roster characters: Matt builder / lifter / cyber / blade; Jason chef / warrior / warlock (purple fire). Julia's forms: chef (chef Jason), knight (warrior Jason). The fixed default episode (Julia + Ellie vs Evil Tiamat) is `?cast=default` / `randomCast: false`; overrides `?seed= ?ally= ?villain= ?form= ?primary= ?secondary= ?place=` (README).
@@ -35,13 +35,13 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-nothing (queue empty since 10:39am)
+- 050 claude.md cleanup, then 051 disk space audit (queued 11:17am, Matt)
 
 ## Maintenance
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (2026-10-20; ids/draw/voice-id/font consolidation, dead code out). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
+- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (2026-10-20; ids/draw/voice-id/font consolidation, dead code out). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: 050 queued 2026-10-20 (CLAUDE.md ~22 KB). Disk space audit: 051 queued 2026-10-20 (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
