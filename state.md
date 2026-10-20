@@ -44,13 +44,13 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- Conductor 15–18 are in code but go live only when Matt restarts the daemon: Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
+- Conductor 15–20 are live with the 7:01am daemon start (20's detached start and reaper need one more app + daemon restart): Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
 
 ## Flags
 
-- Memory (2026-10-20): the box ran out of memory overnight during 039's Chromium sweeps with ultracode on; the daemon and executor died silently. Conductor 20 (postmortem, sampler, pressure guards, orphan-process cleanup) is written for Matt to run. Until then, heavy browser items should run one worker.
+- Memory (2026-10-20, conductor 20): last night was not the OS. A Claude Code session reaped its background `conductor app`, and the daemon (the app's child) and 039's executor (the daemon's child) died with it. The box's memory swing is Alienware's `OCControl.Service` (~3 GiB/min growth to ~9.7 GiB, released every ~3 min). Conductor now samples memory (inbox *Now* line, `memory.jsonl`), pauses launches under pressure (free RAM < 3 GiB), tells running items to cut parallelism, reaps orphans when an item ends, starts the daemon detached, and logs `daemon_died` after a silent death. Never start the daemon as a Claude Code background command.
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Generated voice (~5,100 lines) left git in 008; ~50 MB of old voice remains in git history.
