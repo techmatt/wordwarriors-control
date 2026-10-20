@@ -30,8 +30,8 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- `043_art_round_evil_chef_and_cyber_face` (readonly, running beside 042): candidate round only, picker `art_alts_044`: evil chef Jason (no mustache/whiskers; 5 briefs: sauce ladle, sparking rolling pin, burnt cupcakes, noodle-tentacle soup pot, lightning whisk) and cyber Matt's face card in the gauntlet-engineer look (4 briefs).
 - `045_design_calls_and_ky_words` (running since 8:49am, ETA ~10:35am; three amendments delivered): M1–M6 rulings, PIN familiar, pictured K/Y words (KEY…), picker `art_alts_043_words`; Matt's 040 pick CHEST 3; promote cyber Matt candidate 10 (gauntlet engineer) and write its brief into the roster `look`; matching evil cyber Matt round (picker `art_alts_043_cyber_matt`; the face is 043's).
+- `046_promote_dad_art` (after 045): promote Matt's palette picks (Jason chef 2, warrior 5, warlock 4; Matt builder 4, lifter 7) with Jason's good forms taken out of `NO_GREEN`, briefs into the roster looks; matching face round (picker `art_alts_046_faces`); README lines owed by 043/044. Matt's `art_alts_044` picks (evil chef Jason 1–10, cyber face 4–11) get written in before launch once saved.
 
 ## Maintenance
 
