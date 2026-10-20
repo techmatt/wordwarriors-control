@@ -35,7 +35,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-nothing (queue empty since 11:25am)
+nothing (queue empty since 11:34am). Parked, rides the next wordwarriors prompt: delete the leftover candidates and `scratch/` previews of 040's dropped words (CHIN DISH SAND TEN) and 009's four kept-current rows (`arena_street`, `char_anna_evil`, `char_dada_matt_evil`, `face_julia`); delete 052's saved `scratch/052_uncommitted_028_*` (030 finished that work).
 
 ## Maintenance
 
@@ -65,7 +65,7 @@ nothing
 - Changing a queued item: a rewrite is for a changed plan (discards a stage); **amend X** adds to a plan in any state but finished and keeps the stage. Check for the `edited` / `amended` event after every write (once, a bridge write landed stale). A reorder renumbers and discards stages.
 - Homographs for TTS go in a line's `say:` respelling (020: "Bough to your queen!", "Whined-up Mice"); reword if a respelling sounds off.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
-- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
+- Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores from `art-originals/restore/`) and deletes that id's other candidates (Matt, 2026-10-20: once picked, old candidates are not kept; redraw if ever needed). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
 - Ruled (Matt, 2026-10-19): "Bough to your queen!" stays.
 - Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
