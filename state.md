@@ -22,21 +22,20 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Speaker UI (024):** a cream dialogue box with the speaker's framed face card and name on their side, a tail, placed top or bottom to keep clear of targets; compact in battle; face chips on bark bubbles.
 - **Words (037): one tagged bank** `content/phonics/bank.ts`, 132 words (83 pictured things, 49 actions; L1 CVC 82, L2 blends 40, L3 digraphs 10); every draw (key words, counter, pads, gift, warm-up, machine) goes through one weighting in `src/rules/bank.ts`: shakiness × coverage (vowel, onset, level) × level gate (`BANK_DRAW` in `src/config.ts`: L2 opens once 3% of L1 is solid, at weight 0.15). Distractors differ in first letter while a word is new, then share onset or rime. **Word magic:** any action word can be a pad and her hero fires its effect (`content/phonics/effects.ts`); roster words are flavour. POW and ICE are ability names only. Room words never repeat as pad words in an episode. Parent page: coverage by level/vowel/onset, then every word. Counter frames SCARED OF THE / HATES THE / RUNS FROM THE / IS NO MATCH FOR THE; named counters 3×; every character has two reformed lines. Text wraps everywhere.
 - **Dad lock (038):** backquote/tilde toggles it anywhere (`src/input/dadLock.ts`); she can walk, no press or letter does anything, re-prompts wait, a 🔒 badge shows bottom-left; F9 still works. **Villain names (038):** reading sentences and the narrator's need lines use the bare name (JORMUNGANDR, RILLA); "Evil" stays where the villain is announced (wake-up bad news, name barks, nameplates). **Pads and gifts (038):** wrong pads rotate through a pad bag; casters (`CASTERS` in `content/house/scenes.ts`: Elsa, Bavmorda, Tiamat, Moriarty, warlock Jason, spell-blade Matt) give spell-flagged words ~82% of the time; DET/LAN are no longer silly words.
+- **Familiar words (040):** bank entries carry an `odd` flag; only familiar words fill picture roles (rooms, counter, warm-up, word machine, fetch); odd action words stay pads/gift only. Out of play as unfamiliar: YAK VAT PEG FIG KIT COG ROD POD SUB HUT GUM WIG PIN RAFT PLUG SLUG TWIG VEST SLED PLUM MOTH SHED; pads/gift only: RAM TOP JET FIN. Added familiar: VET CHEST BIN ROCK CLOCK STICK BRUSH TRUCK BATH PLANT CRIB. 68 pictured words now; word-machine families -AN -AP -AT -EN -ET -OG -OX -UG -UN (no short-i family). **Variety (040):** 3 variants of the wake-up/good-news/door lines, villain taunts drawn from 3, reformed lines 3 sorry + 3 ending each, counter frames + CAN NOT BEAT THE / HIDES FROM THE / DOES NOT LIKE THE / SAYS YUCK TO THE. **039's fixes (52)** landed with 040.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `039_bug_hunt`: killed overnight (~1–2am, the box ran low on memory; daemon died too) after ~50 fixes, the QA checker (`tests/qa/`) and `docs/qa-findings.md`, all on unmerged branch `conductor/039_bug_hunt` (worktree kept). Recovered by an amendment to 040 (7:03am): merge that branch first, finish 039's real-speed run and full test run, report 039's Deferred calls under **039 recovery**.
-- `040_familiar_words_and_variety` (next; amended with the 039 recovery and a low-memory instruction): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
-- `041_art_briefs_and_cyber_matt` (after 040): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
-- `042_general_audit` (template, ultracode, depends on 041): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
+- `041_art_briefs_and_cyber_matt` (running, ETA ~9:15am): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
+- `042_general_audit` (staging; template, ultracode, depends on 041): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
 
 ## Maintenance
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- Bug hunt: 039 (2026-10-19, interrupted; recovered in 040). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
+- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
@@ -44,6 +43,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
+- Parked for the next conductor prompt: in the app's Repos tab, an unreviewed finished item gets an amber/yellow state (it needs action), like the pick amber; the button column truncates "Open in terminal" on a row with three buttons.
 - Conductor 15–20 are live with the 7:01am daemon start (20's detached start and reaper need one more app + daemon restart): Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
@@ -69,12 +69,12 @@ nothing
 
 ## Open questions
 
-none
+- 039's design calls M1–M6 (asked 2026-10-20 8:03am; recommended pick in brackets): M1 move-choice caption shows the word [hide it: "USE ...!"]; M2 Dada Matt's face on every phonics line [only when he's in the episode]; M3 long no-control waits [she can walk during story lines and clues]; M4 long banner shrinks to 40 px [two rows at 56 px first]; M5 no hint she can walk in a move choice [stick hint after 4 s]; M6 pad signs hide a tall ally [team steps back during a choice].
 
 ## Paged
 
 - **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
-- **Bank thin spots (037):** no Q/X; Z, K, Y have 0–1 pictured words; ANT the only vowel onset; short E thinnest; most blends one word each; no -EST family.
+- **Bank thin spots (040):** no pictured K or Y word (KICK, YUM pads only); G, V, W 1–2 each; no short-i word-machine family (bringing -IN/-IG back needs PIN or WIG declared familiar, or a new word); PL/SL/TW blend pictures gone.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
 - **More fight styles:** a building contest for builder Matt, a sea race.
