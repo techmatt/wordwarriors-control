@@ -26,8 +26,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- `036_test_perf` (running, test_perf template): the full run crept from ~12 to ~45 min per item. 034 and 035 skipped the slow lane on Matt's word, for this run to cover.
-- `037_hub_scenes_and_move_words` (ultracode, 4h; rewritten 9:10pm before launch): phonics first — one tagged word bank (level 1 CVC balanced by vowel/onset, level 2 blends, level 3 digraphs) with coverage-weighted draws for every pool and reading-based distractors; word magic (any action word can be a battle pad; her hero casts that word's own effect); story hub scenes with 2–3 variants per character, the ally's word drawn from the bank; picker `art_alts_037_words`; report enumerates every pool and coverage.
+- `037_hub_scenes_and_move_words` (running, ultracode, 4h; rewritten 9:10pm before launch; carries Matt's 035 pick: CUP candidate 3): phonics first — one tagged word bank (level 1 CVC balanced by vowel/onset, level 2 blends, level 3 digraphs) with coverage-weighted draws for every pool and reading-based distractors; word magic (any action word can be a battle pad; her hero casts that word's own effect); story hub scenes with 2–3 variants per character, the ally's word drawn from the bank; picker `art_alts_037_words`; report enumerates every pool and coverage.
 
 ## Waiting on Matt
 
@@ -62,7 +61,6 @@ none
 ## Paged
 
 - **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
-- **035 picker** (`art_alts_035_ug`: MUG, RUG, JUG, CUP): the executor's picks are already in the game; saving only matters to change one.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
 - **More fight styles:** a building contest for builder Matt, a sea race.
