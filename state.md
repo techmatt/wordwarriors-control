@@ -31,13 +31,14 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Green keying (049):** `keyGreen` modes `keep` / `noGreen` / `lightGreen`; `keyMode(id)` in `content/art/prompts.ts` picks it for every art command (gen, reprocess, alts, pick). Jason's six green ids (`LIGHT_GREEN`) un-mix only bright screen green (green ≥120), so his forest green stays solid; his evil forms stay `noGreen`. Matt's 046/043 picks are in (Jason faces chef 1, warrior 5, warlock 5; YOYO 3).
 - **Audit follow-ups (047):** the warm-up word avoids everything said before battle (stemmed); roster abilities carry one `words` list; `lines.json` is one object per line; Playwright serves itself on `CONDUCTOR_PORT`, else `TEST_PORT` 5184 (kept off the 5174 dev port).
 - **Charge the Spell + dad buttons (053):** keys `1` no / `2` yes (`src/input/dadButtons.ts`, Numpad too, live under dad lock, F4 = yes; cue bottom right); `src/scenes/ChargeRoom.ts`, rules `src/rules/charge.ts`, runes `content/phonics/runes.ts`. Six runes a round; help level 1 sound + gesture, 2 gesture cloze, 3 rune alone; a no or 8 s = help, two helps then "together"; per-sound `chargeLevels`; charged runes fire in battle at 1.3×; parent page shows levels. Tier 1 continuous sounds + vowels, then quick sounds, then SH CH TH; Q, X, CK out until real recordings. The helper performs gestures (bob + emoji prop; no gesture art). Altar/stone art are placeholders (`prop_rune_altar`, `prop_rune_stone`), ready for an `art:alts` round.
-- **Phonics recorder** (not in git): `C:\Code\gdrive-sync\wordwarriors\recorder\phonics-recorder.html`, one self-contained page Matt sends (or hosts on HTTPS) to whoever records letter sounds: 12 cards of 3 (word, then its sound ×3; target letters in red), first take auto-saves, later takes compared, zip = `manifest.json` + one WAV per card. 36 entries: 26 letters, SH CH TH (both), NG, QU, long A E I O U. An import item splits takes into word + sound clips via `voice:clip` once a real zip arrives.
+- **Stretchy Bridge (054):** `src/scenes/BridgeRoom.ts`; the gap is drawn per place (`GAP_BY_PLACE`); one stone per sound unit; held sounds cut per clip by `src/audio/holdSound.ts` (placeholders and recordings alike); 2–3 far-bank pictures share the start; three words a visit, each a battle item; `bridgeLevels` per word; wrong picks sound out her pick and say where it differs, two misses sparkle the answer. Added familiar words MAT MAN LID LOCK. `FORCE_PHONICS_ROOM` picks Charge or Bridge 50/50 (`PHONICS_GAMES`); `?room=bridge`. Placeholder short A and short O sound nearly alike on the bridge.
+- **Phonics recorder** (not in git): `C:\Code\gdrive-sync\wordwarriors\recorder\phonics-recorder.html`, one self-contained page Matt sends (or hosts on HTTPS) to whoever records letter sounds: 12 cards of 3 (word, then its sound ×3; target letters in red), first take auto-saves, later takes compared, zip = `manifest.json` + one WAV per card. 36 entries: 26 letters, SH CH TH (both), NG, QU, long A E I O U. 055's prototype split a real sample cleanly (12 of 12; a silent take refused); 057 moves the page into `tools/recorder/` and builds `voice:import`.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- 054 Stretchy Bridge running (outline: finish ~6:35pm), then 055 word-bank audit (staged). `FORCE_PHONICS_ROOM` is on: every episode has a phonics room behind door a (Charge the Spell now; 054 adds the bridge to `PHONICS_GAMES`).
+- 056 word-bank audit running (finish ~5:35pm; took its question's default: new long-vowel/magic-e words (QUEEN GOAT JEEP SHEEP THREE, KITE VASE CAKE BIKE) at level 3, QUILT odd, Z = ZIP only, documented exemptions), then 057 recorder into the repo + `voice:import` + `holdSound.ts` sample-rate fix (queued 4:00pm).
 
 ## Maintenance
 
@@ -75,7 +76,7 @@ nothing
 
 ## Open questions
 
-none
+- MAT (054) sounds like "Matt", whom she hears named all the time; keep it as a bridge word, or drop it? Default: keep.
 
 ## Paged
 
