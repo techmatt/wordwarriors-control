@@ -70,13 +70,14 @@ nothing
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores from `art-originals/restore/`) and deletes that id's other candidates (Matt, 2026-10-20: once picked, old candidates are not kept; redraw if ever needed). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
+- Ruled (Matt, 2026-10-20): MAT stays a bridge word, though it sounds like "Matt".
 - Ruled (Matt, 2026-10-19): "Bough to your queen!" stays.
 - Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
 - Ruled (Matt, 2026-10-18): keep the 3× named-counter boost; Ellie's sword word stays ZIP; no asleep chef-Julia image for now; voice-manifest hashing deferred until items that change voice run concurrently. Later word-machine modes: flip it, real or silly.
 
 ## Open questions
 
-- MAT (054) sounds like "Matt", whom she hears named all the time; keep it as a bridge word, or drop it? Default: keep.
+none
 
 ## Paged
 
@@ -86,7 +87,6 @@ nothing
 - **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
 
 - **Recordings (Dada Matt):** 26 letter sounds, the long E and long O sounds (`letter_long_e_sound`, `letter_long_o_sound`), and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
-- **Bank thin spots (040):** G, V, W 1–2 pictured words each; PL/SL/TW blend pictures gone; -IG off unless WIG is made familiar.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
 - **More fight styles:** a building contest for builder Matt, a sea race.
