@@ -8,6 +8,7 @@ ask_default_minutes = 10
 [repos.wordwarriors]
 path = "../wordwarriors"
 shared = ["art-originals", "scratch", "public/voice-gen"]
+setup = ["npm ci"]
 
 [run.game]
 repo = "wordwarriors"

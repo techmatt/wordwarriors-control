@@ -24,11 +24,13 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 ## Queued and running
 
 - `034_picks_and_battle_polish` (ultracode): Matt's 030–032 picks (Scar good 2 / evil 1 / face 2; spell tower 1, finish flag 1, trophy 3; lifter good 5 / evil 5 / face 6) and the battle polish list (overlaps, stomp ellipse, banners over bubbles, bag reveal hiding Scar, doubled move prompts, dads' melee in contests, Pig Curse callout, dad heights).
+- `035_ug_family`: MUG, RUG, JUG pictures + voice, -UG family (with BUG) in the word machine and warm-up.
+- `036_test_perf` (after 035, test_perf template): the full run crept from ~12 to ~45 min per item.
 
 ## Waiting on Matt
 
 - Picks for 030–032 saved (Matt, 2026-10-19) and carried in 034.
-- Word families: planner proposes -UG (BUG + new MUG, RUG, JUG); -IT and -OP skipped (no clear pictures / move words). Awaiting Matt's yes.
+- Word families: -IT and -OP skipped (no clear pictures / move words); -UG in 035.
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape while Evil Anna is still the old copper-curl design (redraw when Anna joins the active cast), Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
 
@@ -39,7 +41,7 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Flags
 
-- Every worktree starts without `node_modules`, so executors run `npm ci` first (~1 min each; README *Run it* says so). `setup = ["npm ci"]` in conductor.toml would do it up front (planner recommends yes): Matt's call.
+- Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Generated voice (~5,100 lines) left git in 008; ~50 MB of old voice remains in git history.
 - Run the daemon in its own terminal (`uv run conductor run C:\Code\wordwarriors-control`), not from the app: a daemon started by the app died with it when the app was killed for low memory (2026-10-19).
