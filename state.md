@@ -27,6 +27,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 ## Queued and running
 
 - `036_test_perf` (running, test_perf template): the full run crept from ~12 to ~45 min per item. 034 and 035 skipped the slow lane on Matt's word, for this run to cover.
+- `037_hub_scenes_and_move_words` (ultracode): hub scenes as short story beats with 2–3 variants per character (and quest-line variants), the move word drawn from the ally's words; move words grown from 26 to ~50–60 (4-letter OK) and spread across the roster; picker `art_alts_037_moves`; report enumerates every word/choice pool.
 
 ## Waiting on Matt
 
