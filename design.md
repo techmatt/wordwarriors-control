@@ -5,7 +5,7 @@ Learn-to-read game for Julia (4; knows letter names, not letter sounds; comforta
 ## Episode loop (~10–15 min)
 
 1. **Bedroom.** Julia wakes up. Dada Matt (or the helper) wakes her: "Good news, Julia! <Helper> is here to play! Bad news, <Villain> is coming, and he's going to <threat>!" The bedroom is cluttered with cool objects that react when she presses green on them; no reading there. The bedroom comes in variants, and the villain overlays the house's mood (evil Elsa freezes it white; EvilRilla leaves footprints and cracks).
-2. **Hub.** A small, slightly modular main house. The helper is there and teaches Julia a spell, which becomes one of her battle move words. Two side-room doors lead off it. A door that isn't usable yet is not shown at all (the front door appears only when it's time to leave).
+2. **Hub.** A small, slightly modular main house. The helper is there and, in a short story scene that fits them (a spell, a recipe, a gadget, a program, a toy…), gives Julia a word for the fight. Two side-room doors lead off it. A door that isn't usable yet is not shown at all (the front door appears only when it's time to leave).
 3. **Two side rooms:** a sentence game each. What she fetches shows up in the battle.
 4. **Battle part 1:** the heroes lose to the villain's over-the-top ultimate and retreat. Scripted; never framed as her failure.
 5. **Back in the hub:** one more sentence game fetches the counter.
@@ -31,6 +31,8 @@ Variants for later: picture-swap (a picture in the sentence, find the written wo
 
 - Everything is voiced except the word she must read. That word is spoken only after she answers, as confirmation. Letter SOUNDS (not names) are voiced as teaching. A hint may sound out letters one by one but never blends the word.
 - Selection is always walking to a place and pressing green, never coloured buttons.
+- **Phonics first (Matt, 2026-10-19):** what she reads is chosen for her phonics, never limited by who is on screen; err toward phonetic diversity. One tagged word bank (level 1 CVC, 2 blends, 3 digraphs) feeds every pool, weighted by shakiness and by coverage of vowels, onsets and patterns. Distractors differ in the first sound early on, then share onset or rime as a word firms up.
+- **Word magic:** reading a word casts it. Any action word can be a battle pad, and her hero fires that word's own effect.
 - Battle choices: mid-battle, two or three move words (e.g. FIRE / ICE / ZAP) appear as places in the arena. The partner says which to pick and she walks to the written word. A wrong pick fires nothing: the fight stays paused and the partner says what she picked and what to find ("That wasn't ICE, that was HUG! Find ICE!") until she gets it; the right pick fires a supercharged version.
 - Every spoken line is data with an id. edge-tts placeholders now; Adobe (Firefly) voices later via Seraphina's recorded-clip override loop.
 - Letter sounds: edge-tts cannot say unvoiced consonants and SSML is impossible, so placeholders by sound class; real phoneme clips later (likely Matt-recorded, ~26–44 clips, one sitting). Each sound is its own line id.
