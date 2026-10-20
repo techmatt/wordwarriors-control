@@ -28,6 +28,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `037_hub_scenes_and_move_words` (running, ultracode, 4h; rewritten 9:10pm before launch; carries Matt's 035 pick: CUP candidate 3): phonics first — one tagged word bank (level 1 CVC balanced by vowel/onset, level 2 blends, level 3 digraphs) with coverage-weighted draws for every pool and reading-based distractors; word magic (any action word can be a battle pad; her hero casts that word's own effect); story hub scenes with 2–3 variants per character, the ally's word drawn from the bank; picker `art_alts_037_words`; report enumerates every pool and coverage.
 - `038_dad_lock_and_villain_names` (after 037): the backquote/tilde key toggles dad lock (she can walk, no action is processed, a small padlock shows); villains named without "EVIL" in reading sentences.
+- `039_bug_hunt` (after 038, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
 
 ## Waiting on Matt
 
