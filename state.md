@@ -30,6 +30,13 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - `039_bug_hunt` (after 038, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
 - `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
 - `041_art_briefs_and_cyber_matt` (after 040): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
+- `042_general_audit` (template, ultracode, depends on 041): whole-repo code-quality pass that acts on clear items and defers design calls; focus on code 037 replaced, the biggest content files, duplicated draw logic.
+
+## Maintenance
+
+The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
+
+- Bug hunt: 039 (queued). General audit: 042 (queued). Cleanup: 017. Test perf: 036 (full run ~18 min). claude.md cleanup: never. Disk space audit: never (037 added 243 art candidates and 3,708 voice lines).
 
 ## Waiting on Matt
 
@@ -38,6 +45,7 @@ nothing
 ## Conductor (hand-pasted)
 
 - Parked for the next conductor prompt (after 18): a **run next prompt** rule in conductor's `CLAUDE.md` — next = lowest prompt after the newest one with a report (natural order, 12 < 12a < 13); run exactly that one, naming it first, never chaining; none → one line saying so (latest + report in), no invented work or reruns; older unreported prompts are only mentioned, never run; with several waiting, say how many remain. No "run all prompts" phrase unless Matt asks.
+- Parked for the next conductor prompt: in `claude-ai-new-project.md`, *Every session*: at session start the planner checks the project's maintenance record and recommends any due template item (bug hunt, general audit, cleanup, test perf audit, claude.md cleanup, disk space audit) with its reason; state.md keeps a short *Maintenance* section (when each last ran, rough triggers).
 - Conductor 15–18 are in code but go live only when Matt restarts the daemon: Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
