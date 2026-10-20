@@ -28,6 +28,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `038_dad_lock_and_villain_names` (running; also told at 10:35pm: wrong pads from a bag, spell-like gift words for casters, DET/LAN silly-word fixes): the backquote/tilde key toggles dad lock (she can walk, no action is processed, a small padlock shows); villains named without "EVIL" in reading sentences.
 - `039_bug_hunt` (after 038, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
+- `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. Matt's `art_alts_037_words` picks get written into it (rewrite before launch) once saved.
 
 ## Waiting on Matt
 
@@ -53,6 +54,7 @@ nothing
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
 - Ruled (Matt, 2026-10-19): "Bough to your queen!" stays.
+- Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
 - Ruled (Matt, 2026-10-18): keep the 3× named-counter boost; Ellie's sword word stays ZIP; no asleep chef-Julia image for now; voice-manifest hashing deferred until items that change voice run concurrently. Later word-machine modes: flip it, real or silly.
 
 ## Open questions
@@ -62,7 +64,6 @@ none
 ## Paged
 
 - **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
-- **037 picker** (`art_alts_037_words`, 81 new pictures): promoted picks are in; weak ones to look at first: VAT, KIT, DESK, LEG, GUM, FIG, YAK, COG, PEG.
 - **Bank thin spots (037):** no Q/X; Z, K, Y have 0–1 pictured words; ANT the only vowel onset; short E thinnest; most blends one word each; no -EST family.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
