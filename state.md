@@ -46,7 +46,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- Conductor 21 (`prompts/21_slow_report_line.md`, written 2026-10-20, not yet run): a `slow:` report header line (component over ~15 min or ~2× expected, why, fix; usually `none`) that feeds the maintenance triggers; plus the Repos-tab amber for unreviewed items and the truncated "Open in terminal" button.
+- Conductor 21 done: reports carry a `slow:` header line (feeds the maintenance triggers; shown in the inbox beside unreviewed reports); the Repos tab marks unreviewed rows amber and the row button is now **Terminal**. Executors get the new preamble only once the daemon restarts on the new code.
 - Conductor 15–19 are live in the 7:01am daemon (Repos tree, ~1-minute tell delivery, **amend X**, `template: bug_hunt`, read-only items beside others with their own port, **run next prompt**, session-start maintenance check). 20 (memory sampling and guards, detached daemon start, orphan reaper, `daemon_died`) goes live when Matt relaunches the app and restarts the daemon from it; until then the daemon still hangs under a Claude Code session. After that restart, add `background` globs for long test/art commands to this repo's conductor.toml by request. **review all** also covers conductor reports past HANDOFF's marker (now 20).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
