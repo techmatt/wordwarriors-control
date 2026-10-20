@@ -18,16 +18,15 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - Weightlifter Dada Matt redrawn (032): fit not bulky, sleeved gym T-shirt, a modest dumbbell; Dumbbell Spin.
 - **Battle polish (034):** Matt's 030–032 picks are in. Fighters stay a body width apart, landings spaced, contests use their stage's places, no line said twice in a row, bag reveal clear of everyone. Every dad form is `ADULT_HEIGHT` (1.5 in `src/config.ts`) times Julia's height everywhere (drawn height only; `size` drives the fight). Abilities can carry a `callout` (Pig Curse says "Curly Tail Curse!"). Battle shots: `tests/shots/polish.pw.ts` + contact sheets (README *Battle shots*).
 - **Quests (025):** every character has a setup line; 12 places (treehouse workshop, forest gym, hacker den, rune dojo, secret kitchen, knights' camp, moon tower, bubble castle, dragon mountain, ice castle, desert oasis, sea grotto), each with hub, two rooms and a secret room; Julia, Scar, Moriarty, Bavmorda, Rilla visit others' places as guests. Home appears every episode as the grab-before-leaving warm-up (033).
-- **Minigame pool (025/026):** `MINIGAMES` in `src/rules/minigames.ts`; sentence frames + the **word machine** (mode 1 make-the-picture; in ~half of episodes, weighted to shaky families; every built word becomes a battle item). Families from pictured words: -AT, -AN, -AP, -EN, -ET, -OG; -IT/-OP/-UG have no pictured non-move words yet. Modes flip / real-or-silly are hooks.
+- **Minigame pool (025/026):** `MINIGAMES` in `src/rules/minigames.ts`; sentence frames + the **word machine** (mode 1 make-the-picture; in ~half of episodes, weighted to shaky families; every built word becomes a battle item). Families from pictured words: -AT, -AN, -AP, -EN, -ET, -OG, -UG (BUG MUG RUG JUG; sillies KUG, WUG; 035). Modes flip / real-or-silly are hooks.
 - **Speaker UI (024):** a cream dialogue box with the speaker's framed face card and name on their side, a tail, placed top or bottom to keep clear of targets; compact in battle; face chips on bark bubbles.
-- **Words:** key words from a per-player bag of 30 CVC words; counter frames SCARED OF THE / HATES THE / RUNS FROM THE / IS NO MATCH FOR THE; random counter with named counters 3× (Magic Hat etc.); 26 move words from a move bag; every character has two reformed lines (the sorry ends battle 2, the second is said in the victory scene). Text wraps everywhere.
+- **Words:** key words from a per-player bag of 33 CVC words (new words join a round under way: `topUpBag`, `bagKnown` in ProgressStore; 035); CUP is a teacup on a saucer so it never looks like MUG; counter frames SCARED OF THE / HATES THE / RUNS FROM THE / IS NO MATCH FOR THE; random counter with named counters 3× (Magic Hat etc.); 26 move words from a move bag; every character has two reformed lines (the sorry ends battle 2, the second is said in the victory scene). Text wraps everywhere.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `035_ug_family` (running): MUG, RUG, JUG pictures + voice, -UG family (with BUG) in the word machine and warm-up.
-- `036_test_perf` (after 035, test_perf template): the full run crept from ~12 to ~45 min per item. 034 skipped the rest of the slow lane on Matt's word, for this run to cover.
+- `036_test_perf` (running, test_perf template): the full run crept from ~12 to ~45 min per item. 034 and 035 skipped the slow lane on Matt's word, for this run to cover.
 
 ## Waiting on Matt
 
@@ -49,7 +48,7 @@ nothing
 - A rewrite of a queued item does take effect (conductor 14); the 015 rewrite never reached disk. Conductor logs an `edited` event when a queued file changes; no `edited` event means the write didn't land.
 - Homographs for TTS go in a line's `say:` respelling (020: "Bough to your queen!", "Whined-up Mice"); reword if a respelling sounds off.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
-- Word families: -IT and -OP skipped (no clear pictures / move words); -UG in 035.
+- Word families: -IT and -OP skipped (no clear pictures / move words).
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
 - Ruled (Matt, 2026-10-19): "Bough to your queen!" stays.
@@ -61,7 +60,8 @@ none
 
 ## Paged
 
-- **Recordings (Dada Matt):** 26 letter sounds and letter names via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
+- **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
+- **035 picker** (`art_alts_035_ug`: MUG, RUG, JUG, CUP): the executor's picks are already in the game; saving only matters to change one.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
 - **More fight styles:** a building contest for builder Matt, a sea race.
