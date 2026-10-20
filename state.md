@@ -36,6 +36,8 @@ nothing
 
 ## Conductor (hand-pasted)
 
+- Parked for the next conductor prompt (after 18): a **run next prompt** rule in conductor's `CLAUDE.md` — next = lowest prompt after the newest one with a report (natural order, 12 < 12a < 13); run exactly that one, naming it first, never chaining; none → one line saying so (latest + report in), no invented work or reruns; older unreported prompts are only mentioned, never run; with several waiting, say how many remain. No "run all prompts" phrase unless Matt asks.
+- In flight: conductor 18 (read-only items skip the repo lock + per-item ports; a planner-reviewed marker for conductor reports in HANDOFF *Status*, so **review all** covers them). 15–17 are in code but need a daemon restart to go live.
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
 
