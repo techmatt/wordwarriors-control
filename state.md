@@ -23,13 +23,11 @@ Status, plan and flags. Changed only through conductor requests. Design lives in
 
 ## Queued and running
 
-nothing
+- `034_picks_and_battle_polish` (ultracode): Matt's 030–032 picks (Scar good 2 / evil 1 / face 2; spell tower 1, finish flag 1, trophy 3; lifter good 5 / evil 5 / face 6) and the battle polish list (overlaps, stomp ellipse, banners over bubbles, bag reveal hiding Scar, doubled move prompts, dads' melee in contests, Pig Curse callout, dad heights).
 
 ## Waiting on Matt
 
-- **Picks:** `art_alts_030` (Scar good/evil/face, Robot Workshop rooms), `art_alts_031_fight_styles` (3 arenas, 3 props), `art_alts_032_lifter` (lifter good/evil/face). Executor's best already promoted.
-- **Battle polish seen in 030, not done:** Julia sometimes lands inside a big villain or on her ally; a flat white ellipse on stomp landings; item banners covering bubbles; the bag reveal hiding small allies (Scar); move prompts said twice; dads' melee moves step toward the villain in contests. Worth one item when Matt wants it.
-- Dad heights: lifter Matt and warlock Jason read only a little taller than Julia in endings (prop height); a one-line size tweak if wanted.
+- Picks for 030–032 saved (Matt, 2026-10-19) and carried in 034.
 - Word families: planner proposes -UG (BUG + new MUG, RUG, JUG); -IT and -OP skipped (no clear pictures / move words). Awaiting Matt's yes.
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape while Evil Anna is still the old copper-curl design (redraw when Anna joins the active cast), Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Letter-sound placeholders: only "Mmm" kept its doubling; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh. Real clips via `npm run voice:clip` (26 sounds); sentence prefixes and read-backs are the next recordings worth making.
