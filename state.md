@@ -44,8 +44,6 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- Parked for the next conductor prompt (after 18): a **run next prompt** rule in conductor's `CLAUDE.md` — next = lowest prompt after the newest one with a report (natural order, 12 < 12a < 13); run exactly that one, naming it first, never chaining; none → one line saying so (latest + report in), no invented work or reruns; older unreported prompts are only mentioned, never run; with several waiting, say how many remain. No "run all prompts" phrase unless Matt asks.
-- Parked for the next conductor prompt: in `claude-ai-new-project.md`, *Every session*: at session start the planner checks the project's maintenance record and recommends any due template item (bug hunt, general audit, cleanup, test perf audit, claude.md cleanup, disk space audit) with its reason; state.md keeps a short *Maintenance* section (when each last ran, rough triggers).
 - Conductor 15–18 are in code but go live only when Matt restarts the daemon: Repos tree, ~1-minute tell delivery (shell calls capped at 60 s; long test/art commands want `background` globs in this repo's conductor.toml, to be added by request after the restart), **amend X**, `template: bug_hunt`, read-only items running beside others with their own port. **review all** also covers conductor reports past HANDOFF's marker (now 18).
 - 12a done: "audit pending: N audit notes" in inbox, `conductor status` and the app. 14 done: **disk space audit R**, **claude.md cleanup R**; run logs compacted.
 - Picker shipped (13, 13a: images never altered): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt.
