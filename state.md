@@ -29,6 +29,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - `038_dad_lock_and_villain_names` (running; also told at 10:35pm: wrong pads from a bag, spell-like gift words for casters, DET/LAN silly-word fixes): the backquote/tilde key toggles dad lock (she can walk, no action is processed, a small padlock shows); villains named without "EVIL" in reading sentences.
 - `039_bug_hunt` (after 038, ultracode, 5h target, unattended): reusable QA checker (`tests/qa/`, captures at meaningful moments + automatic checks), look as the user, fix clear bugs, findings list in `docs/qa-findings.md`, Deferred list for Matt.
 - `040_familiar_words_and_variety` (after 039): bank words tagged familiar-to-a-4-year-old; only familiar words where she matches a picture (rooms, warm-up, counter, make-the-picture), unfamiliar ones action-only; replacements where coverage thins (picker `art_alts_040_words`); 3 variants of the wake/good-news/door lines and of each villain's taunt and two reformed lines; ~4 more counter frames. carries Matt's `art_alts_037_words` picks.
+- `041_art_briefs_and_cyber_matt` (after 040): `art:alts --brief=<scratch file>` so candidate rounds touch nothing tracked and can run as readonly items (promotion stays a normal item and writes the brief into `prompts.ts`); 5 briefs × 2 candidates for cyber Dada Matt (netrunner, drone wrangler, keytar hacker, gauntlet engineer, laptop knight), picker `art_alts_041_cyber_matt`, nothing promoted; evil + face follow his pick.
 
 ## Waiting on Matt
 
