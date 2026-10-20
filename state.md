@@ -26,7 +26,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Art briefs (041):** `art:alts --brief=<scratch file>` draws a candidate round from a brief; a round writes only `art-originals/alts` and `scratch`, so it runs as a readonly item beside other work (043, 044 did). Promotion (`art:pick`) is a normal item and writes the printed brief into the roster `look` (characters) or a `HAND` entry in `prompts.ts`. Cyber Dada Matt is the gauntlet engineer (good 10, evil 5, face 4 in 046); his drone moves became hologram tools / grid / gauntlet shield / blast (Scar's drone minion and the Drone Hangar stay).
 - **Green family art:** promoting a green Jason form must take its good, evil and face ids out of `FAMILY_ART` / `NO_GREEN` in `content/art/prompts.ts` in the same commit, or `art:pick` washes the green out (046 does this for Matt's palette picks).
 - **039's M1–M6 (045):** move-choice prompts never light or say the right word; the phonics face shows Dada Matt only when he is in the episode (`phonicsFace`); banners try two 56 px rows before shrinking; the stick hint (`src/ui/stickHint.ts`, `STICK_HINT_MS` 4 s) also shows in move choices; teammates step off signs when a choice opens (least-covered spot when none is clear).
-- **K and Y (045):** KEY and YOYO are `special` bank words (level 1, no vowel, one sound unit = first letter, never in a family, never the counter word). PIN is familiar again, so -IN (PIN BIN) is back; -IG stays off (PIG is its only familiar picture). The secret-door sign is 🧭, not 🗝️.
+- **K and Y (045, 048):** KEY and YOYO are ordinary bank words with hand-written sound units (`spelled` in `content/phonics/bank.ts`: K + long E; Y + long O twice), so hints and warm-up clues sound them in full and either may be the counter; level 1, no vowel tag, never in a family. Long-vowel lines `letter_long_e_sound` / `letter_long_o_sound` ("Ee"/"Oh" placeholders). PIN is familiar again, so -IN (PIN BIN) is back; -IG stays off (PIG is its only familiar picture). The secret-door sign is 🧭, not 🗝️.
 - **Dad art (046):** Matt's palette picks promoted (Jason chef 2, warrior 5, warlock 4; Matt builder 4, lifter 7; evil chef Jason 1 with his own goatee; cyber Matt face 4 in `HAND`), each brief now the look. Jason's good forms and faces are `GREEN_JASON`, out of `NO_GREEN`; his evil forms and Matt's blue forms stay keyed. New face cards promoted meanwhile from `art_alts_046_faces` (chef 2, warrior 4, warlock 5, builder 4, lifter 7) pending Matt's picks.
 - **Audit follow-ups (047):** the warm-up word avoids everything said before battle (stemmed); roster abilities carry one `words` list; `lines.json` is one object per line; Playwright serves itself on `CONDUCTOR_PORT`, else `TEST_PORT` 5184 (kept off the 5174 dev port).
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
@@ -34,7 +34,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-nothing (queue empty since 10:01am)
+- `049_green_jason_keying` (running since 10:32am, ETA ~11:20am): a light-green-only keying mode for `GREEN_JASON`, re-cut from originals (whisk streaks, crystal halos); amended with Matt's picks: Jason faces chef 1, warrior 5, warlock 5; `pic_yoyo` 3 (KEY, evil cyber Matt, Matt's builder/lifter faces unchanged).
 
 ## Maintenance
 
@@ -80,7 +80,7 @@ none
 - **KEY/YOYO as counters (045):** special words are never the counter word (keeps 009's decodable-counter rule); default keep.
 - **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
 
-- **Recordings (Dada Matt):** 26 letter sounds and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
+- **Recordings (Dada Matt):** 26 letter sounds, the long E and long O sounds (`letter_long_e_sound`, `letter_long_o_sound`), and letter names (and the silly words, KUG/WUG included) via `npm run voice:clip`, replacing the placeholders (only "Mmm" doubled; l/n/r/v/z are Luh/Nuh/Err/Vuh/Zuh; letter names `letter_<x>_name`). Sentence prefixes and read-backs are the next recordings worth making after those.
 - **Bank thin spots (040):** G, V, W 1–2 pictured words each; PL/SL/TW blend pictures gone; -IG off unless WIG is made familiar.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
