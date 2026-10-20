@@ -28,13 +28,14 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **039's M1–M6 (045):** move-choice prompts never light or say the right word; the phonics face shows Dada Matt only when he is in the episode (`phonicsFace`); banners try two 56 px rows before shrinking; the stick hint (`src/ui/stickHint.ts`, `STICK_HINT_MS` 4 s) also shows in move choices; teammates step off signs when a choice opens (least-covered spot when none is clear).
 - **K and Y (045, 048):** KEY and YOYO are ordinary bank words with hand-written sound units (`spelled` in `content/phonics/bank.ts`: K + long E; Y + long O twice), so hints and warm-up clues sound them in full and either may be the counter; level 1, no vowel tag, never in a family. Long-vowel lines `letter_long_e_sound` / `letter_long_o_sound` ("Ee"/"Oh" placeholders). PIN is familiar again, so -IN (PIN BIN) is back; -IG stays off (PIG is its only familiar picture). The secret-door sign is 🧭, not 🗝️.
 - **Dad art (046):** Matt's palette picks promoted (Jason chef 2, warrior 5, warlock 4; Matt builder 4, lifter 7; evil chef Jason 1 with his own goatee; cyber Matt face 4 in `HAND`), each brief now the look. Jason's good forms and faces are `GREEN_JASON`, out of `NO_GREEN`; his evil forms and Matt's blue forms stay keyed. New face cards promoted meanwhile from `art_alts_046_faces` (chef 2, warrior 4, warlock 5, builder 4, lifter 7) pending Matt's picks.
+- **Green keying (049):** `keyGreen` modes `keep` / `noGreen` / `lightGreen`; `keyMode(id)` in `content/art/prompts.ts` picks it for every art command (gen, reprocess, alts, pick). Jason's six green ids (`LIGHT_GREEN`) un-mix only bright screen green (green ≥120), so his forest green stays solid; his evil forms stay `noGreen`. Matt's 046/043 picks are in (Jason faces chef 1, warrior 5, warlock 5; YOYO 3).
 - **Audit follow-ups (047):** the warm-up word avoids everything said before battle (stemmed); roster abilities carry one `words` list; `lines.json` is one object per line; Playwright serves itself on `CONDUCTOR_PORT`, else `TEST_PORT` 5184 (kept off the 5174 dev port).
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- `049_green_jason_keying` (running since 10:32am, ETA ~11:20am): a light-green-only keying mode for `GREEN_JASON`, re-cut from originals (whisk streaks, crystal halos); amended with Matt's picks: Jason faces chef 1, warrior 5, warlock 5; `pic_yoyo` 3 (KEY, evil cyber Matt, Matt's builder/lifter faces unchanged).
+nothing (queue empty since 10:39am)
 
 ## Maintenance
 
