@@ -34,13 +34,13 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Stretchy Bridge (054):** `src/scenes/BridgeRoom.ts`; the gap is drawn per place (`GAP_BY_PLACE`); one stone per sound unit; held sounds cut per clip by `src/audio/holdSound.ts` (placeholders and recordings alike); 2–3 far-bank pictures share the start; three words a visit, each a battle item; `bridgeLevels` per word; wrong picks sound out her pick and say where it differs, two misses sparkle the answer. Added familiar words MAT MAN LID LOCK. `FORCE_PHONICS_ROOM` picks Charge or Bridge 50/50 (`PHONICS_GAMES`); `?room=bridge`. Placeholder short A and short O sound nearly alike on the bridge. **Held sounds (058):** the steady part is overlap-add stretched to one 1.3 s sound (`HELD_MS` in `holdSound.ts`), then quiet; re-sounds after `BRIDGE.resoundMs` 2 s on the stone or at once on stepping on again; quick sounds once per landing.
 - **Word bank coverage (056):** `COVERAGE` in `content/phonics/bank.ts` (targets with reasons; `tests/unit/coverage.test.ts` fails a row under target; `npm run bank:audit` prints the table). 28 new pictured words + QUEST (action), QUILT odd; QU, NG and doubled letters (FF LL SS ZZ GG) are units; long-vowel/magic-E words are level 3 (`late`), silent E is a lit, unspoken unit; new sounds `ng`, `th_voiced`, `long_a/i/u` (placeholders). **058 added** ZOO ZEBRA APPLE IGLOO OCTOPUS UMBRELLA XRAY (level 3, hand-spelled; untaught sounds get their own keys `letter_long_oo_sound`, `letter_schwa_sound`, `letter_x_name_sound`); their pictures are placeholders until an `art:gen`. U rune's gesture is now 👆. `VoiceBus` waits at most `ENSURE_TIMEOUT_MS` 4 s for a clip, then shows the caption alone. Codex: 9% of a 5-hour window.
 - **Phonics recorder + import (057):** the page is `tools/recorder/phonics-recorder.html` (format 2: name required, live utterance count with the importer's own detector, stretched held sounds, pauses ≥0.5 s / 1 s, quiet warning); hosted copy synced by the planner (Flags). `npm run voice:import -- <zip> [--take gNN] [--dry]` (`tools/voice/split.ts`, `import.ts`) splits, picks the medoid repeat, normalizes, installs as `<id>.<hash8>.mp3` via `addClip`, and writes `scratch/voice-import/review.html`; a bad card writes nothing and says why. `holdSound.ts` counts zero crossings per second (rate-independent). Recording 2 installed cards 2 4 6 8 9 (27 clips); F, L and V failed the hold check (an "uh" after a short consonant).
+- **Free play (060):** wherever she is free to move and no answer is open (battle fight/combo outside move choices; hub always; bedroom once up; rooms via `playOpen()`), green jumps (hold floats ≤420 ms) and blue (Shift) / red (Esc) / yellow (Tab) cast bolts, sparkle stars, or lobbed stars/hearts/snowballs; hold past 260 ms charges one big shot (full at 900 ms). Chef and knight forms have their own shots. Green on a spot still chooses it; yellow keeps "say it again" where a hint would speak; dad lock drops everything; ≤10 shots, pooled emitters; a move choice clears shots. `src/fx/freePlay.ts`, `src/rules/freePlay.ts`, knobs `FREE_PLAY` in `src/config.ts`. Shift ×5 opens Windows Sticky Keys: untick its shortcut on Julia's machine (README).
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- 060_free_play running (jump on green, colored casts on blue/red/yellow in battles and walking scenes; pure play). Launched without ultracode (a conductor slip, in its HANDOFF *Open*); told to use it mid-run.
-- 061_test_perf (ultracode) staged, then 062_voice_lines (ultracode: missing/stale voice clips and their cause; CHIPS redrawn as potato chips; warm-up never says the word), then 063_bug_hunt (1 h, ultracode).
+- 061_test_perf (ultracode) running (fast lane measured 7.8 min before; ETA ~10:10pm), then 062_voice_lines (ultracode: missing/stale voice clips and their cause; CHIPS redrawn as potato chips; warm-up never says the word), then 063_bug_hunt (1 h, ultracode).
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
@@ -95,7 +95,7 @@ Agreed in session 6's pipeline review; start at the next checkpoint, not before.
 
 ## Open questions
 
-none
+- **Blue on Shift (060):** five Shift presses open Windows' Sticky Keys dialog (README says to untick the shortcut). Move blue to another non-letter key? Default: keep Shift, untick the shortcut.
 
 ## Paged
 
