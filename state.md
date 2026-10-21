@@ -69,6 +69,7 @@ nothing
 - Tests (Matt, 2026-10-20): no full browser suite by default; fast lane plus the browser tests covering the change, full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy. The planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, leaving it as an uncommitted file; Matt commits that repo, never an executor or the planner.
+- **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` gets a fresh workspace path; a reused path re-sends its first contents (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
 - **Planner and conductor's HANDOFF.md:** until the next-checkpoint fix lands, the planner writes HANDOFF only when no conductor prompt is running AND the last one's report is in and reviewed, from a fresh stage, with `expectedMtimeMs`. A write made while 26 was finishing clobbered 26's lines (27 restored them).
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Generated voice (~5,100 lines) left git in 008; ~50 MB of old voice remains in git history.
@@ -98,9 +99,7 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
 **Conductor**
-- Parked for the next conductor prompt (missed 31, which was pasted first): **cleanup conductor** also cleans up `CLAUDE.md`'s content, not just its size — every fact checked against the code and workflow, stale or wrong lines fixed or cut, history removed, what a session doesn't need at every start moved to `docs/` with a pointer (`CLEANUP.md` §2) (Matt, 2026-10-20).
 - Parked for the next conductor prompt: `planner.md`'s "`audit: true` (only when Matt asks)" becomes the audit ruling in *Flags* (Matt, 2026-10-20).
-- **Cleanup conductor is due** (last after 25; `daemon.py` at 1097 of 1100 lines, `planner.md` at its 20 KB budget).
 - **Bug hunt stopped early:** 069 was asked for 6 h and stopped at 1.6 h with no reason given; the `bug_hunt` template should say the hours are a target to use, not a cap (Matt's standing rule), and that a hunt that runs out of leads widens its search.
 - The first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
