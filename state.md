@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Where it stands (v0.6; session 6 open 2026-10-20)
+## Where it stands (v0.7; session 6 closed 2026-10-20 5:05pm, queue empty)
 
 - The episode: bedroom wake-up (primary dad, maybe the other dad, the ally, good/bad news, the villain's house overlay, the ally's quest line) → entry-hall warm-up (033) → the quest place's hub (the ally's short story scene ends with a gift word) → two rooms drawn from the minigame pool → battle 1 → retreat, attic counter sentence → battle 2 → the reformed villain's sorry → a victory scene (8 scenes, 2–5 people, ~20 s) → recap with a picture per word.
 - **Casting (025):** every episode draws its own cast (`src/rules/cast.ts`, `CAST_ODDS`): villain from all characters (her last 4 avoided), any good ally, primary dad Matt 60% / Jason 40%, other dad present 50%. Dad forms are roster characters: Matt builder / lifter / cyber / blade; Jason chef / warrior / warlock (purple fire). Julia's forms: chef (chef Jason), knight (warrior Jason). The fixed default episode (Julia + Ellie vs Evil Tiamat) is `?cast=default` / `randomCast: false`; overrides `?seed= ?ally= ?villain= ?form= ?primary= ?secondary= ?place=` (README).
@@ -53,8 +53,8 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- Conductor 24–26 are committed: lean session start (`planner.md`, `session: start` → `session.md`), cleanup conductor (25), and `open:` / `notify:` (26; `open_roots` lists the Drive folder). 26 needs a daemon restart to go live (the 2:08pm restart predates it). Live in the 11:06am daemon (detached, heartbeat): everything through conductor 23. Reports carry `slow:` (21; feeds maintenance triggers). The Repos tab is a split with the selected item's **Conversation** thread (22: tells with tagged replies, amendments, questions, progress, finish; Tell… / Outline? / Amend… at the bottom). **Outline** (23): executors post a terse section list with finish times (pinned in Conversation, one line in the inbox *Now*); **outline X** requests a fresh one. Memory sampling, pressure pauses, orphan reaping and `daemon_died` (20). The 11:06am `daemon_died` red (last heartbeat 7:01am, "4h05m") is an artifact of the old code having no heartbeat; it ran until ~10:41am and lost nothing.
-- Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker (now 26).
+- **Conductor at session 6's close:** 24 (lean session start: `planner.md`, `session: start` → `session.md`), 25 (cleanup conductor: `CLEANUP.md`, size budgets), 26 (`open:` / `notify:`; `open_roots` lists the Drive folder), 27 (quiet app header) are committed; the daemon last restarted at 2:08pm, so 26–27 go live at Matt's next daemon + app restart. 28 (pipeline fixes: self-restart on code change, `review: all` bundle, readonly items start at once, one-call requests, free-form amendment names, setup off the loop, **pipeline review** vocab) and 29 (navy+gold hub icon, live window title) are written, not yet reported. HANDOFF's review marker is at 26; 27 is reviewed, so the next planner moves it past 27–29 once their reports are in and no conductor prompt runs.
+- Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker (26; 27 already reviewed).
 - Planner: write conductor's `HANDOFF.md` marker only when no conductor prompt is running, from a fresh stage (a stale write at 10:32am clobbered 22's Status; 23 restored it).
 
 ## Flags
@@ -81,10 +81,12 @@ nothing
 
 ## Next checkpoint (Matt, 2026-10-20)
 
-Agreed in session 6's pipeline review; start at the next checkpoint, not before.
+Agreed in session 6's pipeline review; start at the next checkpoint, not before. Every pipeline review's agreed items land in this section (Matt, 2026-10-20).
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
-- **Conductor preamble:** add one line enforcing "tests only for an unfixed red" in reports (053's report still had a test section). Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
+- **Conductor preamble:** add one line enforcing "tests only for an unfixed red" and "no process narration" in reports (053's and 057's still had test/process sections).
+- **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; conductor writing a small receipt per signal file (its event ids, or the refusal) would end that polling. Check first whether 28's one-call requests already cover it.
+- **Keep the readonly-prototype pattern:** a readonly prototype item first, then the real build from its findings (055 → 057), for any tool whose approach is uncertain. Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
 
 ## Open questions
 
