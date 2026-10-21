@@ -58,9 +58,9 @@ nothing
 - Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
 - Ruled (Matt, 2026-10-18): keep the named-counter boost (3×, now 6× for the doubled pool, 067); Ellie's sword word stays ZIP; no asleep chef-Julia image for now; voice-manifest hashing deferred until items that change voice run concurrently. Later word-machine modes: flip it, real or silly.
 
-## Next checkpoint (Matt, 2026-10-20)
+## Pending fixes
 
-Accumulated fixes and pipeline-review items; start at the next checkpoint, not before. Every pipeline review's agreed items land here.
+Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
