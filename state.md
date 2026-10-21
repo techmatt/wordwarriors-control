@@ -18,14 +18,14 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 079_test_cleanup running (lanes per its question's default: `npm test` = unit + @smoke, `test:browser`, `test:all`, `test:slow`). Everything through 078 reviewed. `background` globs set (session 9). Conductor through 36 reviewed.
+- 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed. `background` globs set (session 9). Conductor through 36 reviewed.
 
 ## Maintenance
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
 - **Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`** (059): American spelling, nothing covering a target, no letter-matching giveaways, pictures a 4-year-old recognizes, complete natural sentences, words that fit their moment, snappy pacing plus missing voice lines (062). The checker automates `not-american`, `giveaway`, `clipped-line`, `slow-room`, `target-covered`.
-- Bug hunt: 069 (2026-10-21; asked 6 h, ran 1.6 h, stopping because its fixes were in and green: partial under the new clock rules, per its own correction; lenses never run: reloading mid-flow, tab/focus switches and resizing, slow or failing network/disk, many episodes back to back at real speed, every URL and dev flag, the grown-ups page and dad lock across a whole episode; 24 fixes, `QA_SET=new` batch, findings "Hunt 2" in `docs/qa-findings.md`); before it 039. General cleanup: 068 (2026-10-21, as general audit; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 076 (2026-10-21; 067's notes used up; spread seeds in unit loops, `withDifficulty`, shared ramp clamp/step, legacy store fields into `recent`, Episode.ts state/draws split into `episode/state.ts` and `draws.ts`, `bridgeTier`→`bridgeEase`, `BRIDGE_WORDS`→`BRIDGE_PICTURES`; 4 deferred calls raised in session 9); before it 017. Test cleanup: 061 (2026-10-20, as test perf; fast lane re-cut, two Playwright workers). claude.md cleanup: 077 (2026-10-21; facts checked and fixed, still ~249 lines; the real shrink is moving the "Matt says" table, raised in session 9); before it 050. Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
+- Bug hunt: 069 (2026-10-21; asked 6 h, ran 1.6 h, stopping because its fixes were in and green: partial under the new clock rules, per its own correction; lenses never run: reloading mid-flow, tab/focus switches and resizing, slow or failing network/disk, many episodes back to back at real speed, every URL and dev flag, the grown-ups page and dad lock across a whole episode; 24 fixes, `QA_SET=new` batch, findings "Hunt 2" in `docs/qa-findings.md`); before it 039. General cleanup: 068 (2026-10-21, as general audit; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 076 (2026-10-21; 067's notes used up; spread seeds in unit loops, `withDifficulty`, shared ramp clamp/step, legacy store fields into `recent`, Episode.ts state/draws split into `episode/state.ts` and `draws.ts`, `bridgeTier`→`bridgeEase`, `BRIDGE_WORDS`→`BRIDGE_PICTURES`; 4 deferred calls raised in session 9); before it 017. Test cleanup: 079 (2026-10-21; suite serves a production build on 3 GPU workers; `npm test` = unit + 3 @smoke ~20 s, `test:browser` ~50 s before a commit, `test:slow` ~10 min, `test:all` ~10 min; `WW_DEV_SERVER=1` for the old dev-server run); before it 061. claude.md cleanup: 077 (2026-10-21; facts checked and fixed, still ~249 lines; the real shrink is moving the "Matt says" table, raised in session 9); before it 050. Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
 
 ## Waiting on Matt
 
@@ -39,7 +39,7 @@ nothing
 
 - Memory: never start the daemon as a Claude Code background command (it dies with that session). Alienware's `OCControl.Service` swings free RAM by ~10 GiB every ~3 min; conductor pauses launches under pressure.
 - Art: `art:gen` / `art:alts` / `art:pick` and the studio redesigns are in the repo README and `content/art/prompts.ts`; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used.
-- Tests (Matt, 2026-10-20): no full browser suite by default; fast lane plus the browser tests covering the change, full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
+- Tests (Matt, 2026-10-20): no full browser suite by default; `npm test` plus the browser tests covering the change (`test:browser` before a commit, 079), full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy. The planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, leaving it as an uncommitted file; Matt commits that repo, never an executor or the planner.
 - **Conductor prompts start at once (Matt, 2026-10-21):** read `C:\Code\claude-conductor\prompts\ledger.md`'s tail before writing a conductor prompt or saying one has started (`planner.md` *Bridge*, from 32).
@@ -69,7 +69,7 @@ Accumulated fixes and pipeline-review items (every pipeline review's agreed item
 
 ## Backlog (night shift)
 
-Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: `bug_hunt_lenses` (069's unrun lenses, 072's configs, battle polish leftovers, clipped sorries; 3 h), `disk_space_audit`. General cleanup joins when its trigger is due.
+Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: `disk_space_audit` (`bug_hunt_lenses` drawn as 080). General cleanup joins when its trigger is due.
 
 ## Open questions
 
