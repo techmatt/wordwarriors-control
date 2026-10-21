@@ -40,7 +40,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 ## Queued and running
 
 - 060_free_play running (jump on green, colored casts on blue/red/yellow in battles and walking scenes; pure play). Launched without ultracode (a conductor slip, in its HANDOFF *Open*); told to use it mid-run.
-- 061_test_perf (ultracode) staged, then 062_voice_lines (ultracode: missing/stale voice clips and their cause; CHIPS redrawn as potato chips), then 063_bug_hunt (1 h, ultracode).
+- 061_test_perf (ultracode) staged, then 062_voice_lines (ultracode: missing/stale voice clips and their cause; CHIPS redrawn as potato chips; warm-up never says the word), then 063_bug_hunt (1 h, ultracode).
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
@@ -56,7 +56,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 29 is reviewed** (HANDOFF marker at 29, session 7). Two conductor slips are in HANDOFF *Open* (2026-10-20): a rewrite of a staged item didn't take (060 launched without ultracode), and 059 dropped a mid-run amendment. Live since 28: the daemon restarts itself on a conductor commit; `review: all` writes `review.md`; readonly items start at once; one-call requests; free-form amend names; setup off the loop; **pipeline review** vocab. 29: conductor's own icon and a live window title. Whether Windows shows the icon under its app id needs Matt's look after an app restart (conductor HANDOFF *Open*).
+- **Conductor through 29 is reviewed** (HANDOFF marker at 29, session 7). Two conductor slips are in HANDOFF *Open* (2026-10-20): a rewrite of a staged item didn't take (060 launched without ultracode), and 059's mid-run amendment landed in a helper subagent, which ignored it as untrusted, so the lead never saw it (root cause in HANDOFF *Open*). Live since 28: the daemon restarts itself on a conductor commit; `review: all` writes `review.md`; readonly items start at once; one-call requests; free-form amend names; setup off the loop; **pipeline review** vocab. 29: conductor's own icon and a live window title. Whether Windows shows the icon under its app id needs Matt's look after an app restart (conductor HANDOFF *Open*).
 - Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker.
 - Planner: write conductor's `HANDOFF.md` marker only when no conductor prompt is running, from a fresh stage (a stale write at 10:32am clobbered 22's Status; 23 restored it).
 
@@ -77,6 +77,8 @@ nothing
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores from `art-originals/restore/`) and deletes that id's other candidates (Matt, 2026-10-20: once picked, old candidates are not kept; redraw if ever needed). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
 - Ruled (Matt, 2026-10-20): a word may use sounds the game doesn't teach yet (she learns plenty outside the game); applied in 058 (`UNTAUGHT_SOUNDS`).
+- Ruled (Matt, 2026-10-20): XRAY stays as X's first word, though it starts with the letter's name.
+- Ruled (Matt, 2026-10-20): the entry-hall warm-up is a phonics task, never a listening one: no clue or help says the whole word (062 carries it).
 - Ruled (Matt, 2026-10-20): MAT stays a bridge word, though it sounds like "Matt".
 - Ruled (Matt, 2026-10-19): "Bough to your queen!" stays.
 - Ruled (Matt, 2026-10-19): fight style stays fixed per villain (its identity); word-machine blend/digraph families wait until she reads blends.
@@ -93,8 +95,7 @@ Agreed in session 6's pipeline review; start at the next checkpoint, not before.
 
 ## Open questions
 
-- **XRAY (058):** the only familiar X picture word, but it starts with the letter's name, not /ks/. Keep it as X's first word, or drop it? Default: keep.
-- **Warm-up level-1 clue (059):** with no labels, the level-1 clue (and its help after misses) still says the word first, so it becomes a listening task. New players start at level 2. Default: leave it.
+none
 
 ## Paged
 
