@@ -40,6 +40,8 @@ nothing
 
 - Memory: never start the daemon as a Claude Code background command (it dies with that session). Alienware's `OCControl.Service` swings free RAM by ~10 GiB every ~3 min; conductor pauses launches under pressure.
 - Art: `art:gen` / `art:alts` / `art:pick` and the studio redesigns are in the repo README and `content/art/prompts.ts`; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used.
+- **Questions (Matt, 2026-10-21):** `ask_default_minutes` stays 10; Matt often won't see questions and that's fine: defaults stand and he corrects after the fact. Don't raise timed-out defaults as problems.
+- **Planner habits (session 9):** stage a receipt in a call of its own (it lands 1–2 s after the write; a stage fails whole if one path is missing) and retry once; always stage `state.md` fresh before building a request from it.
 - **Tests: faster over thorough (Matt, 2026-10-21):** where reasonable, prefer faster tests and lanes to thorough ones; Matt scales coverage up when he notices problems.
 - Tests (Matt, 2026-10-20): no full browser suite by default; `npm test` plus the browser tests covering the change (`test:browser` before a commit, 079), full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
@@ -65,6 +67,7 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
+- **Due from checkpoint #1994 (session 9 pipeline review, Matt approved):** only Matt's or the app's actions (and a planner `approve:` or queue write on his word) count as "someone acted" for the night shift's no-back-to-back rule; a planner `state.md` request at 12:27 let 080 (a 3 h bug hunt) start straight after 079's template.
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
