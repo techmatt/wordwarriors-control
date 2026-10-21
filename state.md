@@ -36,12 +36,13 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 - **Recorder thresholds (063):** the faint cut is `dropDb` 30 (was 20) on the page and in `split.ts` alike; holds ask for "half a second or so"; Matt's card-1 take is a fixture. **Recording 3 (063):** all 12 cards in, 67 clips; R, V, voiced TH and long U use a later repeat; F still says "fuh" and stays a placeholder (tip: let the breath stop after ffff, no "uh" even quietly); L only just passes (a longer llll is safer).
 - **Phonics recorder + import (057):** the page is `tools/recorder/phonics-recorder.html` (format 2: name required, live utterance count with the importer's own detector, stretched held sounds, pauses ≥0.5 s / 1 s, quiet warning); hosted copy synced by the planner (Flags). `npm run voice:import -- <zip> [--take gNN] [--dry]` (`tools/voice/split.ts`, `import.ts`) splits, picks the medoid repeat, normalizes, installs as `<id>.<hash8>.mp3` via `addClip`, and writes `scratch/voice-import/review.html`; a bad card writes nothing and says why. `holdSound.ts` counts zero crossings per second (rate-independent). Recording 2 installed cards 2 4 6 8 9 (27 clips); F, L and V failed the hold check (an "uh" after a short consonant).
 - **Free play (060):** wherever she is free to move and no answer is open (battle fight/combo outside move choices; hub always; bedroom once up; rooms via `playOpen()`), green jumps (hold floats ≤420 ms) and blue (Shift) / red (Esc) / yellow (Tab) cast bolts, sparkle stars, or lobbed stars/hearts/snowballs; hold past 260 ms charges one big shot (full at 900 ms). Chef and knight forms have their own shots. Green on a spot still chooses it; yellow keeps "say it again" where a hint would speak; dad lock drops everything; ≤10 shots, pooled emitters; a move choice clears shots. `src/fx/freePlay.ts`, `src/rules/freePlay.ts`, knobs `FREE_PLAY` in `src/config.ts`. Blue is the **3** key (062); nothing is on Shift.
+- **Lazy art (065):** art loads on demand: `src/art/` (`ArtBank` one fetch queue, `needs.ts` `artFor(scene, draw)`, `gate.ts` `startScene` for every scene start, a text-free Wait scene after 150 ms); the next scene's art is prefetched; boot loads only the title's art (page load → title 3.2 s → 1.2 s). The victory scene is drawn during battle 2. Art and voice share the dev server's six connections (art by high-priority `fetch` for the scene about to show; voice holds background decodes while a scene waits); notes in `docs/engineering.md`. `tests/perf/boot.pw.ts` times boot.
 - Sentences are read by the phonics voice as a prefix clip plus the key word's own clip, so no line can leak a key word and Matt's recordings can replace them; the read-back may sound choppy.
 - Julia's first play (2026-10-18) fixed by 004: unusable doors aren't drawn; a wrong move pick holds the fight until she finds the right word; the read pass speaks each word as it lights (key word silent).
 
 ## Queued and running
 
-- 065_lazy_art (ultracode) running (on-demand art; ETA ~12:25am), then 067_base_difficulty (ultracode: all words in play, each game picks words by length in sounds, help ramps stay at base until Matt raises `DIFFICULTY`, variety across episodes). 066 was cancelled: a rewrite during staging kept its old plan. 064_bug_hunt was cancelled by Matt (app, 10:04pm).
+- Queue empty. 065 reviewed; 067_base_difficulty (with audit), 068_general_audit and 069_bug_hunt finished overnight, not yet reviewed.
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
@@ -92,7 +93,7 @@ nothing
 Accumulated fixes and pipeline-review items; start at the next checkpoint, not before. Every pipeline review's agreed items land in this section (Matt, 2026-10-20).
 
 **Word Warriors fixes**
-- **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. Fix after 065 (on-demand loading touches the same loader); check other rooms for the same.
+- **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. 065 has landed, so it's unblocked; check other rooms for the same. Likely the same cause: fights.spec's cook_off fails on main with voice clips aborted by `VoiceBank`'s fetch timeout (065, 128 aborted clips).
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
 **Conductor**
@@ -112,7 +113,7 @@ none
 
 ## Paged
 
-- **`background` globs** for this repo's conductor.toml (long test commands always backgrounded, never hit the 10-minute cutoff); planner's default `["npm test*", "npm run test*", "npx playwright*"]`. Less pressing since 047 made Playwright serve itself.
+- **`background` globs** for this repo's conductor.toml (long test commands always backgrounded, never hit the 10-minute cutoff); planner's default `["npm test*", "npm run test*", "npx playwright*"]`. 065's full slow-lane run hit the 10-minute cap.
 
 - **KEY/YOYO as counters (045):** special words are never the counter word (keeps 009's decodable-counter rule); default keep.
 - **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
