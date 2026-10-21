@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- 083_faster_tests_2 next (ultracode: voice skip, split real-time episode, teleport hook, short battle mode, one part per fight style, rope-pull `padPlace` fix). Everything through 082 reviewed (the victory recap advances only on Dad's 2, cue "DAD: PRESS 2 TO PLAY AGAIN"; M18 sorries reworded; M19 captions from `lines.json` when the manifest fails). `background` globs set (session 9). Conductor through 39 and cleanup 2026-10-21 reviewed; 40 (autopilot switch, header, message boxes) written. Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout.
+- Queue empty after 083 (partial: stopped at Matt's word for a playtest; all five speed-ups and the rope-pull `padPlace` fix are in, one full run 5.6 min; still owed: `npm run test:all` green twice in a row and the episodes-first A/B, once the machine is free). Everything through 083 reviewed (082: the victory recap advances only on Dad's 2; M18 sorries reworded; M19 captions from `lines.json`).
 
 ## Maintenance
 
@@ -41,6 +41,7 @@ nothing
 - Memory: never start the daemon as a Claude Code background command (it dies with that session). Alienware's `OCControl.Service` swings free RAM by ~10 GiB every ~3 min; conductor pauses launches under pressure.
 - Art: `art:gen` / `art:alts` / `art:pick` and the studio redesigns are in the repo README and `content/art/prompts.ts`; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used.
 - **Questions (Matt, 2026-10-21):** `ask_default_minutes` stays 10; Matt often won't see questions and that's fine: defaults stand and he corrects after the fact. Don't raise timed-out defaults as problems.
+- **Ultracode (083, 2026-10-21):** leave it off items that are serial on one machine-saturating resource (full test-suite timing runs); it adds nothing there.
 - **Planner habits (session 9):** stage a receipt in a call of its own (it lands 1–2 s after the write; a stage fails whole if one path is missing) and retry once; always stage `state.md` fresh before building a request from it. Read inbox sections with non-overlapping extracts (overlapping `sed` ranges doubled lines and cost conductor 38 a wild-goose chase).
 - **Tests: faster over thorough (Matt, 2026-10-21):** where reasonable, prefer faster tests and lanes to thorough ones; Matt scales coverage up when he notices problems.
 - Tests (Matt, 2026-10-20): no full browser suite by default; `npm test` plus the browser tests covering the change (`test:browser` before a commit, 079), full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
