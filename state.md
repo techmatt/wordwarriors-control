@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- 081_faster_slow_lane running (ETA ~3:15pm), then 082_victory_dad_advance (only a dad's 2 leaves the last end-of-episode screen). Everything through 080 reviewed. `background` globs set (session 9). Conductor through 38 and cleanup 2026-10-21 reviewed.
+- 082_victory_dad_advance running (with M18 sorry rewords, M19 captions fallback; ETA ~3:50pm). Everything through 081 reviewed (full run ~7 min, was 10; its untimed episodes-first config is revertable as commit 7e5f679). `background` globs set (session 9). Conductor through 38 and cleanup 2026-10-21 reviewed; 39 (auto-push) written.
 
 ## Maintenance
 
