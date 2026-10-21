@@ -14,11 +14,11 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **This session:** on-demand art loading (065); one `DIFFICULTY` knob at base with all words in play and decoding games capped by length (067); general audit (068); bug hunt 2 with 24 fixes, including voice and art timeouts on the wall clock (069); sign placement, the narrow dialogue box and rewording (071); tooling and docs, with `docs/episode.md` and npm scripts (072); new word pictures, MAT/PAN/ROCK picks promoted (070, 073).
 - **Art:** no placeholder pictures left in the game (`art:placeholders` reports 0 after 074). **Voice placeholders:** Matt's F recording (Paged); untaught-sound lines (long vowels, schwa) are TTS.
 - **Gesture words (074):** a rune gesture that says a bank word (the /e/ rune's "Tap the egg": TAP, EGG) keeps that word out of later reading only in an episode whose Charge word uses that rune; the Charge word is planned up front so this holds (`gestureWords` in `src/rules/charge.ts`).
-- Mechanics that lived here are being checked into the repo's docs by 075; the planner's copy is in this file's git history (before "state: slimmed").
+- Mechanics live in the repo's docs (075 gave every fact from the old "Where it stands" a home and fixed 4 doc lines the code contradicted).
 
 ## Queued and running
 
-- 074 reviewed (rune props drawn; TAP/EGG narrowed). 075_state_facts_to_docs running (the mechanics into the repo's docs; no code).
+- Queue empty; 074 and 075 reviewed.
 - Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`).
 
 ## Maintenance
