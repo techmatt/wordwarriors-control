@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 077_claude_md_cleanup running, then 078_small_fixes (dad trail tints, `voice:build --prune`). `background` globs set (session 9). Everything through 076 reviewed. Conductor through 35 reviewed.
+- 077_claude_md_cleanup running, then 078_small_fixes (dad trail tints, `voice:build --prune`, Charge ramp removed, villain avoid via `fresh()`). `background` globs set (session 9). Everything through 076 reviewed. Conductor through 35 reviewed.
 
 ## Maintenance
 
@@ -47,6 +47,7 @@ nothing
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Art nitpicks (Matt, 2026-10-21): small art flaws a report notes in passing (halos, slight tints) are fine; don't raise or track them.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
+- Ruled (Matt, 2026-10-21, 076's deferred calls): Charge's dead ramp is removed and the villain avoid uses `fresh()` (both in 078); the rune `tier` stays as a documented label; the pick screens' surprise-villain flag is fixed only if the pick screens return.
 - **Ruled (Matt, 2026-10-20): audits.** The planner adds `audit: true` on its own judgment (a lot has changed since the last audit or cleanup, and the item is a big pass through much of the code), always saying so in the reply where it does; Matt can drop it. Supersedes "audits only when Matt asks". First use: 067.
 - Ruled (Matt, 2026-10-20): a word may use sounds the game doesn't teach yet (she learns plenty outside the game); applied in 058 (`UNTAUGHT_SOUNDS`).
 - Ruled (Matt, 2026-10-20): no automatic difficulty; everything plays at base until Matt raises it. All words are in the vocabulary (long ones like OCTOPUS are fine: she'll recognize some); decoding games use short words, recognition roles any word (067).
