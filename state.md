@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Where it stands (v0.8; session 7 open since 2026-10-20 5:10pm)
+## Where it stands (v0.8; session 7 closed 2026-10-20 ~10:50pm; 065 running, 067 queued)
 
 - The episode: bedroom wake-up (primary dad, maybe the other dad, the ally, good/bad news, the villain's house overlay, the ally's quest line) → entry-hall warm-up (033) → the quest place's hub (the ally's short story scene ends with a gift word) → two rooms drawn from the minigame pool → battle 1 → retreat, attic counter sentence → battle 2 → the reformed villain's sorry → a victory scene (8 scenes, 2–5 people, ~20 s) → recap with a picture per word.
 - **Casting (025):** every episode draws its own cast (`src/rules/cast.ts`, `CAST_ODDS`): villain from all characters (her last 4 avoided), any good ally, primary dad Matt 60% / Jason 40%, other dad present 50%. Dad forms are roster characters: Matt builder / lifter / cyber / blade; Jason chef / warrior / warlock (purple fire). Julia's forms: chef (chef Jason), knight (warrior Jason). The fixed default episode (Julia + Ellie vs Evil Tiamat) is `?cast=default` / `randomCast: false`; overrides `?seed= ?ally= ?villain= ?form= ?primary= ?secondary= ?place=` (README).
@@ -88,12 +88,25 @@ nothing
 
 ## Next checkpoint (Matt, 2026-10-20)
 
-Agreed in session 6's pipeline review; start at the next checkpoint, not before. Every pipeline review's agreed items land in this section (Matt, 2026-10-20).
+Accumulated fixes and pipeline-review items; start at the next checkpoint, not before. Every pipeline review's agreed items land in this section (Matt, 2026-10-20).
+
+**Word Warriors fixes**
+- **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. Fix after 065 (on-demand loading touches the same loader); check other rooms for the same.
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
+
+**Conductor (prompts 30 and 31)**
+- Prompt 30 (`alongside` concurrency, lead-only delivery of messages and amendments, the report preamble lines) was pasted in session 7; review its report. Paste 31 (planner action rules, safe reorder via `next:`, rewrites of staging items, inbox wording, ultracode guidance) after 30 lands. Then the first real `alongside` use is worth a look.
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
-- **Conductor preamble:** add one line enforcing "tests only for an unfixed red" and "no process narration" in reports (053's and 057's still had test/process sections).
-- **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; conductor writing a small receipt per signal file (its event ids, or the refusal) would end that polling. Check first whether 28's one-call requests already cover it.
+- **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; a small receipt per signal file (its event ids, or the refusal) would end that polling.
 - **Keep the readonly-prototype pattern:** a readonly prototype item first, then the real build from its findings (055 → 057), for any tool whose approach is uncertain. Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
+
+**Session 7 pipeline review (all routed to 30/31 unless noted)**
+- Rewrites of a staging item silently kept the old plan, twice (060's ultracode, 066's plan) → 31.
+- 059's amendment landed in a helper subagent and was dropped → 30.
+- The planner piggybacked unrequested `reviewed:`/`read:` lines and marked 061 without reading it → 31's action rules.
+- One-per-repo serialization held a small independent fix behind a long item for hours → 30's `alongside`.
+- The planner skipped ultracode on a heavy multi-part item (059) because `planner.md`'s narrower rule won over Matt's standing one → 31.
+- Planner habit (said in chat, not carried): verify before asserting state (it claimed 30 wasn't pasted).
 
 ## Open questions
 
