@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 074 reviewed (rune props drawn; TAP/EGG narrowed). 075_state_facts_to_docs running (the mechanics into the repo's docs; no code).
-- Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`). Nitpick from 074, only if Matt minds: the altar's candle flames have a yellow-lime halo and the stone's glow goes teal at its edge (`art:alts` can redraw).
+- Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`).
 
 ## Maintenance
 
@@ -47,6 +47,7 @@ nothing
 - **Conductor prompts start at once (Matt, 2026-10-21):** read `C:\Code\claude-conductor\prompts\ledger.md`'s tail before writing a conductor prompt, editing HANDOFF, or saying one has started (`planner.md` *Bridge*, from 32).
 - **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` is written once to a fresh workspace path and never edited after; the bridge sends a path's first contents (a reused or edited path sent stale text: HANDOFF after 31, a "no change" request, and the slimmed `state.md`'s second pass) (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
+- Art nitpicks (Matt, 2026-10-21): small art flaws a report notes in passing (halos, slight tints) are fine; don't raise or track them.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - **Ruled (Matt, 2026-10-20): audits.** The planner adds `audit: true` on its own judgment (a lot has changed since the last audit or cleanup, and the item is a big pass through much of the code), always saying so in the reply where it does; Matt can drop it. Supersedes "audits only when Matt asks". First use: 067.
 - Ruled (Matt, 2026-10-20): a word may use sounds the game doesn't teach yet (she learns plenty outside the game); applied in 058 (`UNTAUGHT_SOUNDS`).
