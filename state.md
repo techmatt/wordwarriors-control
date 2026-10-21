@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- Parked for the next wordwarriors prompt: put "faster tests over thorough tests where reasonable; Matt scales up when he notices problems" in the repo's CLAUDE.md test rule. `background` globs set (session 9). Conductor through 36 reviewed.
+- 081_faster_slow_lane queued after 080 (079's slowest tests cut; carries the faster-tests line into CLAUDE.md). `background` globs set (session 9). Conductor through 36 reviewed.
 
 ## Maintenance
 
