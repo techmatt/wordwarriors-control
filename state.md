@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 076_cleanup running (ultracode; acts on 067's audit note, carries 074's seed-spreading fix), 077_claude_md_cleanup staged behind it. Everything through 075 reviewed. Conductor through 34 reviewed.
+- 076_cleanup running (ultracode; acts on 067's audit note, carries 074's seed-spreading fix), then 077_claude_md_cleanup (staged), then 078_small_fixes (dad trail tints, `voice:build --prune`). `background` globs set (session 9). Everything through 075 reviewed. Conductor through 34 reviewed; 35 (receipts, planner marker off HANDOFF) written.
 
 ## Maintenance
 
@@ -76,13 +76,9 @@ none
 
 ## Paged
 
-- **`background` globs** for this repo's conductor.toml (long test commands always backgrounded, never hit the 10-minute cutoff); planner's default `["npm test*", "npm run test*", "npx playwright*"]`. 065's full slow-lane run hit the 10-minute cap.
-
 - **KEY/YOYO as counters (045):** special words are never the counter word (keeps 009's decodable-counter rule); default keep.
-- **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
 
 - **Recordings (Dada Matt):** only F is left (card 2, "ffff" with no "uh"); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
-- **Stale voice audio:** clips for retired line ids (e.g. 071's two rainbow lines) stay in the shared voice folder; `voice:build` has no `--prune` run yet. A disk audit's job.
 - **072's configs only listed:** the full shots (~5 + ~16 min), perf and qa runs weren't run after 072 moved them to npm scripts and the GPU; the next bug hunt or shot run exercises them.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
