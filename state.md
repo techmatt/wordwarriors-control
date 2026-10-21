@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH (Python edge-tts via `uvx`; the npm port is refused).
 
-## Where it stands (v0.8; session 7 closed 2026-10-20 ~10:50pm; 065 running, 067 queued)
+## Where it stands (v0.8; session 8 open; 065 running, 067 queued)
 
 - The episode: bedroom wake-up (primary dad, maybe the other dad, the ally, good/bad news, the villain's house overlay, the ally's quest line) → entry-hall warm-up (033) → the quest place's hub (the ally's short story scene ends with a gift word) → two rooms drawn from the minigame pool → battle 1 → retreat, attic counter sentence → battle 2 → the reformed villain's sorry → a victory scene (8 scenes, 2–5 people, ~20 s) → recap with a picture per word.
 - **Casting (025):** every episode draws its own cast (`src/rules/cast.ts`, `CAST_ODDS`): villain from all characters (her last 4 avoided), any good ally, primary dad Matt 60% / Jason 40%, other dad present 50%. Dad forms are roster characters: Matt builder / lifter / cyber / blade; Jason chef / warrior / warlock (purple fire). Julia's forms: chef (chef Jason), knight (warrior Jason). The fixed default episode (Julia + Ellie vs Evil Tiamat) is `?cast=default` / `randomCast: false`; overrides `?seed= ?ally= ?villain= ?form= ?primary= ?secondary= ?place=` (README).
@@ -57,7 +57,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 29 is reviewed** (HANDOFF marker at 29, session 7). Two conductor slips are in HANDOFF *Open* (2026-10-20): a rewrite of a staged item didn't take (060 launched without ultracode), and 059's mid-run amendment landed in a helper subagent, which ignored it as untrusted, so the lead never saw it (root cause in HANDOFF *Open*). Live since 28: the daemon restarts itself on a conductor commit; `review: all` writes `review.md`; readonly items start at once; one-call requests; free-form amend names; setup off the loop; **pipeline review** vocab. 29: conductor's own icon and a live window title. Whether Windows shows the icon under its app id needs Matt's look after an app restart (conductor HANDOFF *Open*).
+- **Conductor through 30 is reviewed** (session 8). Live from 30: `alongside` items start beside others in a repo (planner's judgment, warnings both ways); exclusive templates (cleanup, general audit, test perf, disk audit, claude.md cleanup) run alone, readonly included; messages and amendments reach only the lead executor, so they wait out a whole subagent or Workflow call; tamper is blamed only on the item that named the changed path. Still open in conductor: a rewrite of a staged item didn't take (060 launched without ultracode; 31). Whether Windows shows conductor's icon needs Matt's look after an app restart (conductor HANDOFF *Open*).
 - Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker.
 - Planner: write conductor's `HANDOFF.md` marker only when no conductor prompt is running, from a fresh stage (a stale write at 10:32am clobbered 22's Status; 23 restored it).
 
@@ -94,17 +94,15 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 - **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. Fix after 065 (on-demand loading touches the same loader); check other rooms for the same.
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
-**Conductor (prompts 30 and 31)**
-- Prompt 30 (`alongside` concurrency, lead-only delivery of messages and amendments, the report preamble lines) was pasted in session 7; review its report. Paste 31 (planner action rules, safe reorder via `next:`, rewrites of staging items, inbox wording, ultracode guidance) after 30 lands. Then the first real `alongside` use is worth a look.
+**Conductor (prompt 31)**
+- 30 landed and is reviewed. 31 (planner action rules, safe reorder via `next:`, rewrites of staging items, inbox wording, ultracode guidance) is written at `prompts/31_planner_action_rules.md`; Matt pastes it. Then the first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; a small receipt per signal file (its event ids, or the refusal) would end that polling.
 - **Keep the readonly-prototype pattern:** a readonly prototype item first, then the real build from its findings (055 → 057), for any tool whose approach is uncertain. Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
 
-**Session 7 pipeline review (all routed to 30/31 unless noted)**
+**Session 7 pipeline review (30's items landed; the rest routed to 31 unless noted)**
 - Rewrites of a staging item silently kept the old plan, twice (060's ultracode, 066's plan) → 31.
-- 059's amendment landed in a helper subagent and was dropped → 30.
 - The planner piggybacked unrequested `reviewed:`/`read:` lines and marked 061 without reading it → 31's action rules.
-- One-per-repo serialization held a small independent fix behind a long item for hours → 30's `alongside`.
 - The planner skipped ultracode on a heavy multi-part item (059) because `planner.md`'s narrower rule won over Matt's standing one → 31.
 - Planner habit (said in chat, not carried): verify before asserting state (it claimed 30 wasn't pasted).
 
