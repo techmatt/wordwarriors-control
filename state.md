@@ -67,17 +67,18 @@ Accumulated fixes and pipeline-review items (every pipeline review's agreed item
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
+## Backlog (night shift)
+
+Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: `bug_hunt_lenses` (069's unrun lenses, 072's configs, battle polish leftovers, clipped sorries; 3 h), `disk_space_audit`. General cleanup joins when its trigger is due.
+
 ## Open questions
 
-- **Backlog contents** (36 landed): which items go in `backlog\wordwarriors\` for the night shift. Planner's candidates: bug hunt over 069's unrun lenses (+ 072's configs, battle polish leftovers, clipped sorries as focus); disk space audit; general cleanup when its trigger is due.
+none
 
 ## Paged
 
 - **KEY/YOYO as counters (045):** special words are never the counter word (keeps 009's decodable-counter rule); default keep.
 
 - **Recordings (Dada Matt):** only F is left (card 2, "ffff" with no "uh"); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
-- **072's configs only listed:** the full shots (~5 + ~16 min), perf and qa runs weren't run after 072 moved them to npm scripts and the GPU; the next bug hunt or shot run exercises them.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
-- **Battle polish leftovers (034, minor):** brief edge contact during combos and mid-dash; a bubble can sit over a taller neighbour; full-screen combo flashes at their peak; the cook-off's tall winning cake can cover a hero.
-- **Leftover clipped lines (059):** the "X for everybody!" sorries (rated minor).
 - **More fight styles:** a building contest for builder Matt, a sea race.
