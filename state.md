@@ -18,8 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- Queue empty; everything through 075 reviewed. Conductor through 33 reviewed.
-- Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`).
+- 076_cleanup running (ultracode; acts on 067's audit note, carries 074's seed-spreading fix), 077_claude_md_cleanup staged behind it. Everything through 075 reviewed. Conductor through 34 reviewed.
 
 ## Maintenance
 
@@ -34,7 +33,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 32 is reviewed** (session 8). What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 34 is reviewed** (session 9). What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
@@ -65,7 +64,7 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 
 **Conductor**
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
-- **In conductor 34 (written session 9, 2026-10-21):** the parked `planner.md` edits (fresh-path uploads, signal filename format, four-step session start, one tool search, open questions first), support files out of `prompts/`, the `.conductor/` list split if needed, the session digest without reviewed history (and `closeout:` moving the read mark), the readonly-prototype line in HANDOFF *Open*. Cleanup conductor still due after it.
+- **Conductor 34 done (session 9):** digest hides settled events, `closeout:` moves the read mark, four-step session start, support files in `prompts/support/`. Cleanup conductor still due; lead for it: nine stale `.claude/worktrees/wf_*` workflow worktrees in claude-conductor.
 - **Planner never edits conductor's HANDOFF.md:** move the `Last report reviewed by the planner` marker into a file the planner owns (or conductor writes), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Signal receipts:** a small receipt per signal or request (its event ids, or the refusal), so the planner stops re-staging the inbox to see a write land (~15 extra reads in session 8).
 
