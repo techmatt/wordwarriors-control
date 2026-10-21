@@ -120,7 +120,6 @@ none
 - **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
 
 - **Recordings (Dada Matt):** only F is left (card 2, "ffff" with no "uh"); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
-- **Which dad wakes her (067):** keeps Matt's 60/40 odds with no memory, so one dad can wake her several mornings running; default keep.
 - **The /e/ rune line (071):** Matt's "Tap the egg, crack it open" stays, with TAP and EGG counted as said every episode (never a pad, gift, warm-up, key or Charge word); a gesture line with no bank words is a one-line change.
 - **Stale voice audio:** clips for retired line ids (e.g. 071's two rainbow lines) stay in the shared voice folder; `voice:build` has no `--prune` run yet. A disk audit's job.
 - **072's configs only listed:** the full shots (~5 + ~16 min), perf and qa runs weren't run after 072 moved them to npm scripts and the GPU; the next bug hunt or shot run exercises them.
