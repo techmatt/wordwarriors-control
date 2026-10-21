@@ -43,8 +43,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- Queue empty; 065, 067, 068, 069 reviewed (067 left 1 audit note).
-- **Held (Matt, 2026-10-21): 068's deferred picks, all taken** — (1) contests: no sign covering a teammate; (2) the timed Charge test logs in the fast lane, asserts in a one-worker timing run; (3) voice fetch timeout (superseded by 069's wall-clock timers); (4) README *Playing an episode* → `docs/episode.md` with a short summary; (5) npm scripts `perf` `shots` `qa` `test:pairs`, pairs shows as skipped; (6) shots config aligned (GPU branch, same server); (7) keep the parked v0.1 games and their test; (8) side rooms' base class → `src/world/SideRoom.ts`. The prompt waits on Matt's calls on 069's deferred list, to go out as one item.
+- Queued (Matt, 2026-10-21; all of 068's and 069's deferred picks taken): 070_word_pictures (M9: `art:gen` IGLOO ZOO ZEBRA APPLE OCTOPUS UMBRELLA XRAY; `art:alts` + picker for MAT PAN ROCK), 071_staging_and_wording (ultracode: signs in contests never cover anyone, M13 narrower box, M10/M11/M12/M16 rewording + voice build), 072_tooling_and_docs (ultracode: timed Charge test logs in fast lane / asserts in a one-worker run, README *Playing an episode* → `docs/episode.md`, npm scripts `perf` `shots` `qa` `test:pairs`, shots config aligned, `Minigame` → `src/world/SideRoom.ts`). Kept as is: M14, M15, the parked v0.1 games. 067 left 1 audit note.
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
@@ -102,6 +101,7 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 - Parked for the next conductor prompt (missed 31, which was pasted first): **cleanup conductor** also cleans up `CLAUDE.md`'s content, not just its size — every fact checked against the code and workflow, stale or wrong lines fixed or cut, history removed, what a session doesn't need at every start moved to `docs/` with a pointer (`CLEANUP.md` §2) (Matt, 2026-10-20).
 - Parked for the next conductor prompt: `planner.md`'s "`audit: true` (only when Matt asks)" becomes the audit ruling in *Flags* (Matt, 2026-10-20).
 - **Cleanup conductor is due** (last after 25; `daemon.py` at 1097 of 1100 lines, `planner.md` at its 20 KB budget).
+- **Bug hunt stopped early:** 069 was asked for 6 h and stopped at 1.6 h with no reason given; the `bug_hunt` template should say the hours are a target to use, not a cap (Matt's standing rule), and that a hunt that runs out of leads widens its search.
 - The first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; a small receipt per signal file (its event ids, or the refusal) would end that polling.
