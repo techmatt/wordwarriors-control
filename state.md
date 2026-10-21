@@ -43,7 +43,8 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- Queue empty. 065, 067, 068 reviewed (067 left 1 audit note); 069_bug_hunt finished overnight, not yet reviewed.
+- Queue empty; 065, 067, 068, 069 reviewed (067 left 1 audit note).
+- **Held (Matt, 2026-10-21): 068's deferred picks, all taken** — (1) contests: no sign covering a teammate; (2) the timed Charge test logs in the fast lane, asserts in a one-worker timing run; (3) voice fetch timeout (superseded by 069's wall-clock timers); (4) README *Playing an episode* → `docs/episode.md` with a short summary; (5) npm scripts `perf` `shots` `qa` `test:pairs`, pairs shows as skipped; (6) shots config aligned (GPU branch, same server); (7) keep the parked v0.1 games and their test; (8) side rooms' base class → `src/world/SideRoom.ts`. The prompt waits on Matt's calls on 069's deferred list, to go out as one item.
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
@@ -51,7 +52,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
 - **Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`** (059): American spelling, nothing covering a target, no letter-matching giveaways, pictures a 4-year-old recognizes, complete natural sentences, words that fit their moment, snappy pacing plus missing voice lines (062). The checker automates `not-american`, `giveaway`, `clipped-line`, `slow-room`, `target-covered`.
-- Bug hunt: 039 (2026-10-19; killed overnight, merged and finished through 040 on 2026-10-20; QA checker `tests/qa/`, findings `docs/qa-findings.md`). General audit: 068 (2026-10-21; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 017. Test perf: 061 (2026-10-20; fast lane re-cut, two Playwright workers). claude.md cleanup: 050 (2026-10-20; 235 → 211 lines, history cut, stale facts fixed). Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
+- Bug hunt: 069 (2026-10-21; asked 6 h, ran 1.6 h; 24 fixes, `QA_SET=new` batch, findings "Hunt 2" in `docs/qa-findings.md`); before it 039. General audit: 068 (2026-10-21; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 017. Test perf: 061 (2026-10-20; fast lane re-cut, two Playwright workers). claude.md cleanup: 050 (2026-10-20; 235 → 211 lines, history cut, stale facts fixed). Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
 
 ## Waiting on Matt
 
@@ -94,7 +95,7 @@ nothing
 Accumulated fixes and pipeline-review items; start at the next checkpoint, not before. Every pipeline review's agreed items land in this section (Matt, 2026-10-20).
 
 **Word Warriors fixes**
-- **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. 065 has landed, so it's unblocked; check other rooms for the same. 068 found the test side: `VoiceBank`'s 15 s `FETCH_TIMEOUT_MS` runs on the 5× test clock (3 s real), so a loaded machine aborts fetches (its deferred call 3); the charge stall may be partly that. Related: fights.spec's cook_off fails on main with voice clips aborted by `VoiceBank`'s fetch timeout (065, 128 aborted clips).
+- **Decode stall (063): fixed by 069.** Voice and art timeouts and the decode wait ran on the 5× test clock; they now use the wall clock (`src/realTime.ts`). A real-speed episode had no silent line; silent lines at test speed are now a look, not a bug.
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
 **Conductor**
