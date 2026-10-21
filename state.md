@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- 082_victory_dad_advance running (with M18 sorry rewords, M19 captions fallback; ETA ~3:50pm). Everything through 081 reviewed (full run ~7 min, was 10; its untimed episodes-first config is revertable as commit 7e5f679). `background` globs set (session 9). Conductor through 38 and cleanup 2026-10-21 reviewed; 39 (auto-push) written.
+- 083_faster_tests_2 next (ultracode: voice skip, split real-time episode, teleport hook, short battle mode, one part per fight style, rope-pull `padPlace` fix). Everything through 082 reviewed (the victory recap advances only on Dad's 2, cue "DAD: PRESS 2 TO PLAY AGAIN"; M18 sorries reworded; M19 captions from `lines.json` when the manifest fails). `background` globs set (session 9). Conductor through 38 and cleanup 2026-10-21 reviewed; 39 (auto-push) running.
 
 ## Maintenance
 
