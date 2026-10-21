@@ -99,7 +99,7 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
 **Conductor**
-- Parked for the next conductor prompt: `planner.md`'s "`audit: true` (only when Matt asks)" becomes the audit ruling in *Flags* (Matt, 2026-10-20).
+- Parked for the next conductor prompt (Matt took cleanup b's picks, 2026-10-21): in `planner.md`, (1) "`audit: true` (only when Matt asks)" becomes the audit ruling in *Flags*; (2) a *Bridge* line: every upload gets a fresh workspace path (a reused one re-sends its first contents); (3) cut to stay within 20 KB for both. When `docs/control-folder.md` next grows, split its `.conductor/` runtime list into its own section or file.
 - **Bug hunt stopped early:** 069 was asked for 6 h and stopped at 1.6 h with no reason given; the `bug_hunt` template should say the hours are a target to use, not a cap (Matt's standing rule), and that a hunt that runs out of leads widens its search.
 - The first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
