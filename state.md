@@ -43,7 +43,7 @@ Every item for Matt sits in exactly one of three places. **Waiting on Matt** hol
 
 ## Queued and running
 
-- Queued (Matt, 2026-10-21; all of 068's and 069's deferred picks taken): 070_word_pictures (M9: `art:gen` IGLOO ZOO ZEBRA APPLE OCTOPUS UMBRELLA XRAY; `art:alts` + picker for MAT PAN ROCK), 071_staging_and_wording (ultracode: signs in contests never cover anyone, M13 narrower box, M10/M11/M12/M16 rewording + voice build), 072_tooling_and_docs (ultracode: timed Charge test logs in fast lane / asserts in a one-worker run, README *Playing an episode* → `docs/episode.md`, npm scripts `perf` `shots` `qa` `test:pairs`, shots config aligned, `Minigame` → `src/world/SideRoom.ts`). Kept as is: M14, M15, the parked v0.1 games. 067 left 1 audit note.
+- From 068's and 069's deferred picks (Matt, 2026-10-21): **070_word_pictures done** (IGLOO ZOO ZEBRA APPLE OCTOPUS UMBRELLA XRAY drawn and committed; MAT PAN ROCK candidates in the picker `scratch/art_alts_070_word_pictures.json`, waiting for Matt; promotion is a follow-up item, each picked brief into `PICTURES`/`HAND`; ~5% of the 5-hour Codex window for 19 images; rune altar and stone props still placeholders), 071_staging_and_wording (ultracode: signs in contests never cover anyone, M13 narrower box, M10/M11/M12/M16 rewording + voice build), 072_tooling_and_docs (ultracode: timed Charge test logs in fast lane / asserts in a one-worker run, README *Playing an episode* → `docs/episode.md`, npm scripts `perf` `shots` `qa` `test:pairs`, shots config aligned, `Minigame` → `src/world/SideRoom.ts`). Kept as is: M14, M15, the parked v0.1 games. 067 left 1 audit note.
 - Parked for the next wordwarriors prompt: nothing.
 
 ## Maintenance
