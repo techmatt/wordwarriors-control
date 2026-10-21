@@ -18,14 +18,14 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- Queue empty; everything through 078 reviewed. `background` globs set (session 9). Conductor through 35 reviewed.
+- 079_test_cleanup running (lanes per its question's default: `npm test` = unit + @smoke, `test:browser`, `test:all`, `test:slow`). Everything through 078 reviewed. `background` globs set (session 9). Conductor through 36 reviewed.
 
 ## Maintenance
 
-The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general audit** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test perf audit** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
+The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
 - **Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`** (059): American spelling, nothing covering a target, no letter-matching giveaways, pictures a 4-year-old recognizes, complete natural sentences, words that fit their moment, snappy pacing plus missing voice lines (062). The checker automates `not-american`, `giveaway`, `clipped-line`, `slow-room`, `target-covered`.
-- Bug hunt: 069 (2026-10-21; asked 6 h, ran 1.6 h, stopping because its fixes were in and green: partial under the new clock rules, per its own correction; lenses never run: reloading mid-flow, tab/focus switches and resizing, slow or failing network/disk, many episodes back to back at real speed, every URL and dev flag, the grown-ups page and dad lock across a whole episode; 24 fixes, `QA_SET=new` batch, findings "Hunt 2" in `docs/qa-findings.md`); before it 039. General audit: 068 (2026-10-21; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 076 (2026-10-21; 067's notes used up; spread seeds in unit loops, `withDifficulty`, shared ramp clamp/step, legacy store fields into `recent`, Episode.ts state/draws split into `episode/state.ts` and `draws.ts`, `bridgeTier`→`bridgeEase`, `BRIDGE_WORDS`→`BRIDGE_PICTURES`; 4 deferred calls raised in session 9); before it 017. Test perf: 061 (2026-10-20; fast lane re-cut, two Playwright workers). claude.md cleanup: 077 (2026-10-21; facts checked and fixed, still ~249 lines; the real shrink is moving the "Matt says" table, raised in session 9); before it 050. Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
+- Bug hunt: 069 (2026-10-21; asked 6 h, ran 1.6 h, stopping because its fixes were in and green: partial under the new clock rules, per its own correction; lenses never run: reloading mid-flow, tab/focus switches and resizing, slow or failing network/disk, many episodes back to back at real speed, every URL and dev flag, the grown-ups page and dad lock across a whole episode; 24 fixes, `QA_SET=new` batch, findings "Hunt 2" in `docs/qa-findings.md`); before it 039. General cleanup: 068 (2026-10-21, as general audit; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 076 (2026-10-21; 067's notes used up; spread seeds in unit loops, `withDifficulty`, shared ramp clamp/step, legacy store fields into `recent`, Episode.ts state/draws split into `episode/state.ts` and `draws.ts`, `bridgeTier`→`bridgeEase`, `BRIDGE_WORDS`→`BRIDGE_PICTURES`; 4 deferred calls raised in session 9); before it 017. Test cleanup: 061 (2026-10-20, as test perf; fast lane re-cut, two Playwright workers). claude.md cleanup: 077 (2026-10-21; facts checked and fixed, still ~249 lines; the real shrink is moving the "Matt says" table, raised in session 9); before it 050. Disk space audit: 051 (2026-10-20; 15.4 GB of test-shot PNGs freed from `scratch/`; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
 
 ## Waiting on Matt
 
@@ -33,7 +33,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 35 is reviewed** (session 9). What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 36 is reviewed** (session 9). 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
@@ -63,14 +63,13 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
-- **Conductor 36 written (night shift, Matt's defaults 2026-10-21):** 10-min daemon checks plus a readonly watch item (tell / backlog draw / notify only), a `backlog\<repo>\` of pre-approved items drawn on an empty queue, never two full-length back to back, 6 executor-hours a night; `planner.md`: done-when checks, adversarial review on ultracode features, prefer `alongside` for art/voice/prototypes. Once it lands, the planner seeds the backlog on Matt's word.
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
 ## Open questions
 
-none
+- **Backlog contents** (36 landed): which items go in `backlog\wordwarriors\` for the night shift. Planner's candidates: bug hunt over 069's unrun lenses (+ 072's configs, battle polish leftovers, clipped sorries as focus); disk space audit; general cleanup when its trigger is due.
 
 ## Paged
 
