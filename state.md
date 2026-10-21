@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 076_cleanup running (ultracode; acts on 067's audit note, carries 074's seed-spreading fix), then 077_claude_md_cleanup (staged), then 078_small_fixes (dad trail tints, `voice:build --prune`). `background` globs set (session 9). Everything through 075 reviewed. Conductor through 34 reviewed; 35 (receipts, planner marker off HANDOFF) written.
+- 076_cleanup running (ultracode; acts on 067's audit note, carries 074's seed-spreading fix), then 077_claude_md_cleanup (staged), then 078_small_fixes (dad trail tints, `voice:build --prune`). `background` globs set (session 9). Everything through 075 reviewed. Conductor through 35 reviewed.
 
 ## Maintenance
 
@@ -33,17 +33,16 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 34 is reviewed** (session 9). What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 35 is reviewed** (session 9). What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
 - Memory: never start the daemon as a Claude Code background command (it dies with that session). Alienware's `OCControl.Service` swings free RAM by ~10 GiB every ~3 min; conductor pauses launches under pressure.
 - Art: `art:gen` / `art:alts` / `art:pick` and the studio redesigns are in the repo README and `content/art/prompts.ts`; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used.
-- HANDOFF.md: the planner writes its marker only when the ledger shows no conductor prompt running and the last report is reviewed, from a fresh stage, with `expectedMtimeMs`.
 - Tests (Matt, 2026-10-20): no full browser suite by default; fast lane plus the browser tests covering the change, full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy. The planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, leaving it as an uncommitted file; Matt commits that repo, never an executor or the planner.
-- **Conductor prompts start at once (Matt, 2026-10-21):** read `C:\Code\claude-conductor\prompts\ledger.md`'s tail before writing a conductor prompt, editing HANDOFF, or saying one has started (`planner.md` *Bridge*, from 32).
+- **Conductor prompts start at once (Matt, 2026-10-21):** read `C:\Code\claude-conductor\prompts\ledger.md`'s tail before writing a conductor prompt or saying one has started (`planner.md` *Bridge*, from 32).
 - **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` is written once to a fresh workspace path and never edited after; the bridge sends a path's first contents (a reused or edited path sent stale text: HANDOFF after 31, a "no change" request, and the slimmed `state.md`'s second pass) (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Art nitpicks (Matt, 2026-10-21): small art flaws a report notes in passing (halos, slight tints) are fine; don't raise or track them.
@@ -64,9 +63,6 @@ Accumulated fixes and pipeline-review items (every pipeline review's agreed item
 
 **Conductor**
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
-- **Conductor 34 done (session 9):** digest hides settled events, `closeout:` moves the read mark, four-step session start, support files in `prompts/support/`. Cleanup conductor still due; lead for it: nine stale `.claude/worktrees/wf_*` workflow worktrees in claude-conductor.
-- **Planner never edits conductor's HANDOFF.md:** move the `Last report reviewed by the planner` marker into a file the planner owns (or conductor writes), and route the planner's *Open* additions through a file conductor prompts merge.
-- **Signal receipts:** a small receipt per signal or request (its event ids, or the refusal), so the planner stops re-staging the inbox to see a write land (~15 extra reads in session 8).
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
