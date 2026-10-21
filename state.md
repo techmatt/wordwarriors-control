@@ -63,6 +63,7 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
+- **Conductor 36 written (night shift, Matt's defaults 2026-10-21):** 10-min daemon checks plus a readonly watch item (tell / backlog draw / notify only), a `backlog\<repo>\` of pre-approved items drawn on an empty queue, never two full-length back to back, 6 executor-hours a night; `planner.md`: done-when checks, adversarial review on ultracode features, prefer `alongside` for art/voice/prototypes. Once it lands, the planner seeds the backlog on Matt's word.
 - **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
