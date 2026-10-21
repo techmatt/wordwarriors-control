@@ -57,7 +57,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 30 is reviewed** (session 8). Live from 30: `alongside` items start beside others in a repo (planner's judgment, warnings both ways); exclusive templates (cleanup, general audit, test perf, disk audit, claude.md cleanup) run alone, readonly included; messages and amendments reach only the lead executor, so they wait out a whole subagent or Workflow call; tamper is blamed only on the item that named the changed path. Still open in conductor: a rewrite of a staged item didn't take (060 launched without ultracode; 31). Whether Windows shows conductor's icon needs Matt's look after an app restart (conductor HANDOFF *Open*).
+- **Conductor through 31 is reviewed** (session 8). Live from 30: `alongside` items start beside others in a repo (planner's judgment, warnings both ways); exclusive templates (cleanup, general audit, test perf, disk audit, claude.md cleanup) run alone, readonly included; messages and amendments reach only the lead executor, so they wait out a whole subagent or Workflow call; tamper is blamed only on the item that named the changed path. From 31: a rewrite of a queued, staging or staged item restages from the new text (`edited`); a write to a running item's queue file is set aside as `.bad` (tell or amend instead); waiting amendments move with a reorder; planner action rules in `planner.md`. Whether Windows shows conductor's icon needs Matt's look after an app restart (conductor HANDOFF *Open*).
 - Picker (13, 13a): `pick:` opens a manifest in the browser; choices land in `picks/<name>.choices.json`, and the planner carries them into the next prompt. **review all** also covers conductor reports past HANDOFF's marker.
 - Planner: write conductor's `HANDOFF.md` marker only when no conductor prompt is running, from a fresh stage (a stale write at 10:32am clobbered 22's Status; 23 restored it).
 
@@ -77,6 +77,7 @@ nothing
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - Art: `npm run art:gen -- <ids…>` draws with Codex's image tool on Matt's ChatGPT Plus login (prompts in `content/art/prompts.ts`; `--reprocess` re-cuts from originals for free). ~35 s and ~0.3–1% of the 5-hour window per image. Candidate rounds: `art:alts` draws candidates and writes a picker manifest; Matt picks; `art:pick` promotes (`0` restores from `art-originals/restore/`) and deletes that id's other candidates (Matt, 2026-10-20: once picked, old candidates are not kept; redraw if ever needed). Studio redesigns: Elsa a white-and-gold winter queen, Evil Elsa a silver-pixie frost witch, Anna (good + face) a dark-brown ponytail with purple ribbon, plum tunic and magenta cape, Jasmine short black curls in coral and saffron. The family is drawn from Matt's photos (`REFS` in `content/art/prompts.ts`; photos only in git-ignored `art-originals/refs/`). Ellie's image is the original bubble-wand one (Matt's pick 0).
 - Move words are spoken by the partner by design, so a villain line containing a pad's word (Evil Bavmorda's "Everybody Pigs!") gives nothing away; only key words are protected.
+- **Ruled (Matt, 2026-10-20): audits.** The planner adds `audit: true` on its own judgment (a lot has changed since the last audit or cleanup, and the item is a big pass through much of the code), always saying so in the reply where it does; Matt can drop it. Supersedes "audits only when Matt asks". First use: 067.
 - Ruled (Matt, 2026-10-20): a word may use sounds the game doesn't teach yet (she learns plenty outside the game); applied in 058 (`UNTAUGHT_SOUNDS`).
 - Ruled (Matt, 2026-10-20): no automatic difficulty; everything plays at base until Matt raises it. All words are in the vocabulary (long ones like OCTOPUS are fine: she'll recognize some); decoding games use short words, recognition roles any word (067).
 - Ruled (Matt, 2026-10-20): XRAY stays as X's first word, though it starts with the letter's name.
@@ -94,17 +95,16 @@ Accumulated fixes and pipeline-review items; start at the next checkpoint, not b
 - **Decode stall (063):** about half of Charge rounds, Ellie's `nar_ellie_charge_read` / `_together` / `_done` aren't decoded within 4 s and play silent, even after 062's decode queue. Fix after 065 (on-demand loading touches the same loader); check other rooms for the same.
 - **Slim this file:** "Where it stands" holds mechanics (casting odds, fight styles, paths) that belong in the repo's README/docs; move them there through a wordwarriors prompt and keep status, rulings and pointers here.
 
-**Conductor (prompt 31)**
-- 30 landed and is reviewed. 31 (planner action rules, safe reorder via `next:`, rewrites of staging items, inbox wording, ultracode guidance) is written at `prompts/31_planner_action_rules.md`; Matt pastes it. Then the first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
+**Conductor**
+- Parked for the next conductor prompt (missed 31, which was pasted first): **cleanup conductor** also cleans up `CLAUDE.md`'s content, not just its size — every fact checked against the code and workflow, stale or wrong lines fixed or cut, history removed, what a session doesn't need at every start moved to `docs/` with a pointer (`CLEANUP.md` §2) (Matt, 2026-10-20).
+- Parked for the next conductor prompt: `planner.md`'s "`audit: true` (only when Matt asks)" becomes the audit ruling in *Flags* (Matt, 2026-10-20).
+- **Cleanup conductor is due** (last after 25; `daemon.py` at 1097 of 1100 lines, `planner.md` at its 20 KB budget).
+- The first real `alongside` use is worth a look (did both reports say whether they touched the other's area?).
 - **Planner never edits conductor's HANDOFF.md:** a stale planner write clobbered prompt 26's HANDOFF lines (27 restored them). Move the `Last report reviewed by the planner` marker out of HANDOFF into an untracked file the planner owns (or a conductor-written one), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Signal receipts:** after each signal or request the planner re-staged the inbox to see it land; a small receipt per signal file (its event ids, or the refusal) would end that polling.
 - **Keep the readonly-prototype pattern:** a readonly prototype item first, then the real build from its findings (055 → 057), for any tool whose approach is uncertain. Move this to conductor's HANDOFF *Open* when no conductor prompt is running.
 
-**Session 7 pipeline review (30's items landed; the rest routed to 31 unless noted)**
-- Rewrites of a staging item silently kept the old plan, twice (060's ultracode, 066's plan) → 31.
-- The planner piggybacked unrequested `reviewed:`/`read:` lines and marked 061 without reading it → 31's action rules.
-- The planner skipped ultracode on a heavy multi-part item (059) because `planner.md`'s narrower rule won over Matt's standing one → 31.
-- Planner habit (said in chat, not carried): verify before asserting state (it claimed 30 wasn't pasted).
+**Session 7 pipeline review:** all landed in 30 and 31. Planner habit (said in chat, not carried): verify before asserting state.
 
 ## Open questions
 
