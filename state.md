@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- 083_faster_tests_2 next (ultracode: voice skip, split real-time episode, teleport hook, short battle mode, one part per fight style, rope-pull `padPlace` fix). Everything through 082 reviewed (the victory recap advances only on Dad's 2, cue "DAD: PRESS 2 TO PLAY AGAIN"; M18 sorries reworded; M19 captions from `lines.json` when the manifest fails). `background` globs set (session 9). Conductor through 38 and cleanup 2026-10-21 reviewed; 39 (auto-push) running.
+- 083_faster_tests_2 next (ultracode: voice skip, split real-time episode, teleport hook, short battle mode, one part per fight style, rope-pull `padPlace` fix). Everything through 082 reviewed (the victory recap advances only on Dad's 2, cue "DAD: PRESS 2 TO PLAY AGAIN"; M18 sorries reworded; M19 captions from `lines.json` when the manifest fails). `background` globs set (session 9). Conductor through 39 and cleanup 2026-10-21 reviewed; 40 (autopilot switch, header, message boxes) written. Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout.
 
 ## Maintenance
 
