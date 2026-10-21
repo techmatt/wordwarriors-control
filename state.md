@@ -67,7 +67,7 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
-- **Due from checkpoint #1994:** `inbox.md` renders some sections twice (*Questions resolved*, *Requests and commits*, *Now*, seen at 1:32pm after 36/37 and the cleanup).
+- **In conductor 38 (written session 9):** `inbox.md` printing sections twice; cleanup 2026-10-21's calls ruled by Matt (stop-signal race left as is; split `docs/items.md` at its next growth; `planner.md` stays 20 KB).
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
