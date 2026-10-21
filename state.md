@@ -12,14 +12,14 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **This session:** on-demand art loading (065); one `DIFFICULTY` knob at base with all words in play and decoding games capped by length (067); general audit (068); bug hunt 2 with 24 fixes, including voice and art timeouts on the wall clock (069); sign placement, the narrow dialogue box and rewording (071); tooling and docs, with `docs/episode.md` and npm scripts (072); new word pictures, MAT/PAN/ROCK picks promoted (070, 073).
-- **Placeholders left:** the rune altar and stone (074 running); Matt's F recording (Paged); untaught-sound lines (long vowels, schwa) are TTS.
+- **Art:** no placeholder pictures left in the game (`art:placeholders` reports 0 after 074). **Voice placeholders:** Matt's F recording (Paged); untaught-sound lines (long vowels, schwa) are TTS.
+- **Gesture words (074):** a rune gesture that says a bank word (the /e/ rune's "Tap the egg": TAP, EGG) keeps that word out of later reading only in an episode whose Charge word uses that rune; the Charge word is planned up front so this holds (`gestureWords` in `src/rules/charge.ts`).
 - Mechanics that lived here are being checked into the repo's docs by 075; the planner's copy is in this file's git history (before "state: slimmed").
 
 ## Queued and running
 
-- 074_rune_props running (rune altar and stone art; amendment: TAP/EGG count as said only in an episode where the E rune's line played; README note on `scratch/` scripts reading the main checkout's `../content/`).
-- 075_state_facts_to_docs queued (the mechanics above into the repo's docs; no code).
-- Parked for the next wordwarriors prompt: nothing.
+- 074 reviewed (rune props drawn; TAP/EGG narrowed). 075_state_facts_to_docs running (the mechanics into the repo's docs; no code).
+- Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`). Nitpick from 074, only if Matt minds: the altar's candle flames have a yellow-lime halo and the stone's glow goes teal at its edge (`art:alts` can redraw).
 
 ## Maintenance
 
@@ -45,9 +45,8 @@ nothing
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy. The planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, leaving it as an uncommitted file; Matt commits that repo, never an executor or the planner.
 - **Conductor prompts start at once (Matt, 2026-10-21):** read `C:\Code\claude-conductor\prompts\ledger.md`'s tail before writing a conductor prompt, editing HANDOFF, or saying one has started (`planner.md` *Bridge*, from 32).
-- **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` gets a fresh workspace path; a reused path re-sends its first contents (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
+- **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` is written once to a fresh workspace path and never edited after; the bridge sends a path's first contents (a reused or edited path sent stale text: HANDOFF after 31, a "no change" request, and the slimmed `state.md`'s second pass) (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
-- Codex image budget: 025 used ~40% of a 5-hour window and 23% of the weekly one; big art items should say so.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - **Ruled (Matt, 2026-10-20): audits.** The planner adds `audit: true` on its own judgment (a lot has changed since the last audit or cleanup, and the item is a big pass through much of the code), always saying so in the reply where it does; Matt can drop it. Supersedes "audits only when Matt asks". First use: 067.
 - Ruled (Matt, 2026-10-20): a word may use sounds the game doesn't teach yet (she learns plenty outside the game); applied in 058 (`UNTAUGHT_SOUNDS`).
@@ -84,7 +83,6 @@ none
 - **Dad trail tints (046):** Jason's and Matt's in-game trail/palette tints don't follow their new colours.
 
 - **Recordings (Dada Matt):** only F is left (card 2, "ffff" with no "uh"); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
-- **The /e/ rune line (071):** Matt's "Tap the egg, crack it open" stays (the Jolly Phonics action); 074's amendment narrows TAP/EGG to count as said only in an episode where the line played.
 - **Stale voice audio:** clips for retired line ids (e.g. 071's two rainbow lines) stay in the shared voice folder; `voice:build` has no `--prune` run yet. A disk audit's job.
 - **072's configs only listed:** the full shots (~5 + ~16 min), perf and qa runs weren't run after 072 moved them to npm scripts and the GPU; the next bug hunt or shot run exercises them.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
