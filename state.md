@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9, session 8, 2026-10-21)
+## Where it stands (v0.9; session 8 closed 2026-10-21 ~10:10am; queue empty)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **This session:** on-demand art loading (065); one `DIFFICULTY` knob at base with all words in play and decoding games capped by length (067); general audit (068); bug hunt 2 with 24 fixes, including voice and art timeouts on the wall clock (069); sign placement, the narrow dialogue box and rewording (071); tooling and docs, with `docs/episode.md` and npm scripts (072); new word pictures, MAT/PAN/ROCK picks promoted (070, 073).
@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- Queue empty; 074 and 075 reviewed.
+- Queue empty; everything through 075 reviewed. Conductor through 33 reviewed.
 - Parked for the next wordwarriors prompt: 074 found the unit tests' `seeded(n)` gives nearly the same first draw for seeds 1–200, so loops over `seeded(1..N)` test only a few cases; check every such loop and spread the seeds (074 used `seeded(seed * 104729)`).
 
 ## Maintenance
@@ -64,13 +64,14 @@ nothing
 Accumulated fixes and pipeline-review items; start at the next checkpoint, not before. Every pipeline review's agreed items land here.
 
 **Conductor**
-- Split `docs/control-folder.md`'s `.conductor/` runtime list when it next grows.
+- **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
+- Parked for the next conductor prompt: (1) `planner.md`'s upload rule becomes "every upload is written once to a fresh workspace path and never edited after"; (2) support files a prompt reads never sit in `prompts/` as `NN_name.md` (move `32_bug_hunt_template.md` out), and "run the next prompt" goes by the ledger's `done` lines, so a support file is never taken for an unrun prompt; (3) split `docs/control-folder.md`'s `.conductor/` runtime list when it next grows.
 - **Planner never edits conductor's HANDOFF.md:** move the `Last report reviewed by the planner` marker into a file the planner owns (or conductor writes), and route the planner's *Open* additions through a file conductor prompts merge.
 - **Signal receipts:** a small receipt per signal or request (its event ids, or the refusal), so the planner stops re-staging the inbox to see a write land (~15 extra reads in session 8).
 - **Questions seen while Matt talks to the planner:** 071's ask timed out unseen at 9:06am while Matt was working with the planner. A `planner.md` rule: whenever the planner reads the inbox or a report, it raises open questions first (questions with defaults included).
 - **Keep the readonly-prototype pattern:** a readonly prototype item first, then the real build from its findings (055 → 057), for any tool whose approach is uncertain; to conductor's HANDOFF *Open*.
 
-**Session 8 pipeline review (fixed during the session):** reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075).
+**Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
 ## Open questions
 
