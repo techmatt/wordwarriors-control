@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - 080_bug_hunt_lenses running (drawn from the backlog 12:43pm; hunt to ~3:43pm). Everything through 079 reviewed.
-- 081_faster_slow_lane queued after 080 (079's slowest tests cut; carries the faster-tests line into CLAUDE.md). `background` globs set (session 9). Conductor through 36 reviewed.
+- 081_faster_slow_lane queued after 080 (079's slowest tests cut; carries the faster-tests line into CLAUDE.md), then 082_victory_dad_advance (only a dad's 2 leaves the last end-of-episode screen). 080 told by Matt at 12:52 to finish its current round and wrap up. `background` globs set (session 9). Conductor through 37 and cleanup 2026-10-21 reviewed.
 
 ## Maintenance
 
@@ -34,7 +34,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 36 is reviewed** (session 9). 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 37 is reviewed, plus cleanup 2026-10-21** (session 9). 37: only Matt's acts (app/cli signal, approve, queue or backlog write, answer) unlock a back-to-back full-length draw; `pending` receipts for waiting requests; a bare item number two items share names neither (receipt says `queued as <id>`). Cleanup: docs matched to code, no behaviour change, seven conductor docs at 100% of budget. 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
@@ -67,8 +67,7 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
 
 **Conductor**
-- **Due from checkpoint #1994 (session 9 pipeline review, Matt approved):** only Matt's or the app's actions (and a planner `approve:` or queue write on his word) count as "someone acted" for the night shift's no-back-to-back rule; a planner `state.md` request at 12:27 let 080 (a 3 h bug hunt) start straight after 079's template.
-- **Cleanup conductor is due:** `HANDOFF.md` and `docs/app-panels.md` are at 100% of their size budgets after 33.
+- **Due from checkpoint #1994:** `inbox.md` renders some sections twice (*Questions resolved*, *Requests and commits*, *Now*, seen at 1:32pm after 36/37 and the cleanup).
 
 **Session 8 pipeline review.** Planner habit (said in chat): write a conductor prompt's whole text before saying it's ready, since Matt pastes at once and the ledger only narrows the edit race (33 started within a minute of an edit). Fixed during the session: reused bridge upload paths (fresh-path rule, 32); edits to running conductor prompts (the ledger, 32); the bug hunt stopping early (template clock, 32); a hand-resumed session editing a reviewed report unseen (`report_changed`, 32); `state.md` at 32 KB resent whole on every request (slimmed, 075); an output file edited after its first write uploaded stale (flag: written once).
 
