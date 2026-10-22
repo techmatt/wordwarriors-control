@@ -92,6 +92,8 @@ Conductor findings never go here: they live only in `C:\Code\claude-conductor\pl
 
 **Session 10 pipeline review** (agreed items above; the rest done): session start's extra calls (fixed by 41 and a saved preference), `pending` receipts (fixed by 42), receipt checks (planner-habits flag), a stale *Paged* line, an item number shared with a watch, audit asked after start.
 
+**Session 11 pipeline review** (done unless listed in conductor's `planner-notes.md`): start-of-session listings and extra stages (saved preference), conductor's push read as tamper and the overnight hold (conductor 43, 44), finished work stranded on red branches and hand-landed by 099/101 (44: squash landing, `land:`), reports read as merged while red (planner habit: inbox *Red* first; 44's `conductor:` stamp), approval round-trips (auto-approve everywhere), a file edited after writing went out stale (planner habit sharpened), `depends_on` holds (098 → 100 → 102 renumbering, 103 behind a partial hunt: conductor notes), signal receipts slower than request receipts (conductor notes).
+
 ## Backlog (night shift)
 
 Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: empty (`bug_hunt_lenses` drawn as 080, `disk_space_audit` as 084). General cleanup joins when its trigger is due. Autopilot (conductor 40): `Always` by default; **autopilot off / night / on**.
