@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 087 next)
+## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 087 next, 088 queued)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 9:** cleanup (076), CLAUDE.md cleanup (077), small fixes incl. dad colours, voice prune, Charge ramp removed (078), test cleanup to a production-build suite (079, 081, 083: full run ~5.6 min), bug hunt 3 over 069's unrun lenses (080, partial), the victory recap on Dad's 2 with M18/M19 (082), disk audit freeing 8.4 GB (084); playtest fixes queued (085–087). Conductor 34–40 + a cleanup: digest hides settled history, receipts, planner-notes, night shift with backlog and watch, autopilot switch, auto-push, header and message boxes.
@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 087_language_pass next (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line).
+- 087_language_pass next (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line). Then 088_general_cleanup (Matt, session 10; template, ultracode).
 - 085 (done, session 10): free-play shots now use normal blending (additive washed to white), so their glow is gone; the sentence room reads word by word, not as one natural line; short A now cut by TTS from "Add" (measured, not listened to).
 - 086 (done, session 10): key 0 swaps any game room for a `Debug` scene with one pedestal per game (4, from `MINIGAMES`), nothing counts (store held, episode and draws restored); turning it off replays the room's opening lines; its door out moves the episode on unsandboxed, like F2 (battle 1 then has no items or runes).
 - Everything through 086 reviewed. Conductor through 40 and cleanup 2026-10-21 reviewed.
@@ -28,7 +28,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 The planner checks this at every session start and recommends what is due, with the reason (Matt approves by saying the phrase). Rough triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5× since the last one; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** when art/voice output has grown a lot.
 
-- **Due after 087 (planner, session 9):** general cleanup: ~10 feature items since 068 (076–087); a candidate for the backlog so it runs overnight.
+- General cleanup queued as 088 after 087 (Matt, session 10): 11 feature items since 068.
 - **Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`** (059): American spelling, nothing covering a target, no letter-matching giveaways, pictures a 4-year-old recognizes, complete natural sentences, words that fit their moment, snappy pacing plus missing voice lines (062). The checker automates `not-american`, `giveaway`, `clipped-line`, `slow-room`, `target-covered`.
 - Bug hunt: 080 (2026-10-21; partial at Matt's word after round 1 of 3 h: reload, tab/focus, resize, slow/failing network, every URL flag and dev key, grown-ups page and dad lock all run, `QA_SET=lenses` checker batch; 7 fixes (qa-findings 77-83, Hunt 3), M18/M19 raised in session 9; never run: many episodes back to back at real speed, battle polish leftovers, `npm run shots`); before it 069, 039.. General cleanup: 068 (2026-10-21, as general audit; dead code out, shared helpers, BattleScene and Episode split into `battle/hud.ts`, `battle/moveChoice.ts`, `episode/cast.ts`, `episode/plans.ts`; 18 stale doc claims from 067 fixed; 8 deferred calls raised in session 8). Cleanup: 076 (2026-10-21; 067's notes used up; spread seeds in unit loops, `withDifficulty`, shared ramp clamp/step, legacy store fields into `recent`, Episode.ts state/draws split into `episode/state.ts` and `draws.ts`, `bridgeTier`→`bridgeEase`, `BRIDGE_WORDS`→`BRIDGE_PICTURES`; 4 deferred calls raised in session 9); before it 017. Test cleanup: 079 (2026-10-21; suite serves a production build on 3 GPU workers; `npm test` = unit + 3 @smoke ~20 s, `test:browser` ~50 s before a commit, `test:slow` ~10 min, `test:all` ~10 min; `WW_DEV_SERVER=1` for the old dev-server run); before it 061. claude.md cleanup: 077 (2026-10-21; facts checked and fixed, still ~249 lines; the real shrink is moving the "Matt says" table, raised in session 9); before it 050. Disk space audit: 084 (2026-10-21; 8.4 GB freed, mostly `scratch/qa` PNGs; raw recorder zips and takes moved to Drive `archive\scratch\`; its keep-as-is picks raised in session 9); before it 051 (15.4 GB; shot runs are ~1 MB a shot, so a big sweep or shot run is the next trigger).
 
