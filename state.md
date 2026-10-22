@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9; session 9 closed 2026-10-21 ~4:30pm; 085 running, 086–087 queued)
+## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 086 running, 087 staged)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 9:** cleanup (076), CLAUDE.md cleanup (077), small fixes incl. dad colours, voice prune, Charge ramp removed (078), test cleanup to a production-build suite (079, 081, 083: full run ~5.6 min), bug hunt 3 over 069's unrun lenses (080, partial), the victory recap on Dad's 2 with M18/M19 (082), disk audit freeing 8.4 GB (084); playtest fixes queued (085–087). Conductor 34–40 + a cleanup: digest hides settled history, receipts, planner-notes, night shift with backlog and watch, autopilot switch, auto-push, header and message boxes.
@@ -18,8 +18,9 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 085_playtest_fixes running (bed layering, multi-letter units said once, ear icon, button-coloured shots, bridge: short stretch no loop, sentence room single-green read then accept, THE END screen with Dad's 2, TTS short A/O, 083's two green full runs; amendments: the journey map's castle emoji clipped at the top + a sweep of emoji/text icons for clipping). Then 086_minigame_debug (key 0, works in real play, never counts), then 087_language_pass (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line).
-- Everything through 084 reviewed. Conductor through 40 and cleanup 2026-10-21 reviewed.
+- 086_minigame_debug running (key 0, works in real play, never counts), then 087_language_pass staged (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line).
+- 085 (done, session 10): free-play shots now use normal blending (additive washed to white), so their glow is gone; the sentence room reads word by word, not as one natural line; short A now cut by TTS from "Add" (measured, not listened to).
+- Everything through 085 reviewed. Conductor through 40 and cleanup 2026-10-21 reviewed.
 - Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout. `background` globs set. Autopilot `Always`; backlog empty.
 
 ## Maintenance
@@ -72,6 +73,7 @@ Accumulated fixes and pipeline-review items (every pipeline review's agreed item
 
 **Conductor**
 - **Due from checkpoint #1994:** next conductor prompt merges `planner-notes.md` *For HANDOFF Open* (executors run `date` before any ETA; `planner-vocab.md`'s `reorder` row says to list the new order).
+- **Due from checkpoint #2372:** the same prompt takes the session-10 start review in `planner-notes.md` (exact device-tool select and per-project paths in `planner.md` *Start*; digest carries `state.md`'s due items so start needs no `state.md`).
 
 **Session 9 pipeline review** (agreed, folded into the planner-habits flag and the conductor line above): the 13-call session start (fixed by 34), questions unseen (fine, Matt's ruling), receipts timing, `state.md` built from stale copies, the doubled-inbox misread (planner's `sed`), reorder syntax, editing a conductor prompt near its start, stale review bundles.
 
@@ -87,6 +89,6 @@ none
 
 - **KEY/YOYO as counters (045):** special words are never the counter word (keeps 009's decodable-counter rule); default keep.
 
-- **Recordings (Dada Matt):** only F is left (card 2, "ffff" with no "uh"); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
+- **Recordings (Dada Matt):** F (card 2, "ffff" with no "uh") and A are left (085 retired his A: it slid toward "I"; short A is TTS from "Add" until he re-records a steady CAT vowel); then `voice:import`. Letter names, silly words and sentence prefixes are later lists for the same tool.
 - **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
 - **More fight styles:** a building contest for builder Matt, a sea race.
