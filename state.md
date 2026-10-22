@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.10; session 12 from 2026-10-22 ~10:45am; 106 running, 107 staged)
+## Where it stands (v0.10; session 12 from 2026-10-22 ~10:45am; 107 running)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 11:** solo phonics games from a research round (design.md *Solo phonics games*): Shape-Shifter word chains (096, tuned by 104), picture runes in Charge (097 art, 103 in game), name-to-sound hint lines; bug hunt 6 (102, partial, fixes 102-118); Hunt 6's calls (104); Charge's solo mode queued (106). Rulings: no keyboard answers, no step waits on Dad, auto-approve. Conductor 43-45: watch numbering, running audits, push not drift, squash landing, `land:`, report stamps, dependency warnings, fast receipts.
@@ -18,7 +18,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Running:** 106_charge_solo. **Staged:** 107_smaug_story_fight (the first story fight, design.md *Story fights*; debug link only; whether it spreads to other villains or becomes a random alternative waits for Matt's play). 096/097 went red overnight (conductor's push read as tamper) and landed via 099/101; facts below.
+- **Running:** 107_smaug_story_fight (the first story fight, design.md *Story fights*; debug link only; whether it spreads to other villains or becomes a random alternative waits for Matt's play). 096/097 went red overnight (conductor's push read as tamper) and landed via 099/101; facts below.
+- 106 (done): solo mode for Charge and the Stretchy Bridge: no Dad 1/2 for `DAD_AWAY_MS` (8 s, from her turn) turns `episode.solo` on for the rest of the episode (any Dad press turns it off; `?solo` starts solo). Charge reads together ("Say it with me!" before each rune; three variants); the bridge's level 3 skips the say-to-Dad step. Solo reads record as `modelled` (shown `+n` on the grown-ups page), never as her reads or misses; before 106 a Dad timeout recorded misses she never made. Solo words still count as read this episode (recap, kept out of later rooms). THE END still waits for Dad's 2 on purpose. Tunables Matt may want: `DAD_AWAY_MS`; "with me" on every rune vs first only.
 - 105 (test cleanup, partial): the fast lane is markedly faster (unit and smoke run at once, the test build is skipped when its inputs are unchanged, `node` not `npx`); the other lanes are unchanged. The 10:09am memory critical (~112 Chromium) was its 6-worker trial, stopped by #2900, not a leak. Its 3-worker after-timings were never taken; they and its leftovers wait for the next test cleanup (see *Maintenance*).
 - M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
 - 104 (done): M26-M32 in. Shape-Shifter links take ~5-6 s with instant answers (were 12-15), except read-it → fix-it at ~7 s (two morphs back to back); "Here comes the spell again!" said only on the first link. Chains now change all three places; read-it can sit at the last letter; fresh draws give fewer distinct chains (105 of 300) but her recent words spread them. Battle items fly out as one volley per room (first PICK A MOVE! 24.7 s with eight items, was 37.3). `OUTFIT_FILL` makes chef/knight Julia her plain height. Warm-up name bridges once per clue; fix-it praise of its own; contractions. `?warmup=1` URL option.
@@ -29,7 +30,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - 092 (bug hunt 5, done): fixes 91–101 (LEG/SOCK look-alikes, no "A GUM", move-choice hint and caption on the wall clock, bridge keeps Dad's early 2, F9 and key 0 on a leaving room, word machine tile mash, machine and fetch keys never take the named counter word); the checker now serves a production build (`QA_DEV_SERVER=1` for the old dev server).
 - Session 10 facts still live: free-play shots use normal blending (glow gone, 085); short A is TTS from "Add", measured not listened to (085); the sentence room reads word by word (085); key 0 = minigame debug mode, nothing counts (086); line variants rotate across rooms and episodes, taunts at most twice an episode (087); Matt's clips are named `<id>.<hash8>.mp3` (088); 089 fixes 84–90 (scene await chains stop once a scene change is queued); held sounds play once (090); minigames have a `kind` and one planner each, with a golden draw test `tests/unit/plansGolden` to rewrite on purpose when draws should change (091).
 - Left: nine redundant `say` fields wait for a voice build (088); debug runs still count taunts (088); the pairs sweep is untested with the art check on (090).
-- Everything through 105 reviewed. Conductor through 42 and cleanup 2026-10-21 reviewed.
+- Everything through 106 reviewed. Conductor through 42 and cleanup 2026-10-21 reviewed.
 - Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout. `background` globs set. Autopilot `Always`; backlog empty.
 
 ## Maintenance
