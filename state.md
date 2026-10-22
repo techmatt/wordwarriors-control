@@ -18,7 +18,9 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- Nothing queued. 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picker waits (Waiting on Matt). 093's audit notes are filed (asked by tell, not `audit: true`).
+- **Parked for the next wordwarriors prompt:** promote Matt's TAP pick, `npm run art:pick -- pic_tap 1`, then write the brief (`scratch/093_tap_running.txt`) into `content/art/prompts.ts`'s tap line.
+- M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
+- Nothing queued. 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picked (Matt, candidate 1). 093's audit notes are filed (asked by tell, not `audit: true`).
 - 092 (bug hunt 5, done): fixes 91–101 (LEG/SOCK look-alikes, no "A GUM", move-choice hint and caption on the wall clock, bridge keeps Dad's early 2, F9 and key 0 on a leaving room, word machine tile mash, machine and fetch keys never take the named counter word); the checker now serves a production build (`QA_DEV_SERVER=1` for the old dev server).
 - Session 10 facts still live: free-play shots use normal blending (glow gone, 085); short A is TTS from "Add", measured not listened to (085); the sentence room reads word by word (085); key 0 = minigame debug mode, nothing counts (086); line variants rotate across rooms and episodes, taunts at most twice an episode (087); Matt's clips are named `<id>.<hash8>.mp3` (088); 089 fixes 84–90 (scene await chains stop once a scene change is queued); held sounds play once (090); minigames have a `kind` and one planner each, with a golden draw test `tests/unit/plansGolden` to rewrite on purpose when draws should change (091).
 - Left: nine redundant `say` fields wait for a voice build (088); debug runs still count taunts (088); the pairs sweep is untested with the art check on (090).
@@ -34,8 +36,7 @@ The planner checks this at every session start and recommends what is due, with 
 
 ## Waiting on Matt
 
-- **TAP pick (093, M21):** picker `scratch/art_alts_093_tap.json` (3 faucet candidates; **pick X** opens it). The executor's follow-up: `npm run art:pick -- pic_tap <n>`, then the brief into `content/art/prompts.ts`'s tap line; rides the next wordwarriors prompt.
-- **M20:** unplug the Xbox 360 controller before the next sweep.
+nothing
 
 ## Conductor (hand-pasted)
 
