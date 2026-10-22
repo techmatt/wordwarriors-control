@@ -84,3 +84,14 @@ The two games:
 - **Stretchy Bridge:** letter stepping stones across a gap. Each sound plays held while she stands on it, so how slowly she slides is how slowly she stretches the word. Then she picks among pictures that share the word's start. At the top level she says the word before the pictures appear.
 
 For beta testing, one of the two is in every episode; long term they are random pool entries. Matt's real letter-sound recordings matter most for the bridge, because the placeholders add "uh" to stop sounds.
+
+## Solo phonics games (Matt, 2026-10-21)
+
+No keyboard answers, and new games never need Dad's 1/2: Julia must be able to play them alone. From the research round:
+
+- **Shape-Shifter (096):** a word chain (CAT → BAT → BAG → BIG → PIG), one letter changed per link (first, then last, the vowel last). *Read it*: the written word on the creature, she walks to the matching picture among three that differ only at that letter. *Fix it*: the creature turns into a picture, its label still shows the old word, she walks to the letter stone that fixes it. The morph is the spectacle; the final creature joins the battle.
+- **Picture runes (097):** each Charge rune draws a picture of a word starting with its sound into the letter's shape (S a snake, M mountains). Embedded picture mnemonics help pre-readers learn letter sounds faster and keep them longer.
+- **Sound hidden in the name:** where a letter's name contains its sound (EM → mmm), hints bridge from the name she knows; misleading names (C G H W Y X, vowels) get the plain sound.
+- **Level 2 blends** start with final s-blends and initial l-blends; final nasal blends (JUMP, HAND) come last.
+- Set aside: typing words to spell them (keyboard), and fast read-aloud drills (need Dad).
+

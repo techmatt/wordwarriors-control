@@ -18,9 +18,9 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Parked for the next wordwarriors prompt:** the villain → fight-style table (Pending fixes); promote Matt's TAP pick, `npm run art:pick -- pic_tap 1`, then write the brief (`scratch/093_tap_running.txt`) into `content/art/prompts.ts`'s tap line.
+- **Queued (session 11):** 096_shape_shifter (word-chain minigame; carries the name-to-sound hint lines, the fight-style table, the TAP promote and the level-2 blend-order note); 097_picture_runes (embedded-picture Charge runes, picker, `alongside`). **Proposed:** 098_bug_hunt (after 096: Shape-Shifter first, then back-to-back episodes at real speed and `npm run shots`).
 - M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
-- Nothing queued. 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picked (Matt, candidate 1). 093's audit notes are filed (asked by tell, not `audit: true`).
+- 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picked (Matt, candidate 1). 093's audit notes are filed (asked by tell, not `audit: true`).
 - 092 (bug hunt 5, done): fixes 91–101 (LEG/SOCK look-alikes, no "A GUM", move-choice hint and caption on the wall clock, bridge keeps Dad's early 2, F9 and key 0 on a leaving room, word machine tile mash, machine and fetch keys never take the named counter word); the checker now serves a production build (`QA_DEV_SERVER=1` for the old dev server).
 - Session 10 facts still live: free-play shots use normal blending (glow gone, 085); short A is TTS from "Add", measured not listened to (085); the sentence room reads word by word (085); key 0 = minigame debug mode, nothing counts (086); line variants rotate across rooms and episodes, taunts at most twice an episode (087); Matt's clips are named `<id>.<hash8>.mp3` (088); 089 fixes 84–90 (scene await chains stop once a scene change is queued); held sounds play once (090); minigames have a `kind` and one planner each, with a golden draw test `tests/unit/plansGolden` to rewrite on purpose when draws should change (091).
 - Left: nine redundant `say` fields wait for a voice build (088); debug runs still count taunts (088); the pairs sweep is untested with the art check on (090).
@@ -57,6 +57,7 @@ nothing
 - **Bridge uploads (planner, 2026-10-21):** every file sent with `device_commit_files` is written once to a fresh workspace path and never edited after; the bridge sends a path's first contents (a reused or edited path sent stale text: HANDOFF after 31, a "no change" request, and the slimmed `state.md`'s second pass) (it clobbered conductor's HANDOFF after 31, and turned a request into "no change").
 - Storage policy (Matt, 2026-10-18): one home per file — git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals` incl. family photos, `voice-gen` = generated edge-tts audio + manifest), junctioned into the main checkout and shared into worktrees via conductor.toml (`art-originals`, `scratch`, `public/voice-gen`) / nowhere (rebuildable). A worktree build that changes a line's text overwrites the shared mp3 before merge (see 017 deferred call 3).
 - Art nitpicks (Matt, 2026-10-21): small art flaws a report notes in passing (halos, slight tints) are fine; don't raise or track them.
+- **Ruled (Matt, 2026-10-21): no keyboard answers for now** — selection stays walking and green. **New games must not need Dad beside her** (he often is, not always): no 1/2 confirm as a required step.
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - Ruled (Matt, 2026-10-21): special words (KEY, YOYO) may be the counter word; she sounds them out fine (already so since 048; 090 added a test). MICE stays out (not in the bag).
 - Ruled (Matt, 2026-10-21, 092's deferred calls): every pick taken (093); M22 art stays loaded (bounded); M20: Matt unplugs the controller.
@@ -78,12 +79,10 @@ nothing
 
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Write each due item as a top-level bullet that says "due" (the digest copies only those).
 
-**Conductor**
-- **Due from checkpoint #2372:** watch items take their own numbering, never a queue number a real item can share (093_watch vs 093_hunt5_calls: the receipt had to warn "name it in full").
-- **Due from checkpoint #2372:** **audit X** on a running item sends conductor's own audit text as a message (today only a hand-written `tell` works, as for 093), so the notes match what the next cleanup reads.
+Conductor findings never go here: they live only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open* (Matt, 2026-10-21).
 
 **wordwarriors**
-- **Due from checkpoint #2372:** the next wordwarriors prompt adds a villain → fight-style table to `docs/systems.md` *Fight styles* (finding which villain has which style meant reading the 100 KB roster), alongside the parked TAP promote.
+- None open (the fight-style table rides 096).
 
 **Session 10 pipeline review** (agreed items above; the rest done): session start's extra calls (fixed by 41 and a saved preference), `pending` receipts (fixed by 42), receipt checks (planner-habits flag), a stale *Paged* line, an item number shared with a watch, audit asked after start.
 
@@ -93,7 +92,7 @@ Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: empty (`bug_hunt_
 
 ## Open questions
 
-none
+- **Charge without Dad:** Charge the Spell needs Dad's 2 for every rune, and new games should not need him beside her. Give Charge a no-Dad mode (e.g. the game models the sound and she walks to the matching rune)? Planner's default: leave Charge as is; the picture runes (097) and Shape-Shifter (096) cover solo play.
 
 ## Paged
 
