@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; queue empty after 093)
+## Where it stands (v0.9; session 10 closed 2026-10-21 ~11:35pm; queue empty)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 9:** cleanup (076), CLAUDE.md cleanup (077), small fixes incl. dad colours, voice prune, Charge ramp removed (078), test cleanup to a production-build suite (079, 081, 083: full run ~5.6 min), bug hunt 3 over 069's unrun lenses (080, partial), the victory recap on Dad's 2 with M18/M19 (082), disk audit freeing 8.4 GB (084); playtest fixes queued (085–087). Conductor 34–40 + a cleanup: digest hides settled history, receipts, planner-notes, night shift with backlog and watch, autopilot switch, auto-push, header and message boxes.
