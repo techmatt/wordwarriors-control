@@ -8,9 +8,10 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.10; session 12 from 2026-10-22 ~10:45am; 116 bug hunt running)
+## Where it stands (v0.11; session 12 closed 2026-10-22 ~2:15pm; 116 bug hunt running)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
+- **Session 12:** test cleanup (105, partial), Charge/Bridge solo mode (106), the Evil Smaug story fight by debug link (107, design.md *Story fights*), Shape-Shifter link and recorder `?missing` (108), Anna and Bluerilla art (109-113), cast growth to 11 allies and 7 villains (111, 114, 115), bug hunt 116 queued at close. Conductor 46: lean digest, `planner-start.md`, fast signal receipts, `ack: invalid`.
 - **Session 11:** solo phonics games from a research round (design.md *Solo phonics games*): Shape-Shifter word chains (096, tuned by 104), picture runes in Charge (097 art, 103 in game), name-to-sound hint lines; bug hunt 6 (102, partial, fixes 102-118); Hunt 6's calls (104); Charge's solo mode queued (106). Rulings: no keyboard answers, no step waits on Dad, auto-approve. Conductor 43-45: watch numbering, running audits, push not drift, squash landing, `land:`, report stamps, dependency warnings, fast receipts.
 - **Art:** no placeholder pictures left in the game (`art:placeholders` reports 0 after 074). **Voice placeholders:** Matt's F recording (Paged); untaught-sound lines (long vowels, schwa) are TTS.
 - **Gesture words (074):** a rune gesture that says a bank word (the /e/ rune's "Tap the egg": TAP, EGG) keeps that word out of later reading only in an episode whose Charge word uses that rune; the Charge word is planned up front so this holds (`gestureWords` in `src/rules/charge.ts`).
