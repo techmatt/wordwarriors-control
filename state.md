@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.10; session 12 from 2026-10-22 ~10:45am; queue empty)
+## Where it stands (v0.10; session 12 from 2026-10-22 ~10:45am; 108-111 queued)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 11:** solo phonics games from a research round (design.md *Solo phonics games*): Shape-Shifter word chains (096, tuned by 104), picture runes in Charge (097 art, 103 in game), name-to-sound hint lines; bug hunt 6 (102, partial, fixes 102-118); Hunt 6's calls (104); Charge's solo mode queued (106). Rulings: no keyboard answers, no step waits on Dad, auto-approve. Conductor 43-45: watch numbering, running audits, push not drift, squash landing, `land:`, report stamps, dependency warnings, fast receipts.
@@ -18,7 +18,9 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Queue empty.** 107 (done): the first story fight, Evil Smaug (design.md *Story fights*), by debug link only: `?fight=smaug_story` (whole episode) or `?scene=battle&part=1&fight=smaug_story` (`part=2`); no villain draws it yet, pending Matt's play. Script is data (`content/battle/stories/smaug.ts`; a second villain = one file + a `FIGHTS` entry, `docs/content.md` *A story fight*). Part 1 ~2.6 min (boast, fetched items, gift move, fire dodge, sensible answer from WET/DRIP/MUD/FAN, HOP/JUMP dodge pads, Dad's spin while she grabs the hoard, tail-smash ledge climb, TUG/GRAB answer, dive, to be continued); part 2 ~1.1 min. Only one pad on the floor makes sense; no story line says a bank word. Art owed: `prop_fight_stone`, `prop_fight_ledge`, `prop_fight_hoard`, `fx_story_fire`, `fx_story_tail`, `fx_story_spin`, `fx_story_dive` (painted placeholders now; prompts when Matt asks). 096/097 went red overnight (conductor's push read as tamper) and landed via 099/101; facts below.
+- **Queued:** 108 (Shape-Shifter read-it → fix-it link to 5-6 s; a local recorder page for just F and A), 109 (evil Anna redraw, alongside, picker), 110 (Bluerilla art from Matt's plush photo `art-originals/refs/bluerilla_reference.png`, alongside, picker), 111 (allies wave 1).
+- **Cast growth (Matt, 2026-10-22).** EvilRilla's good side is **Bluerilla** (Julia's navy-and-pale-blue plush gorilla). New allies: Bluerilla, Seraphina, Elsa, Anna, Jasmine, Ozymandias, Moriarty; next villains: evil Elsa, evil Ozymandias, evil Moriarty. Plan: each wave makes its characters draw-ready (quest place, hub scene, combo, lines; villains: threat, counters, overlay, taunts, sorry) and adds them to `ACTIVE_CAST`: **111** allies wave 1 (Seraphina, Elsa, Anna, Jasmine) → **wave 2** allies Ozymandias, Moriarty, Bluerilla (after Matt picks 110's art; renames good Rilla to Bluerilla) → **wave 3** villains evil Elsa, evil Ozymandias, evil Moriarty. A bug hunt is worth recommending after wave 3.
+- 107 (done): the first story fight, Evil Smaug (design.md *Story fights*), by debug link only: `?fight=smaug_story` (whole episode) or `?scene=battle&part=1&fight=smaug_story` (`part=2`); no villain draws it yet, pending Matt's play. Script is data (`content/battle/stories/smaug.ts`; a second villain = one file + a `FIGHTS` entry, `docs/content.md` *A story fight*). Part 1 ~2.6 min (boast, fetched items, gift move, fire dodge, sensible answer from WET/DRIP/MUD/FAN, HOP/JUMP dodge pads, Dad's spin while she grabs the hoard, tail-smash ledge climb, TUG/GRAB answer, dive, to be continued); part 2 ~1.1 min. Only one pad on the floor makes sense; no story line says a bank word. Art owed: `prop_fight_stone`, `prop_fight_ledge`, `prop_fight_hoard`, `fx_story_fire`, `fx_story_tail`, `fx_story_spin`, `fx_story_dive` (painted placeholders now; prompts when Matt asks). 096/097 went red overnight (conductor's push read as tamper) and landed via 099/101; facts below.
 - 106 (done): solo mode for Charge and the Stretchy Bridge: no Dad 1/2 for `DAD_AWAY_MS` (8 s, from her turn) turns `episode.solo` on for the rest of the episode (any Dad press turns it off; `?solo` starts solo). Charge reads together ("Say it with me!" before each rune; three variants); the bridge's level 3 skips the say-to-Dad step. Solo reads record as `modelled` (shown `+n` on the grown-ups page), never as her reads or misses; before 106 a Dad timeout recorded misses she never made. Solo words still count as read this episode (recap, kept out of later rooms). THE END still waits for Dad's 2 on purpose. Tunables Matt may want: `DAD_AWAY_MS`; "with me" on every rune vs first only.
 - 105 (test cleanup, partial): the fast lane is markedly faster (unit and smoke run at once, the test build is skipped when its inputs are unchanged, `node` not `npx`); the other lanes are unchanged. The 10:09am memory critical (~112 Chromium) was its 6-worker trial, stopped by #2900, not a leak. Its 3-worker after-timings were never taken; they and its leftovers wait for the next test cleanup (see *Maintenance*).
 - M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
@@ -103,12 +105,9 @@ Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: empty (`bug_hunt_
 
 ## Open questions
 
-none
+- **Ally draw weights with 11 allies:** equal per person (as now) makes a dad the ally ~2 in 11 instead of 2 in 4; the primary dad still wakes her and the other is in the bedroom half the time. Default: equal per person (111 uses it).
 
 ## Paged
 
-- **Shape-Shifter read-it → fix-it link (~7 s, 104):** two morphs back to back; shortening the morph trims the reward. Matt judges pacing in playtests.
-
-- **Recordings (Dada Matt):** F (card 2, "ffff" with no "uh") and A are left (085 retired his A: it slid toward "I"; short A is TTS from "Add" until he re-records a steady CAT vowel); then `voice:import`. Letter names, silly words, sentence prefixes and the 14 `letter_<x>_hides` lines (096) are later lists for the same tool.
-- **Evil Anna redraw:** still the old copper-curl design; redraw when Anna joins the active cast.
+- **Recordings (Dada Matt):** 108 adds a local recorder page for just these two. F (card 2, "ffff" with no "uh") and A are left (085 retired his A: it slid toward "I"; short A is TTS from "Add" until he re-records a steady CAT vowel); then `voice:import`. Letter names, silly words, sentence prefixes and the 14 `letter_<x>_hides` lines (096) are later lists for the same tool.
 - **More fight styles:** a building contest for builder Matt, a sea race.
