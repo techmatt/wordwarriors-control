@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Session 11:** 096 and 097 ended **red** (tamper: conductor's own control-folder push, the bug conductor 43 fixed); their work is on the kept branches `conductor/096_shape_shifter` and `conductor/097_picture_runes`, not on `main`. 099 merged both correctly on its branch but as merge commits, so conductor's rebase onto `main` conflicted on `plansGolden.json` (red, not merged). **101** landed 099's tree on `main` as one plain commit (a6497d1, 2026-10-22 8:17am). **102_bug_hunt** partial (below; 098 and 100 cancelled). **103** done (below). **104** done (below); **105_test_cleanup** running (goal: faster testing).
+- **Session 11:** 096 and 097 ended **red** (tamper: conductor's own control-folder push, the bug conductor 43 fixed); their work is on the kept branches `conductor/096_shape_shifter` and `conductor/097_picture_runes`, not on `main`. 099 merged both correctly on its branch but as merge commits, so conductor's rebase onto `main` conflicted on `plansGolden.json` (red, not merged). **101** landed 099's tree on `main` as one plain commit (a6497d1, 2026-10-22 8:17am). **102_bug_hunt** partial (below; 098 and 100 cancelled). **103** done (below). **104** done (below); **105_test_cleanup** running (goal: faster testing). **106_charge_solo** queued.
 - M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
 - 104 (done): M26-M32 in. Shape-Shifter links take ~5-6 s with instant answers (were 12-15), except read-it → fix-it at ~7 s (two morphs back to back); "Here comes the spell again!" said only on the first link. Chains now change all three places; read-it can sit at the last letter; fresh draws give fewer distinct chains (105 of 300) but her recent words spread them. Battle items fly out as one volley per room (first PICK A MOVE! 24.7 s with eight items, was 37.3). `OUTFIT_FILL` makes chef/knight Julia her plain height. Warm-up name bridges once per clue; fix-it praise of its own; contractions. `?warmup=1` URL option.
 - 103 (done): Matt's 25 rune picks promoted (originals in `art-originals/restore/`); Charge's stone, its hub door badge and the battle's charge stone show the picture letter (the word bar and the battle HUD's 30 px rune chips keep plain letters: a picture letter at 30 px doesn't read; chips would need ~50 px); runes load per episode; the grown-ups page lists Shape-Shifter words by help level; the kept 096/097/099 worktrees and branches are retired.
@@ -66,6 +66,7 @@ nothing
 - Plural key words (CANNOT STAND MICE) may come later as a special case (Matt, 2026-10-18).
 - Ruled (Matt, 2026-10-21): special words (KEY, YOYO) may be the counter word; she sounds them out fine (already so since 048; 090 added a test). MICE stays out (not in the bag).
 - Ruled (Matt, 2026-10-21, 092's deferred calls): every pick taken (093); M22 art stays loaded (bounded); M20: Matt unplugs the controller.
+- **Ruled (Matt, 2026-10-22): no step waits on Dad forever.** When Dad's 1/2 doesn't come, Charge (and any Dad-confirm step) switches to a Bluey-style "say it with me" solo mode and moves on; solo reads count as modelled (106).
 - Ruled (Matt, 2026-10-22, 102's deferred calls): every pick taken (104): M26 full Shape-Shifter instruction once per beat; M28 battle items as one volley per room; M27 name bridges once per clue; M29 chains change every place; M30 fix-it praise; M31 contractions; M32 outfit fill for Julia. Which minigames are slow, Matt checks in playtests with Julia.
 - Ruled (Matt, 2026-10-21): Dada Matt reads 5–10% shorter than Dada Jason (093).
 - Ruled (Matt, 2026-10-21, 088's deferred calls): every pick taken (090, 091): parked games always three choices; side rooms seeded per room; held sounds play once; art check on in fight sweeps; brawl positions one constant; ability kinds from one list; item tags off headings; Charge door keeps its rune stone.
@@ -100,7 +101,7 @@ Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: empty (`bug_hunt_
 
 ## Open questions
 
-- **Charge without Dad:** Charge the Spell needs Dad's 2 for every rune, and new games should not need him beside her. Give Charge a no-Dad mode (e.g. the game models the sound and she walks to the matching rune)? Planner's default: leave Charge as is; the picture runes (097) and Shape-Shifter (096) cover solo play.
+none
 
 ## Paged
 
