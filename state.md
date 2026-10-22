@@ -93,7 +93,12 @@ Accumulated fixes and pipeline-review items (every pipeline review's agreed item
 Conductor findings never go here: they live only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open* (Matt, 2026-10-21).
 
 **wordwarriors**
-- None open (the fight-style table rides 096).
+- None open.
+
+**Session 12 pipeline review** (2026-10-22; due from checkpoint #2920):
+- **Planner habit, due:** on **review next** / **check**, always re-stage `inbox.md` first. Once I answered "nothing left" from a stale inbox while 106 had finished.
+- **Planner habit, due:** an art or candidate prompt never says "then promote Matt's pick". It ends at `pick:`, and promotion rides a later prompt (109 asked Matt instead; the repo's CLAUDE.md now says so too, 113).
+- Done this session: start-of-session waste (chat not linked, read-back, the digest's noise, slow signal receipts: saved preference and conductor 46); a premise in 106's prompt was stale (Charge hasn't waited per rune since 059); one-off.
 
 **Session 10 pipeline review** (agreed items above; the rest done): session start's extra calls (fixed by 41 and a saved preference), `pending` receipts (fixed by 42), receipt checks (planner-habits flag), a stale *Paged* line, an item number shared with a watch, audit asked after start.
 
