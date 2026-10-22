@@ -18,7 +18,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Parked for the next wordwarriors prompt:** promote Matt's TAP pick, `npm run art:pick -- pic_tap 1`, then write the brief (`scratch/093_tap_running.txt`) into `content/art/prompts.ts`'s tap line.
+- **Parked for the next wordwarriors prompt:** the villain → fight-style table (Pending fixes); promote Matt's TAP pick, `npm run art:pick -- pic_tap 1`, then write the brief (`scratch/093_tap_running.txt`) into `content/art/prompts.ts`'s tap line.
 - M20 done: Matt unplugged the Xbox 360 controller (2026-10-21).
 - Nothing queued. 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picked (Matt, candidate 1). 093's audit notes are filed (asked by tell, not `audit: true`).
 - 092 (bug hunt 5, done): fixes 91–101 (LEG/SOCK look-alikes, no "A GUM", move-choice hint and caption on the wall clock, bridge keeps Dad's early 2, F9 and key 0 on a leaving room, word machine tile mash, machine and fetch keys never take the named counter word); the checker now serves a production build (`QA_DEV_SERVER=1` for the old dev server).
@@ -48,7 +48,7 @@ nothing
 - Art: `art:gen` / `art:alts` / `art:pick` and the studio redesigns are in the repo README and `content/art/prompts.ts`; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used.
 - **Questions (Matt, 2026-10-21):** `ask_default_minutes` stays 10; Matt often won't see questions and that's fine: defaults stand and he corrects after the fact. Don't raise timed-out defaults as problems.
 - **Ultracode (083, 2026-10-21):** leave it off items that are serial on one machine-saturating resource (full test-suite timing runs); it adds nothing there.
-- **Planner habits (session 9):** stage a receipt in a call of its own (it lands 1–2 s after the write; a stage fails whole if one path is missing) and retry once; always stage `state.md` fresh before building a request from it. Read inbox sections with non-overlapping extracts (overlapping `sed` ranges doubled lines and cost conductor 38 a wild-goose chase). Before sending a request, diff it against the staged copy so only the intended lines change (a whole-line replace dropped status at 083). Once a conductor prompt is called ready, additions go to Matt as a line to paste into its session, never as a file edit (40 started 25 s after an edit). Stage `review.md` only after the `review:` signal's receipt exists (stale bundles read twice). Write a conductor prompt's whole text before saying it's ready (session 8). Check receipts in write order with a request's last: the signal's first, then the request's (a request is `pending` while its files settle, ~1–2 s); a request sent alone is checked after the turn's other calls; one recheck is the fallback (session 10).
+- **Planner habits (session 9):** stage a receipt in a call of its own (it lands 1–2 s after the write; a stage fails whole if one path is missing) and retry once; always stage `state.md` fresh before building a request from it. Read inbox sections with non-overlapping extracts (overlapping `sed` ranges doubled lines and cost conductor 38 a wild-goose chase). Before sending a request, diff it against the staged copy so only the intended lines change (a whole-line replace dropped status at 083). Once a conductor prompt is called ready, additions go to Matt as a line to paste into its session, never as a file edit (40 started 25 s after an edit). Stage `review.md` only after the `review:` signal's receipt exists (stale bundles read twice). Write a conductor prompt's whole text before saying it's ready (session 8). Receipts: stage every receipt of a write in one call, then one combined recheck if any is missing (a receipt lands within ~1 s since 42; separate stage calls run in parallel, so ordering them does nothing; never list `receipts\`) (session 10). Before raising a *Paged* item that states a code fact, trust the executor's check over the line (session 10's KEY/YOYO line was stale).
 - **Tests: faster over thorough (Matt, 2026-10-21):** where reasonable, prefer faster tests and lanes to thorough ones; Matt scales coverage up when he notices problems.
 - Tests (Matt, 2026-10-20): no full browser suite by default; `npm test` plus the browser tests covering the change (`test:browser` before a commit, 079), full suite only when very clearly needed; misses are fixed later. In the repo's CLAUDE.md (046).
 - Worktrees run `npm ci` at creation (`setup` in conductor.toml, Matt 2026-10-19).
@@ -79,9 +79,13 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Write each due item as a top-level bullet that says "due" (the digest copies only those).
 
 **Conductor**
-- none (42 made requests apply once their files are there, 2026-10-21)
+- **Due from checkpoint #2372:** watch items take their own numbering, never a queue number a real item can share (093_watch vs 093_hunt5_calls: the receipt had to warn "name it in full").
+- **Due from checkpoint #2372:** **audit X** on a running item sends conductor's own audit text as a message (today only a hand-written `tell` works, as for 093), so the notes match what the next cleanup reads.
 
-**Session 9 pipeline review** (agreed, folded into the planner-habits flag and the conductor line above): the 13-call session start (fixed by 34), questions unseen (fine, Matt's ruling), receipts timing, `state.md` built from stale copies, the doubled-inbox misread (planner's `sed`), reorder syntax, editing a conductor prompt near its start, stale review bundles.
+**wordwarriors**
+- **Due from checkpoint #2372:** the next wordwarriors prompt adds a villain → fight-style table to `docs/systems.md` *Fight styles* (finding which villain has which style meant reading the 100 KB roster), alongside the parked TAP promote.
+
+**Session 10 pipeline review** (agreed items above; the rest done): session start's extra calls (fixed by 41 and a saved preference), `pending` receipts (fixed by 42), receipt checks (planner-habits flag), a stale *Paged* line, an item number shared with a watch, audit asked after start.
 
 ## Backlog (night shift)
 
