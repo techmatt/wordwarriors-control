@@ -95,3 +95,7 @@ No keyboard answers, and new games never need Dad's 1/2: Julia must be able to p
 - **Level 2 blends** start with final s-blends and initial l-blends; final nasal blends (JUMP, HAND) come last.
 - Set aside: typing words to spell them (keyboard), and fast read-aloud drills (need Dad).
 
+
+## Story fights (Matt, 2026-10-22)
+
+A second fight style beside the Magicka brawl, which stays. It's a turn-based fight told like a short story: sides take turns, a few staged big moves, no health bars. The characters speak for themselves (Smaug: "This is MY giant pile of gold, you can't have it!"); there is no narrator, and Dad and the ally talk because they're in the fight. Julia's counter-attacks are word pads Dad suggests, as before, but the right word is a meaningful answer to the villain's move, while the other pads come from the broad word bank. Dad + Julia support moves (he spins, she grabs the coins). On villain turns she dodges by walking to a safe spot (it misses anyway), and occasionally the dodge is a reading choice. Same part 1 / part 2 shape. First test: Evil Smaug, by debug link only (107); whether it spreads to other villains or becomes a random alternative is decided after Matt plays it.
