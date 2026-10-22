@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 093 queued)
+## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; queue empty after 093)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 9:** cleanup (076), CLAUDE.md cleanup (077), small fixes incl. dad colours, voice prune, Charge ramp removed (078), test cleanup to a production-build suite (079, 081, 083: full run ~5.6 min), bug hunt 3 over 069's unrun lenses (080, partial), the victory recap on Dad's 2 with M18/M19 (082), disk audit freeing 8.4 GB (084); playtest fixes queued (085–087). Conductor 34–40 + a cleanup: digest hides settled history, receipts, planner-notes, night shift with backlog and watch, autopilot switch, auto-push, header and message boxes.
@@ -18,11 +18,11 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 093_hunt5_calls queued (ultracode): M24, M23, M25, TAP redrawn with a picker, and Dada Matt 5–10% smaller than Dada Jason (Matt, 2026-10-21). M20 is Matt's: unplug the Xbox 360 controller before the next sweep.
+- Nothing queued. 093 (done): Charge keeps Dad's press after the last rune lights; number words only in `numbers` frames (never after A or in counter frames); art retries in the background after a network error; grown-ups drawn `ADULT_HEIGHTS[person] / ADULT_FILL[art]` tall, so Matt (1.33) reads 7.5% under Jason (1.44) head to soles in every pairing: **new dad art needs an `ADULT_FILL` line**; VS cards cap at 380. TAP picker waits (Waiting on Matt). 093's audit notes are filed (asked by tell, not `audit: true`).
 - 092 (bug hunt 5, done): fixes 91–101 (LEG/SOCK look-alikes, no "A GUM", move-choice hint and caption on the wall clock, bridge keeps Dad's early 2, F9 and key 0 on a leaving room, word machine tile mash, machine and fetch keys never take the named counter word); the checker now serves a production build (`QA_DEV_SERVER=1` for the old dev server).
 - Session 10 facts still live: free-play shots use normal blending (glow gone, 085); short A is TTS from "Add", measured not listened to (085); the sentence room reads word by word (085); key 0 = minigame debug mode, nothing counts (086); line variants rotate across rooms and episodes, taunts at most twice an episode (087); Matt's clips are named `<id>.<hash8>.mp3` (088); 089 fixes 84–90 (scene await chains stop once a scene change is queued); held sounds play once (090); minigames have a `kind` and one planner each, with a golden draw test `tests/unit/plansGolden` to rewrite on purpose when draws should change (091).
 - Left: nine redundant `say` fields wait for a voice build (088); debug runs still count taunts (088); the pairs sweep is untested with the art check on (090).
-- Everything through 092 reviewed. Conductor through 41 and cleanup 2026-10-21 reviewed.
+- Everything through 093 reviewed. Conductor through 42 and cleanup 2026-10-21 reviewed.
 - Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout. `background` globs set. Autopilot `Always`; backlog empty.
 
 ## Maintenance
@@ -34,11 +34,12 @@ The planner checks this at every session start and recommends what is due, with 
 
 ## Waiting on Matt
 
-nothing
+- **TAP pick (093, M21):** picker `scratch/art_alts_093_tap.json` (3 faucet candidates; **pick X** opens it). The executor's follow-up: `npm run art:pick -- pic_tap <n>`, then the brief into `content/art/prompts.ts`'s tap line; rides the next wordwarriors prompt.
+- **M20:** unplug the Xbox 360 controller before the next sweep.
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 41 is reviewed, plus cleanup 2026-10-21** (41 in session 10: lean start stages `planner.md` + `session.md` only; `session.md` *From state.md* copies *Waiting on Matt*, *Open questions* and top-level bullets saying "due" from *Pending fixes* / *Maintenance*, so due items must be bullets that say "due"; executors run `date` before ETAs). 38: temp-file race closed. 39: auto-push (`docs/push.md`, **push R**). 40: autopilot (`autopilot` signal, header control), `planner-vocab.md`. Earlier: 37: only Matt's acts (app/cli signal, approve, queue or backlog write, answer) unlock a back-to-back full-length draw; `pending` receipts for waiting requests; a bare item number two items share names neither (receipt says `queued as <id>`). Cleanup: docs matched to code, no behaviour change, seven conductor docs at 100% of budget. 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 42 is reviewed** (42 in session 10: the control folder pushes to `techmatt/wordwarriors-control` 30 s after a burst of request commits and at closeout, `push: control` to retry; requests apply as soon as `request.md` and its targets are readable, `pending` only for a request held by an earlier one on the same targets). **Through 41, plus cleanup 2026-10-21** (41 in session 10: lean start stages `planner.md` + `session.md` only; `session.md` *From state.md* copies *Waiting on Matt*, *Open questions* and top-level bullets saying "due" from *Pending fixes* / *Maintenance*, so due items must be bullets that say "due"; executors run `date` before ETAs). 38: temp-file race closed. 39: auto-push (`docs/push.md`, **push R**). 40: autopilot (`autopilot` signal, header control), `planner-vocab.md`. Earlier: 37: only Matt's acts (app/cli signal, approve, queue or backlog write, answer) unlock a back-to-back full-length draw; `pending` receipts for waiting requests; a bare item number two items share names neither (receipt says `queued as <id>`). Cleanup: docs matched to code, no behaviour change, seven conductor docs at 100% of budget. 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
@@ -77,7 +78,7 @@ nothing
 Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Write each due item as a top-level bullet that says "due" (the digest copies only those).
 
 **Conductor**
-- **Due from checkpoint #2372:** next conductor prompt takes `planner-notes.md`'s request-settle line (apply a request once `request.md` and all its targets are present; no `pending` receipt for settling alone).
+- none (42 made requests apply once their files are there, 2026-10-21)
 
 **Session 9 pipeline review** (agreed, folded into the planner-habits flag and the conductor line above): the 13-call session start (fixed by 34), questions unseen (fine, Matt's ruling), receipts timing, `state.md` built from stale copies, the doubled-inbox misread (planner's `sed`), reorder syntax, editing a conductor prompt near its start, stale review bundles.
 
