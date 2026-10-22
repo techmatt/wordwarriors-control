@@ -38,7 +38,7 @@ nothing
 
 ## Conductor (hand-pasted)
 
-- **Conductor through 40 is reviewed, plus cleanup 2026-10-21** (session 9). 38: temp-file race closed. 39: auto-push (`docs/push.md`, **push R**). 40: autopilot (`autopilot` signal, header control), `planner-vocab.md`. Earlier: 37: only Matt's acts (app/cli signal, approve, queue or backlog write, answer) unlock a back-to-back full-length draw; `pending` receipts for waiting requests; a bare item number two items share names neither (receipt says `queued as <id>`). Cleanup: docs matched to code, no behaviour change, seven conductor docs at 100% of budget. 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: whether Windows shows conductor's icon after an app restart, and the first real `alongside` use (HANDOFF *Open*).
+- **Conductor through 41 is reviewed, plus cleanup 2026-10-21** (41 in session 10: lean start stages `planner.md` + `session.md` only; `session.md` *From state.md* copies *Waiting on Matt*, *Open questions* and top-level bullets saying "due" from *Pending fixes* / *Maintenance*, so due items must be bullets that say "due"; executors run `date` before ETAs). 38: temp-file race closed. 39: auto-push (`docs/push.md`, **push R**). 40: autopilot (`autopilot` signal, header control), `planner-vocab.md`. Earlier: 37: only Matt's acts (app/cli signal, approve, queue or backlog write, answer) unlock a back-to-back full-length draw; `pending` receipts for waiting requests; a bare item number two items share names neither (receipt says `queued as <id>`). Cleanup: docs matched to code, no behaviour change, seven conductor docs at 100% of budget. 36: night shift (`docs/night-shift.md`: 10-min stall checks, readonly watch items, `backlog\<repo>\`, 6 h nightly cap), done-when / adversarial review / `alongside` rules, `general_cleanup` and `test_cleanup` (old names aliases). Its first real nights are worth a look. What is live is in `planner.md` and conductor's HANDOFF *Status*: `alongside`, ask / post-audit, `report_changed`, the run ledger, the bug hunt clock, settled events hidden from the digest, receipts for every planner write (`docs/receipts.md`; stage the receipt, never the inbox), the planner's marker and *Open* lines in `planner-notes.md`. Still for Matt's eye: the first real `alongside` use (HANDOFF *Open*).
 
 ## Flags
 
@@ -70,11 +70,10 @@ nothing
 
 ## Pending fixes
 
-Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Everything below is due now (from #1994, session 9 start).
+Accumulated fixes and pipeline-review items (every pipeline review's agreed items land here). Each item or group names the checkpoint it is due from ("due from checkpoint #N"), never "next checkpoint"; at session start the planner raises every item already due. Write each due item as a top-level bullet that says "due" (the digest copies only those).
 
 **Conductor**
-- **Due from checkpoint #1994:** next conductor prompt merges `planner-notes.md` *For HANDOFF Open* (executors run `date` before any ETA; `planner-vocab.md`'s `reorder` row says to list the new order).
-- **Due from checkpoint #2372:** the same prompt takes the session-10 start review in `planner-notes.md` (exact device-tool select and per-project paths in `planner.md` *Start*; digest carries `state.md`'s due items so start needs no `state.md`).
+- none (41 merged the planner-notes lines and the session-10 start review, 2026-10-21)
 
 **Session 9 pipeline review** (agreed, folded into the planner-habits flag and the conductor line above): the 13-call session start (fixed by 34), questions unseen (fine, Matt's ruling), receipts timing, `state.md` built from stale copies, the doubled-inbox misread (planner's `sed`), reorder syntax, editing a conductor prompt near its start, stale review bundles.
 
