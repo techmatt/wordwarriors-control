@@ -8,7 +8,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 086 running, 087 staged)
+## Where it stands (v0.9; session 10 started 2026-10-21 ~4:58pm; 087 next)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast, places, fights, rooms and words are drawn per episode, with rotation memory across episodes.
 - **Session 9:** cleanup (076), CLAUDE.md cleanup (077), small fixes incl. dad colours, voice prune, Charge ramp removed (078), test cleanup to a production-build suite (079, 081, 083: full run ~5.6 min), bug hunt 3 over 069's unrun lenses (080, partial), the victory recap on Dad's 2 with M18/M19 (082), disk audit freeing 8.4 GB (084); playtest fixes queued (085–087). Conductor 34–40 + a cleanup: digest hides settled history, receipts, planner-notes, night shift with backlog and watch, autopilot switch, auto-push, header and message boxes.
@@ -18,9 +18,10 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 086_minigame_debug running (key 0, works in real play, never counts), then 087_language_pass staged (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line).
+- 087_language_pass next (lines she hears often: stilted rewording, spell names like PIGGY POLYMORPH, variety, short doors line).
 - 085 (done, session 10): free-play shots now use normal blending (additive washed to white), so their glow is gone; the sentence room reads word by word, not as one natural line; short A now cut by TTS from "Add" (measured, not listened to).
-- Everything through 085 reviewed. Conductor through 40 and cleanup 2026-10-21 reviewed.
+- 086 (done, session 10): key 0 swaps any game room for a `Debug` scene with one pedestal per game (4, from `MINIGAMES`), nothing counts (store held, episode and draws restored); turning it off replays the room's opening lines; its door out moves the episode on unsandboxed, like F2 (battle 1 then has no items or runes).
+- Everything through 086 reviewed. Conductor through 40 and cleanup 2026-10-21 reviewed.
 - Auto-push on for wordwarriors (`push = true`, Matt 2026-10-21; repos are public, Matt knows): conductor pushes `main` after each merge and at closeout. `background` globs set. Autopilot `Always`; backlog empty.
 
 ## Maintenance
