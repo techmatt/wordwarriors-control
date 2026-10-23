@@ -13,12 +13,11 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
 - **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
-- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. Conductor 52.
+- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. Conductor 52.
 
 ## Queued and running
 
-- **133_cleanup_rulings:** 132's deferred calls as Matt ruled (session 14: the executor's pick on each): W39 banner height variance found and fixed first, pictures lowered only as needed; parked made-things out of the battle; charge-gesture lines pruned; placeholder painter to generic only; `?seed=` threaded through the house draws; rulings.md:25 reworded; `perf` on the test build; hunt-spec headers; `room_parent.png` deleted. `shifterLevels` stays optional; `__ww.debug()` / `resetProgress()` stay removed.
-- **134_arena_ambience:** ambience table onto `ARENAS`; nursery and street candidates, ending at `pick:`.
+- **135_bug_hunt:** finish by 7:30pm (Oct 23).
 
 ## Maintenance
 
@@ -34,11 +33,11 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 
 ## Waiting on Matt
 
-nothing
+- **Arena ambience pick** (134): picker `scratch/arena_ambience_134.json` (nursery: bubbles / blocks / nightlight stars; street: leaves / fluff / butterflies; `current` = meadow sparkles). The promoting prompt copies the chosen `AMBIENCE_TRIALS` entry into `ARENAS.nursery` / `.street` and deletes the trials and the round's scratch files.
 
 ## Open questions
 
-none
+- **`gestureWords`** (`src/rules/charge.ts`, from 133): still counts a charge gesture's words (TAP, EGG) as said in the episode, keeping them out of reading though nothing speaks them since 058. Change it (changes the word draws) or leave. Default: leave.
 
 ## Paged
 
