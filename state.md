@@ -13,6 +13,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
 - **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
+- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. Conductor 52.
 
 ## Queued and running
 
@@ -23,7 +24,7 @@ nothing
 Triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5×; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** after much generated media; **content audit** only when Matt asks; **trim state** past ~25 KB. Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`, and resume from the last hunt's *Where the next hunt resumes*.
 
 - Bug hunt: 129 (2026-10-23, done; resume from Hunt 9).
-- General cleanup: 117 (2026-10-22).
+- General cleanup: 132 (2026-10-23).
 - Cleanup: 076 (2026-10-21).
 - Test cleanup: 105 (2026-10-22, partial; owed: a timed 3-worker run, splitting `episode.spec`'s real-time tests, a 20 ms `WW_POLL_MS` default if two full runs stay green, 4-6 workers if memory allows).
 - claude.md cleanup: 118 (2026-10-22).
@@ -36,7 +37,20 @@ nothing
 
 ## Open questions
 
-none
+Asked session 14 (from 132's *Deferred*); each not taken up goes to *Paged* with the executor's pick as default.
+
+- **W39, Word → Picture banner check** (`tests/banner.spec.ts`): now fails alone ~4 runs in 6, on main too, so `test:browser` is red on it until Matt rules. Options: lower the parked game's pictures a few px; find why the banner's height varies (ink measured before the font loads?); tag it `@slow`. Pick: find the height variance first.
+- **Parked "made things" in the battle** (`useMade/useHelper/useGem/useAmmo`, HUD icons, `StageHost.helper`, ~120 lines): remove, or keep for the parked games. Pick: remove.
+- **Arena ambience** (`nursery`, `street` silently get the meadow's sparkles): own looks, and/or move the table onto `ARENAS`. Pick: both, Matt picking the looks.
+- **432 unsaid charge-gesture lines** (`CHARGE_GESTURES`, unsaid since 058): stop composing (`voice:build -- --prune`), or keep for a teaching mode. Pick: stop.
+- **Placeholder painter** (`tools/art/placeholders.ts`, ~700 lines of per-id branches): keep only the generic painters, or keep all. Pick: generic only.
+- **`?seed=` scope** (seeds only the cast draw): thread a seeded rand through the house draws (moves seeded shots), or leave. Pick: thread it.
+- **`docs/rulings.md:25` "fight style is fixed per villain"** contradicts chef Jason's nudge and Smaug's story fight: reword or retire. Pick: reword.
+- **`perf` times the dev server:** serve the test build and re-baseline, or document. Pick: serve the build.
+- **Hunt-named specs** (`tests/hunt4..7.spec.ts`): move tests to feature specs, or add a header. Pick: header.
+- **`room_parent.png`** (unused real art): delete and regenerate `docs/art.md`, or keep. Pick: delete.
+- **`shifterLevels` required** (changes stored shape and plansGolden's hash): pick: leave optional.
+- **`__ww.debug()` / `resetProgress()`** were removed (no caller in the repo): restore if Matt uses them from the console.
 
 ## Paged
 
@@ -44,6 +58,7 @@ none
 - **115's optional calls (default: leave):** Evil Ozymandias's Comet Crash and Evil Elsa's Forever Winter are both icy-blue waves; Evil Elsa has no summon ability; Anna's quest line against Evil Elsa still says "train at my sister's ice castle".
 - **More fight styles:** a building contest for builder Matt, a sea race.
 - **Shape-Shifter:** MAN is still in ~46% of visits (more words would fix it; Matt ruled none); its islands (DOG-LOG-LEG, NUT-NET-VET, FOX-BOX, LIP-LID) never chain; 130's rotation order can revert in one line if Matt prefers short chains to repeated links.
+- **132's own-item refactors** (clear, too big for a sweep): split `BattleScene.ts` (1841 lines), `rules/sentences.ts` (→ `rules/rooms.ts`), `tests/qa/qa.pw.ts`; a `SceneKey` union; `VoiceBus` → `src/voice/`, a home for `sceneGen`; a relock hook for rooms' `narrate`/`speak` + shared `flow` counter (needs design: changes Entry, Hub, Bedroom); one hard C/K helper (must not fold BELT/BELL); one voice-manifest schema shared by `VoiceBank` and `tools/voice/types.ts`; shared spec page helpers (fake-hidden-tab copies differ); pick notes out of `content/art/prompts.ts`; restructure `docs/systems.md`'s long cells; voice split/fingerprint coupling (`--force` note or a version).
 - **Pickers:** face-card picker `scratch/art_alts_113_faces.json` (if still on disk); edge-tts "Bluerilla" unheard (add a `sayName` if it sounds wrong).
 
 ## Pending fixes
@@ -71,4 +86,4 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 
 ## Conductor
 
-- Reviewed through 51 (marker in `planner-notes.md`; unreviewed conductor reports now show in the inbox); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: the first real **pause R** (proven only with the fake executor) and the first real `alongside` use.
+- Reviewed through 52 (planner.md holds the common path; planner-start.md retired; marker in `planner-notes.md`; unreviewed conductor reports now show in the inbox); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: the first real **pause R** (proven only with the fake executor) and the first real `alongside` use.
