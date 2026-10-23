@@ -20,6 +20,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - **Session 13 (Matt, 2026-10-22):** 117-120 done (below); queued after 121: 122 (promote 120's picks: stone 1, ledge 2, hoard 1; 117's calls 2, 6-10), 123 (roster split, 117-1); while Matt is away until 11pm: 124 (story fx art candidates, `alongside`, ends at `pick:`), 125 (bug hunt 8, 3 h, finish by 11pm). 121 (variety across playthroughs measured and fixed, plus familiar content: Stardew, dragons, bedtime-story things, everyday life; ultracode).
+- 121 (done): `npm run variety` (`tests/variety/simulate.ts`) plays 300 drawn episodes on one store and prints each dimension's reach, gaps and over-draws; line variants go round all three before one repeats; a dad's last two forms sit out; 16 new familiar words (TREE HAM HAY GATE STUMP SACK DRESS BLOCK BENCH SKUNK; CHOMP DASH SWISH SMASH CRASH SPLASH) with art and voice, 2 counter frames ({villain} RAN AWAY FROM THE / CAN NOT GET PAST THE), themed hub scenes and quest lines (orc-castle ring, chase, chopping wood, scything, farm, school, robot dragon); `?words=new` leans draws to new words; Smaug's "Tail smash!" is "Tail whack!", the tug's SPLASH! is SPLOOSH!. BEE, DISH, SWING, PUP, CUB dropped (said elsewhere or misread). ~7% of the 5-hour Codex window. Its calls under *Open questions*.
 - 120 (done): M33 candidate round, 3 each for `prop_fight_stone`, `prop_fight_ledge`, `prop_fight_hoard`; Matt picked stone 1, ledge 2, hoard 1; 122 promotes them. ~3% of the 5-hour Codex window.
 - 119 (done): M36 Shape-Shifter keeps 12 whole chains (`recent.chains`; a chain never shares a link with the last six, as ruled; 12 not 6 because six still repeated at episode 10); M34 solo lasts the page session (not saved; a reload asks Dad again), a Dad yes during the solo read records `helped`, his no a miss; Dad's 2 at THE END doesn't end solo (one line in TheEnd if it should); M35 good Moriarty `size: 1.3` (evil stays 1).
 - 118 (claude.md cleanup, done): 246 → 194 lines, 21.8 → 14.9 KB; the "Matt says" table was already in `docs/content.md` since 078. Its two calls: keep (ruled).
@@ -120,7 +121,15 @@ Pre-approved by Matt (2026-10-21), in `backlog\wordwarriors\`: empty (`bug_hunt_
 
 ## Open questions
 
-none
+121's deferred calls and questions (raised session 13; the executor's pick is the default):
+- **121-1 Forced doors:** Charge/Bridge behind door a and Shape-Shifter behind door b every episode, so the fetch sentence frames and word machine never come up. (a) keep; (b) Shifter behind door b about half the time, frames and machine otherwise; (c) Shifter every other episode. Default: (b).
+- **121-2 Shape-Shifter word spread:** BUG and MAT in ~1 visit in 3, 16 of 47 CVC words never in a chain. (a) more CVC words with neighbours; (b) "most places changed" gives way after a recent chain word. Default: (a), then (b).
+- **121-3 RUN, FIX, GRAB never read** (the episode says them first). Default: reword the hall's GRAB and Shape-Shifter's FIX lines (re-voice), keep RUN.
+- **121-4 Named counters rare** (~4% of episodes). Default: `NAMED_COUNTER_BOOST` 6 → ~15 only if Matt wants staged defeats more often; else leave.
+- **121-5 Smaug's story fight** reachable only by URL. Default: half of Evil Smaug's episodes.
+- **121-6 Charge runes Z and Y never come up.** Default: a familiar short Z or Y word when one fits the rules.
+- **121-Q1 COW?** Needs a new OW sound (as 058 did for ZOO).
+- **121-Q2 MOM / DAD as words?** Or skip, since she says Mama / Dada.
 
 ## Paged
 
