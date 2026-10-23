@@ -8,11 +8,11 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (2026-10-23, session 13)
+## Where it stands (session 13 closed 2026-10-23 ~10:30am)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
-- **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-49.
+- **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
 
 ## Queued and running
 
@@ -71,4 +71,4 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 
 ## Conductor
 
-- Reviewed through 49 (marker in `planner-notes.md`); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: the first real **pause R** (proven only with the fake executor) and the first real `alongside` use.
+- Reviewed through 51 (marker in `planner-notes.md`; unreviewed conductor reports now show in the inbox); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: the first real **pause R** (proven only with the fake executor) and the first real `alongside` use.
