@@ -17,7 +17,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-nothing
+- **133_cleanup_rulings:** 132's deferred calls as Matt ruled (session 14: the executor's pick on each): W39 banner height variance found and fixed first, pictures lowered only as needed; parked made-things out of the battle; charge-gesture lines pruned; placeholder painter to generic only; `?seed=` threaded through the house draws; rulings.md:25 reworded; `perf` on the test build; hunt-spec headers; `room_parent.png` deleted. `shifterLevels` stays optional; `__ww.debug()` / `resetProgress()` stay removed.
+- **134_arena_ambience:** ambience table onto `ARENAS`; nursery and street candidates, ending at `pick:`.
 
 ## Maintenance
 
@@ -37,20 +38,7 @@ nothing
 
 ## Open questions
 
-Asked session 14 (from 132's *Deferred*); each not taken up goes to *Paged* with the executor's pick as default.
-
-- **W39, Word → Picture banner check** (`tests/banner.spec.ts`): now fails alone ~4 runs in 6, on main too, so `test:browser` is red on it until Matt rules. Options: lower the parked game's pictures a few px; find why the banner's height varies (ink measured before the font loads?); tag it `@slow`. Pick: find the height variance first.
-- **Parked "made things" in the battle** (`useMade/useHelper/useGem/useAmmo`, HUD icons, `StageHost.helper`, ~120 lines): remove, or keep for the parked games. Pick: remove.
-- **Arena ambience** (`nursery`, `street` silently get the meadow's sparkles): own looks, and/or move the table onto `ARENAS`. Pick: both, Matt picking the looks.
-- **432 unsaid charge-gesture lines** (`CHARGE_GESTURES`, unsaid since 058): stop composing (`voice:build -- --prune`), or keep for a teaching mode. Pick: stop.
-- **Placeholder painter** (`tools/art/placeholders.ts`, ~700 lines of per-id branches): keep only the generic painters, or keep all. Pick: generic only.
-- **`?seed=` scope** (seeds only the cast draw): thread a seeded rand through the house draws (moves seeded shots), or leave. Pick: thread it.
-- **`docs/rulings.md:25` "fight style is fixed per villain"** contradicts chef Jason's nudge and Smaug's story fight: reword or retire. Pick: reword.
-- **`perf` times the dev server:** serve the test build and re-baseline, or document. Pick: serve the build.
-- **Hunt-named specs** (`tests/hunt4..7.spec.ts`): move tests to feature specs, or add a header. Pick: header.
-- **`room_parent.png`** (unused real art): delete and regenerate `docs/art.md`, or keep. Pick: delete.
-- **`shifterLevels` required** (changes stored shape and plansGolden's hash): pick: leave optional.
-- **`__ww.debug()` / `resetProgress()`** were removed (no caller in the repo): restore if Matt uses them from the console.
+none
 
 ## Paged
 
