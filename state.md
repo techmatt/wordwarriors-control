@@ -1,6 +1,6 @@
 # wordwarriors — state
 
-Status, plan, open items and flags; the wavefront, not a history (trimmed session 13). Changed only through conductor requests. Design: `design.md`. How the game works, and Matt's game rulings: the repo's docs (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
+Status, plan, open items and flags; the wavefront, not a history (trimmed session 13). Changed only through conductor requests. Design: `design.md`. How the game works: the repo's docs; Matt's game rulings: the repo's `docs/rulings.md` (131) (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
 
 Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued or next work is blocked on, raised every session start. **Open questions**: decisions for upcoming work, asked once, then to **Paged** with the planner's default. **Paged**: raised only by Matt, or when a prompt already touching that code can carry it.
 
@@ -16,7 +16,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 131: Matt's game rulings and the old state's game facts into the repo's docs (trim state), plus the parked M43/M44 edit.
+nothing
 
 ## Maintenance
 
