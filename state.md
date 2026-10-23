@@ -19,7 +19,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **Session 13 (Matt, 2026-10-22):** 117-120 done (below); queued after 121: 122 (promote 120's picks: stone 1, ledge 2, hoard 1; 117's calls 2, 6-10), 123 (roster split, 117-1). 121 (variety across playthroughs measured and fixed, plus familiar content: Stardew, dragons, bedtime-story things, everyday life; ultracode).
+- **Session 13 (Matt, 2026-10-22):** 117-120 done (below); queued after 121: 122 (promote 120's picks: stone 1, ledge 2, hoard 1; 117's calls 2, 6-10), 123 (roster split, 117-1); while Matt is away until 11pm: 124 (story fx art candidates, `alongside`, ends at `pick:`), 125 (bug hunt 8, 3 h, finish by 11pm). 121 (variety across playthroughs measured and fixed, plus familiar content: Stardew, dragons, bedtime-story things, everyday life; ultracode).
 - 120 (done): M33 candidate round, 3 each for `prop_fight_stone`, `prop_fight_ledge`, `prop_fight_hoard`; Matt picked stone 1, ledge 2, hoard 1; 122 promotes them. ~3% of the 5-hour Codex window.
 - 119 (done): M36 Shape-Shifter keeps 12 whole chains (`recent.chains`; a chain never shares a link with the last six, as ruled; 12 not 6 because six still repeated at episode 10); M34 solo lasts the page session (not saved; a reload asks Dad again), a Dad yes during the solo read records `helped`, his no a miss; Dad's 2 at THE END doesn't end solo (one line in TheEnd if it should); M35 good Moriarty `size: 1.3` (evil stays 1).
 - 118 (claude.md cleanup, done): 246 → 194 lines, 21.8 → 14.9 KB; the "Matt says" table was already in `docs/content.md` since 078. Its two calls: keep (ruled).
