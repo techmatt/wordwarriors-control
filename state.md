@@ -18,7 +18,6 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - **144_hunt11_rulings:** M61-M77 as the hunt picked (Matt, session 14); pacing ruled by the planner: Charge ≤ 40 s a visit, the rhyme room ≤ 45 s with her moving ≤ 8 s into a round, battle 1's first choice back under ~26 s.
-- **145_hunt11_art** (alongside): candidates for M67's rune pictures (K, U, N, A) and M68's odd gift props, ending at `pick:`.
 
 
 ## Maintenance
@@ -35,8 +34,7 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 
 ## Waiting on Matt
 
-nothing
-
+- **Hunt 11 art picks** (145): picker `scratch/hunt11_art_145.json` (contact sheet `scratch/hunt11_art_145.png`): rune K and U redraws (the main targets), N (NET or NEST instead of NOODLE) and A (ANT instead of ALLIGATOR; `current` keeps the word), `prop_medal` for lifter Matt and `prop_dragon_scale` for Seraphina's dragon trick (or neither: delete both ids). Promotion is a later prompt; an N or A pick also changes `PICTURES` in `content/phonics/runes.ts`.
 
 ## Open questions
 
