@@ -60,6 +60,8 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 - **Session 13 pipeline review** (2026-10-23; due from checkpoint #3848): the 5 h blocked pause (fixed by conductor 48 and **pause R**), slow request receipts (conductor 50), session-start extra calls (conductor 47), the watch footer warnings (50) are done; one habit below.
 - **Planner habit, due (session 13):** a bug hunt item gets `ultracode: true` (the vocab's rule; 125 and 129 went without). A `state.md` premise is checked against the repo before it goes in a prompt (118's "Matt says" table had moved long before). Stage `review.md` only after the `review:` signal's receipt exists (missed once, read a stale bundle).
 
+- **Planner habit, due (session 14 pipeline review; due from checkpoint #3859):** before saying a picker waits on Matt, stage its `picks\<name>.choices.json` (134's were saved hours before the planner asked twice). Stage a fresh write's receipts in their own call after the write's result, re-staging once on a miss: one missing receipt fails the whole stage call. Never stage the inbox to confirm a queue write; the receipt says it.
+
 ## Flags
 
 - **Auto-approve (Matt, 2026-10-22):** every item the planner drafts goes straight to `queue\`; Matt stops what he doesn't want.
