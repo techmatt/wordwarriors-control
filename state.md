@@ -17,7 +17,6 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- **143_alienware_check** (readonly): is any Alienware/Dell service back, and does free memory still swing on a cycle (the *Memory* flag's OCControl claim is unverified since Matt uninstalled it).
 - **144_hunt11_rulings:** M61-M77 as the hunt picked (Matt, session 14); pacing ruled by the planner: Charge ≤ 40 s a visit, the rhyme room ≤ 45 s with her moving ≤ 8 s into a round, battle 1's first choice back under ~26 s.
 - **145_hunt11_art** (alongside): candidates for M67's rune pictures (K, U, N, A) and M68's odd gift props, ending at `pick:`.
 
@@ -68,7 +67,7 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 ## Flags
 
 - **Auto-approve (Matt, 2026-10-22):** every item the planner drafts goes straight to `queue\`; Matt stops what he doesn't want.
-- **Memory:** never start the daemon as a Claude Code background command (it dies with that session). Alienware's `OCControl.Service` swings free RAM by ~10 GiB every ~3 min; conductor pauses launches under pressure.
+- **Memory:** never start the daemon as a Claude Code background command (it dies with that session). Alienware's OCControl/AWCC is gone and memory no longer swings (143, 2026-10-24); the Dell/Alienware Update stack is still installed and could reinstall it (admin removal steps in 143's report). Conductor pauses launches under pressure.
 - **Art:** `art:gen` / `art:alts` / `art:pick` in the README; an image costs ~0.25–1% of the 5-hour Codex window, so big art items say what they used. Small art flaws a report notes in passing are fine; don't raise them (Matt).
 - **Questions (Matt):** `ask_default_minutes` stays 10; defaults stand when Matt doesn't see a question, and he corrects after. Don't raise timed-out defaults as problems.
 - **Ultracode:** on for bug hunts, cleanups and multi-part items; off for items serial on one machine-saturating resource (full test-suite timing runs).
