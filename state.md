@@ -17,7 +17,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-nothing
+- **136_hunt10_rulings:** Hunt 10's M45-M60 as the hunt picked (Matt, session 14); ambience promoted: nursery blocks (`nursery_2`), street leaves (`street_1`), trials removed.
+
 
 ## Maintenance
 
@@ -33,11 +34,13 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 
 ## Waiting on Matt
 
-- **Arena ambience pick** (134): picker `scratch/arena_ambience_134.json` (nursery: bubbles / blocks / nightlight stars; street: leaves / fluff / butterflies; `current` = meadow sparkles). The promoting prompt copies the chosen `AMBIENCE_TRIALS` entry into `ARENAS.nursery` / `.street` and deletes the trials and the round's scratch files.
+nothing
+
 
 ## Open questions
 
-- **Hunt 10's calls M45-M60** (asked session 14): in `docs/qa-findings.md` *Hunt 10*, each with options and the hunt's pick, most important first (M54 story-fight pads inside her reach; M45 MOM/DAD as battle items; M57 warm-up sub-words; M53 ZOO/HAND in fetch frames; M56 "Good hiding!"; M46 Shifter praise lines; M49 a few ill-fitting lines; M51 bank pictures before reading; M48 narrow pictures; M50 waking dad and the podium; M55 gift scenes; M52 chasm; M47 HUD shake; M58 entry decal; M59 attic find box; M60 flash). Not taken up → *Paged* with the hunt's pick.
+none
+
 
 ## Paged
 
