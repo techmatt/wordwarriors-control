@@ -13,17 +13,17 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
 - **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
-- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. Conductor 52.
+- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. 135: Hunt 10 (28 fixes, 133-160 in qa-findings). Conductor 52.
 
 ## Queued and running
 
-- **135_bug_hunt:** finish by 7:30pm (Oct 23).
+nothing
 
 ## Maintenance
 
 Triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5×; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space audit** after much generated media; **content audit** only when Matt asks; **trim state** past ~25 KB. Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`, and resume from the last hunt's *Where the next hunt resumes*.
 
-- Bug hunt: 129 (2026-10-23, done; resume from Hunt 9).
+- Bug hunt: 135 (2026-10-23, done; resume from Hunt 10; `variants6` and the rest of `hunt9` not run).
 - General cleanup: 132 (2026-10-23).
 - Cleanup: 076 (2026-10-21).
 - Test cleanup: 105 (2026-10-22, partial; owed: a timed 3-worker run, splitting `episode.spec`'s real-time tests, a 20 ms `WW_POLL_MS` default if two full runs stay green, 4-6 workers if memory allows).
@@ -37,10 +37,11 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 
 ## Open questions
 
-- **`gestureWords`** (`src/rules/charge.ts`, from 133): still counts a charge gesture's words (TAP, EGG) as said in the episode, keeping them out of reading though nothing speaks them since 058. Change it (changes the word draws) or leave. Default: leave.
+- **Hunt 10's calls M45-M60** (asked session 14): in `docs/qa-findings.md` *Hunt 10*, each with options and the hunt's pick, most important first (M54 story-fight pads inside her reach; M45 MOM/DAD as battle items; M57 warm-up sub-words; M53 ZOO/HAND in fetch frames; M56 "Good hiding!"; M46 Shifter praise lines; M49 a few ill-fitting lines; M51 bank pictures before reading; M48 narrow pictures; M50 waking dad and the podium; M55 gift scenes; M52 chasm; M47 HUD shake; M58 entry decal; M59 attic find box; M60 flash). Not taken up → *Paged* with the hunt's pick.
 
 ## Paged
 
+- **`gestureWords`** (`src/rules/charge.ts`, from 133): still counts a charge gesture's words (TAP, EGG) as said in the episode, keeping them out of reading though nothing speaks them since 058. Default (asked session 14): leave.
 - **Recordings (Dada Matt):** open `C:\Code\wordwarriors\tools\recorder\phonics-recorder.html?missing` locally (F as FAN, A as CAT; its zip goes to `voice:import`; afterwards empty the page's `MISSING` list). F ("ffff" with no "uh") and A are left (short A is TTS from "Add" until he re-records a steady CAT vowel). Letter names, silly words, sentence prefixes and the 14 `letter_<x>_hides` lines are later lists for the same tool.
 - **115's optional calls (default: leave):** Evil Ozymandias's Comet Crash and Evil Elsa's Forever Winter are both icy-blue waves; Evil Elsa has no summon ability; Anna's quest line against Evil Elsa still says "train at my sister's ice castle".
 - **More fight styles:** a building contest for builder Matt, a sea race.
