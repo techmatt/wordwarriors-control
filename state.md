@@ -20,6 +20,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **138_gift_spot** (running): the gift spot fits its story (spell circle for casters; else a power-up/pickup look); rides: the word machine's empty slot moves clear of the rime; Bluerilla said "blue-rilla".
 - **139_rhyme_room:** a new side-room game: two rhyming words shown and said, the third printed; she picks its picture (wrong pictures share the first sound or the vowel); help fades by level.
 - **140_charge_two_words:** Charge says all the word's sounds up front, then the runes; two words a visit.
+- **141_split_battle_sentences:** `BattleScene.ts` split (simulation, beats/volleys out) and room planning to `rules/rooms.ts`, behaviour unchanged; carries Matt's ruling that an action word's picture stays where nothing is picked (cook-off, super fan, recap) into `docs/rulings.md`.
+- **142_bug_hunt:** overnight, finish by 8:00am Oct 24, focused on 137-141.
 
 ## Maintenance
 
@@ -40,7 +42,7 @@ nothing
 
 ## Open questions
 
-- **DRIP's picture outside picture choices** (137): an action word's picture still shows where nothing is picked: the cook-off flinging it into a dish (likely the "chocolate" Matt saw), the battle super's fan of pictures, the recap card. Drop the picture there for action words, or keep. Default: keep.
+none
 
 ## Paged
 
@@ -49,7 +51,7 @@ nothing
 - **115's optional calls (default: leave):** Evil Ozymandias's Comet Crash and Evil Elsa's Forever Winter are both icy-blue waves; Evil Elsa has no summon ability; Anna's quest line against Evil Elsa still says "train at my sister's ice castle".
 - **More fight styles:** a building contest for builder Matt, a sea race.
 - **Shape-Shifter:** MAN is still in ~46% of visits (more words would fix it; Matt ruled none); its islands (DOG-LOG-LEG, NUT-NET-VET, FOX-BOX, LIP-LID) never chain; 130's rotation order can revert in one line if Matt prefers short chains to repeated links.
-- **132's own-item refactors** (clear, too big for a sweep): split `BattleScene.ts` (1841 lines), `rules/sentences.ts` (→ `rules/rooms.ts`), `tests/qa/qa.pw.ts`; a `SceneKey` union; `VoiceBus` → `src/voice/`, a home for `sceneGen`; a relock hook for rooms' `narrate`/`speak` + shared `flow` counter (needs design: changes Entry, Hub, Bedroom); one hard C/K helper (must not fold BELT/BELL); one voice-manifest schema shared by `VoiceBank` and `tools/voice/types.ts`; shared spec page helpers (fake-hidden-tab copies differ); pick notes out of `content/art/prompts.ts`; restructure `docs/systems.md`'s long cells; voice split/fingerprint coupling (`--force` note or a version).
+- **132's own-item refactors** (clear, too big for a sweep; `BattleScene.ts` and `rules/sentences.ts` are 141): split `tests/qa/qa.pw.ts`; a `SceneKey` union; `VoiceBus` → `src/voice/`, a home for `sceneGen`; a relock hook for rooms' `narrate`/`speak` + shared `flow` counter (needs design: changes Entry, Hub, Bedroom); one hard C/K helper (must not fold BELT/BELL); one voice-manifest schema shared by `VoiceBank` and `tools/voice/types.ts`; shared spec page helpers (fake-hidden-tab copies differ); pick notes out of `content/art/prompts.ts`; restructure `docs/systems.md`'s long cells; voice split/fingerprint coupling (`--force` note or a version).
 - **Pickers:** face-card picker `scratch/art_alts_113_faces.json` (if still on disk); edge-tts "Bluerilla" unheard (add a `sayName` if it sounds wrong).
 
 ## Pending fixes
