@@ -1,6 +1,6 @@
 # wordwarriors — state
 
-Status, plan, open items and flags; the wavefront, not a history (trimmed session 13). Changed only through conductor requests. Design: `design.md`. How the game works: the repo's docs; Matt's game rulings: the repo's `docs/rulings.md` (131) (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
+Status, plan, open items and flags; the wavefront, not a history (trimmed session 14). Changed only through conductor requests. Design: `design.md`. How the game works: the repo's docs; Matt's game rulings: the repo's `docs/rulings.md` (131) (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
 
 Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued or next work is blocked on, raised every session start. **Open questions**: decisions for upcoming work, asked once, then to **Paged** with the planner's default. **Paged**: raised only by Matt, or when a prompt already touching that code can carry it.
 
@@ -8,17 +8,15 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (session 13 closed 2026-10-23 ~10:30am)
+## Where it stands (session 14, 2026-10-24)
 
-- **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
-- **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
-- **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
-- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. 135: Hunt 10 (28 fixes, 133-160 in qa-findings). 136: Hunt 10's M45-M60 done as picked (MOM/DAD never fired in battle, nor warm-up words; "word minus its first or last sound" counts as said: CLOCK→LOCK, LEG→EGG, BELT→BELL…; pictures fit their own aspect); ambience: nursery blocks, street leaves, trials gone. Short Shifter visits 22/150 (was 17/153), as the hall now draws MAN more on a fresh store. 137 (Matt's playtest): no letter names in clues or hints (sounds only, every level); games rotate strictly (no side-room game from last episode, door a alternates Charge/Bridge, Shifter never two running: 3 in 7); an action word is never a picture to pick (DRIP stays in play). 138: gift spots drawn per story (magic circle for casters; plate, tool table, charging pad, training spot, blanket, nest, treasure), the word machine's slot clear of the rime, Bluerilla said "Blue-rilla" (a roster `sayName` now respells every line). 139: the rhyme room (door b in episodes without the Shifter, ~1 in 6; ten families, two of them with action-word rhyme cards; -OG/-ED wait for words). 140: Charge says all sounds first, two words a visit (~51-55 s; battle 1 fires 6-8 runes). 141: BattleScene split into sim/volleys/beats, room planning in `rules/rooms.ts`. 142: Hunt 11 (75 fixes, 161-235; overnight memory went critical from parallel browser jobs, conductor 53 caps a hunt at one browser lane plus one checker sweep). 144: Hunt 11's calls done (pacing: Charge 33-39 s warm, rhyme 39.6 s, battle 1's first choice 19.8/25.3 s; second Charge word skips "Now read the whole spell!", the last word's praise yields to the closing line). 145/146: Hunt 11 art: runes U (handle up), N = NEST, A = ANT, K kept; `prop_medal` (lifter Matt) and `prop_dragon_scale` (Seraphina's trick); the rhyme room's `rhyme_intro` dropped (green ~9.8 s in). Conductor 52.
+- **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
+- **Words:** 133 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
+- **Session 14 (132-146):** general cleanup and its rulings, Hunts 10 and 11 with their rulings, Matt's playtest fixes (137), gift spots, the rhyme room, two-word Charge, the BattleScene/rooms split, pacing (Charge ≤ 40 s a visit, rhyme room ≤ 45 s, battle 1's first choice under ~26 s), Hunt 11 art. Conductor 52-53.
 
 ## Queued and running
 
 nothing
-
 
 ## Maintenance
 
@@ -36,20 +34,18 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 
 nothing
 
-
 ## Open questions
 
 none
-
 
 ## Paged
 
 - **Medal word offset** (146): CLAP sits ~10 px high on `prop_medal` (the ribbon); a per-prop word offset in `HubScene.propBehind` fixes it. Default: leave.
 - **`gestureWords`** (`src/rules/charge.ts`, from 133): still counts a charge gesture's words (TAP, EGG) as said in the episode, keeping them out of reading though nothing speaks them since 058. Default (asked session 14): leave.
-- **Recordings (Dada Matt):** open `C:\Code\wordwarriors\tools\recorder\phonics-recorder.html?missing` locally (F as FAN, A as CAT; its zip goes to `voice:import`; afterwards empty the page's `MISSING` list). F ("ffff" with no "uh") and A are left (short A is TTS from "Add" until he re-records a steady CAT vowel). Letter names, silly words, sentence prefixes and the 14 `letter_<x>_hides` lines are later lists for the same tool.
+- **Recordings (Dada Matt):** open `C:\Code\wordwarriors\tools\recorder\phonics-recorder.html?missing` locally (F as FAN, A as CAT; its zip goes to `voice:import`; afterwards empty the page's `MISSING` list). F ("ffff" with no "uh") and A are left (short A is TTS from "Add" until he re-records a steady CAT vowel). Silly words and sentence prefixes are later lists for the same tool (letter names and the name bridges were retired by 137).
 - **115's optional calls (default: leave):** Evil Ozymandias's Comet Crash and Evil Elsa's Forever Winter are both icy-blue waves; Evil Elsa has no summon ability; Anna's quest line against Evil Elsa still says "train at my sister's ice castle".
 - **More fight styles:** a building contest for builder Matt, a sea race.
-- **Shape-Shifter:** MAN is still in ~46% of visits (more words would fix it; Matt ruled none); its islands (DOG-LOG-LEG, NUT-NET-VET, FOX-BOX, LIP-LID) never chain; 130's rotation order can revert in one line if Matt prefers short chains to repeated links.
+- **Shape-Shifter:** MAN is still in ~46% of visits (more words would fix it; Matt ruled none); its islands (DOG-LOG-LEG, NUT-NET-VET, FOX-BOX, LIP-LID) never chain.
 - **132's own-item refactors** (clear, too big for a sweep; `BattleScene.ts` and `rules/sentences.ts` are 141): split `tests/qa/qa.pw.ts`; a `SceneKey` union; `VoiceBus` → `src/voice/`, a home for `sceneGen`; a relock hook for rooms' `narrate`/`speak` + shared `flow` counter (needs design: changes Entry, Hub, Bedroom); one hard C/K helper (must not fold BELT/BELL); one voice-manifest schema shared by `VoiceBank` and `tools/voice/types.ts`; shared spec page helpers (fake-hidden-tab copies differ); pick notes out of `content/art/prompts.ts`; restructure `docs/systems.md`'s long cells; voice split/fingerprint coupling (`--force` note or a version).
 - **Pickers:** face-card picker `scratch/art_alts_113_faces.json` (if still on disk).
 
@@ -57,12 +53,7 @@ none
 
 Each item names the checkpoint it is due from; due items are top-level bullets that say "due" (the digest copies only those). Conductor findings never go here: only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open*.
 
-- **Planner habit, due:** on **review next** / **check**, always re-stage `inbox.md` first.
-- **Planner habit, due:** an art or candidate prompt ends at `pick:`; promotion rides a later prompt.
-- **Session 13 pipeline review** (2026-10-23; due from checkpoint #3848): the 5 h blocked pause (fixed by conductor 48 and **pause R**), slow request receipts (conductor 50), session-start extra calls (conductor 47), the watch footer warnings (50) are done; one habit below.
-- **Planner habit, due (session 13):** a bug hunt item gets `ultracode: true` (the vocab's rule; 125 and 129 went without). A `state.md` premise is checked against the repo before it goes in a prompt (118's "Matt says" table had moved long before). Stage `review.md` only after the `review:` signal's receipt exists (missed once, read a stale bundle).
-
-- **Planner habit, due (session 14 pipeline review; due from checkpoint #3859):** before saying a picker waits on Matt, stage its `picks\<name>.choices.json` (134's were saved hours before the planner asked twice). Stage a fresh write's receipts in their own call after the write's result, re-staging once on a miss: one missing receipt fails the whole stage call. Never stage the inbox to confirm a queue write; the receipt says it.
+- **Planner habits, due (sessions 13-14; due from checkpoint #3859):** re-stage `inbox.md` before **review next** / **check**. A bug hunt item gets `ultracode: true`. An art or candidate prompt ends at `pick:`; promotion rides a later prompt. Check a `state.md` premise against the repo before it goes in a prompt. Stage `review.md` only after the `review:` signal's receipt exists. Before saying a picker waits, read its `picks\<name>.choices.json`. Stage a write's receipts after the write's result and re-stage the same set once on a miss (one missing receipt fails the whole call); never list a folder or stage the inbox to confirm a write.
 
 ## Flags
 
@@ -76,8 +67,8 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy; the planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, uncommitted; Matt commits that repo.
 - **Storage policy (Matt, 2026-10-18):** git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals`, `voice-gen`), junctioned and shared into worktrees via conductor.toml / nowhere (rebuildable).
 - Auto-push on (`push = true`); `background` globs set; worktrees run `npm ci` at creation.
-- **Planner habits:** stage `state.md` fresh before a request and diff the request against it; read the inbox's *Red* before processing a report (conductor can overrule `status: done`); a stranded red branch lands with **land X**; every bridge upload goes to a fresh workspace path, never edited after; `expectedMtimeMs` only when replacing an existing file; stage all of a write's receipts in one call and re-stage the same set once on a miss (request receipts can take ~5 s); once a conductor prompt is called ready, additions are a line Matt pastes into its session; to stop and restart work, **pause R** / **resume R**, never a tell asking an item to wait; after a critical tell, check its receipt says delivered.
+- **Planner habits:** stage `state.md` fresh before a request and diff the request against it; read the inbox's *Red* before processing a report (conductor can overrule `status: done`); a stranded red branch lands with **land X**; every bridge upload goes to a fresh workspace path, never edited after; `expectedMtimeMs` only when replacing an existing file; request receipts can take ~5 s; once a conductor prompt is called ready, additions are a line Matt pastes into its session; to stop and restart work, **pause R** / **resume R**, never a tell asking an item to wait; after a critical tell, check its receipt says delivered.
 
 ## Conductor
 
-- Reviewed through 52 (planner.md holds the common path; planner-start.md retired; marker in `planner-notes.md`; unreviewed conductor reports now show in the inbox); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: the first real **pause R** (proven only with the fake executor) and the first real `alongside` use.
+- Reviewed through 53 (marker in `planner-notes.md`); live behaviour is in `planner.md` and conductor's HANDOFF *Status*. 53: a Windows job object per executor, so an item's orphaned browsers count as its own; memory ticks every 2 s on a rise; the bug hunt template caps one browser lane plus one checker sweep; `session.md` / `inbox.md` *Now* show the next item number; "picks saved" shows on a pending pick. Still to watch: the next bug hunt's memory line against Task Manager, and the first real **pause R**.
