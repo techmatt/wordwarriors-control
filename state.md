@@ -18,6 +18,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 ## Queued and running
 
 - **143_alienware_check** (readonly): is any Alienware/Dell service back, and does free memory still swing on a cycle (the *Memory* flag's OCControl claim is unverified since Matt uninstalled it).
+- **144_hunt11_rulings:** M61-M77 as the hunt picked (Matt, session 14); pacing ruled by the planner: Charge ≤ 40 s a visit, the rhyme room ≤ 45 s with her moving ≤ 8 s into a round, battle 1's first choice back under ~26 s.
+- **145_hunt11_art** (alongside): candidates for M67's rune pictures (K, U, N, A) and M68's odd gift props, ending at `pick:`.
 
 
 ## Maintenance
@@ -39,8 +41,7 @@ nothing
 
 ## Open questions
 
-- **Hunt 11's calls M61-M77** (asked session 14): in `docs/qa-findings.md` *Hunt 11*, options and the hunt's pick each. Most important: M63 the part-1 villain sits at his 45% floor from the first choice in Charge episodes (pick: a high floor stepping down per super); M62 battle 1's opening is 27-37 s before PICK A MOVE! with two-word Charge (pick: the runes in one volley); M61/M64 pacing (two-word Charge 41-55 s a visit, the rhyme room ~66 s with her first move ~16 s into a round); M75 brawl pads across the dragon (pick: she steps out first); M72 two tabs overwrite progress (pick: a `storage` listener); M65 sea tug rings on Elsa (pick: two pads); M77 a word read in one game returning in Charge next episode (pick: `LAST_READ` lean); M76, M70, M73, M74, M66-M69, M71 smaller. Not taken up → *Paged* with the hunt's pick.
-- **140's small calls:** Charge's sounds play before "Say each sound after me!" (default keep); the closing line's singular was fixed by 142.
+none
 
 
 ## Paged
