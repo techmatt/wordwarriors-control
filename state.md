@@ -13,12 +13,11 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up → the quest place's hub (a story scene ending in a gift word) → two side rooms (door a Charge/Bridge; door b Shape-Shifter about half the time, else fetch frames or the word machine) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** 133 live words; risky ones are stored (`STORED_WHY` in `content/phonics/bank.ts`, grown-ups page 3); the bank has enough variety (Matt). `npm run variety` measures reach and repeats over 300 episodes.
 - **Session 13 (116-130):** bug hunts 7-9, general and claude.md cleanups, solo Charge for the session, cast heights, story-fight art, variety fixes, familiar words, the word audit, banners that fit their words, Shape-Shifter chains from the smaller pool. Conductor 47-51 and cleanup 2026-10-23.
-- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. 135: Hunt 10 (28 fixes, 133-160 in qa-findings). Conductor 52.
+- **Session 14 (132):** general cleanup (~140 verified findings; Stretchy Bridge sparkle bug fixed; soak's story-fight red since 126 fixed; docs match the code). Its big refactors are in *Paged*. 133: its deferred calls as ruled (W39 fixed: pictures 40 px lower, step-back follows them; made-things out of the battle; charge-gesture lines pruned; `?seed=` replays the house plan for the first episode after load; `perf` times the build). 134: arena ambience on `ARENAS`, nursery/street candidates at a picker. 135: Hunt 10 (28 fixes, 133-160 in qa-findings). 136: Hunt 10's M45-M60 done as picked (MOM/DAD never fired in battle, nor warm-up words; "word minus its first or last sound" counts as said: CLOCK→LOCK, LEG→EGG, BELT→BELL…; pictures fit their own aspect); ambience: nursery blocks, street leaves, trials gone. Short Shifter visits 22/150 (was 17/153), as the hall now draws MAN more on a fresh store. Conductor 52.
 
 ## Queued and running
 
-- **136_hunt10_rulings:** Hunt 10's M45-M60 as the hunt picked (Matt, session 14); ambience promoted: nursery blocks (`nursery_2`), street leaves (`street_1`), trials removed.
-
+nothing
 
 ## Maintenance
 
