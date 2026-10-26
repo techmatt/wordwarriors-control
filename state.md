@@ -17,7 +17,8 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-nothing
+- 165_hunt12_calls: Matt's rulings on Hunt 12's calls M83, M78, M82, M85, M84, M81 (all the hunt's picks).
+- 166_art_cot_dot_snowmen: art candidates for COT, DOT and the Grumpy Snowman minion (M79, M80), ends at `pick:`; promotion rides a later prompt.
 
 ## Maintenance
 
@@ -37,15 +38,7 @@ none
 
 ## Open questions
 
-Hunt 12's deferred calls (164; details in `docs/qa-findings.md` "Hunt 12"), most important first, each with the hunt's pick:
-- **M83 battle runes back to back** (~0 ms between a word's sounds): (b) a 250 ms beat.
-- **M78 F's whole "fuh" in blends on the bridge** (FROG, FLAG, GIFT, ELF): (c) keep those four off the bridge while F is whole.
-- **M82 sentence room's find box has no clear place** when a standing person drops the row (also the attic test's "flake"): (b) pictures at the square's height under a two-row banner.
-- **M85 hideout's painted chest behind CHEST:** (a) keep the hideout's things off its counter.
-- **M79 COT reads as BED, DOT as a ball, PUP like DOG:** (a) an `art:alts` round for COT and DOT.
-- **M84 bakery's 🥐 sign reads as a C:** (a) another glyph.
-- **M80 smiling "grumpy" snowmen:** (a) a grumpy minion.
-- **M81 Crushing Coil's flat discs over faces:** (a) drawn under the fighters as a body.
+none
 
 ## Paged
 
