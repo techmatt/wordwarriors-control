@@ -1,6 +1,6 @@
 # wordwarriors — state
 
-Status, plan, open items and flags; the wavefront, not a history (trimmed session 14). Changed only through conductor requests. Design: `design.md`. How the game works: the repo's docs; Matt's game rulings: the repo's `docs/rulings.md` (131) (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
+Status, plan, open items and flags; the wavefront, not a history (trimmed session 16). Changed only through conductor requests. Design: `design.md`. How the game works: the repo's docs; Matt's game rulings: the repo's `docs/rulings.md` (131) (`docs/episode.md`, `docs/systems.md`, `docs/content.md`, `docs/qa-findings.md`, README, CLAUDE.md). Past items: their reports and git history.
 
 Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued or next work is blocked on, raised every session start. **Open questions**: decisions for upcoming work, asked once, then to **Paged** with the planner's default. **Paged**: raised only by Matt, or when a prompt already touching that code can carry it.
 
@@ -8,12 +8,12 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (session 15 closed 2026-10-25 ~6:00pm)
+## Where it stands (session 16 closed 2026-10-26 ~10:10am)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
-- **Words:** about 140 live words (BED, TUB, NUT, BAG back live in 153; PUP, CUB, COT, KID new in 157; TAP and EGG read again in 156); risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
-- **Session 14 (132-146):** general cleanup and its rulings, Hunts 10 and 11 with their rulings, Matt's playtest fixes (137), gift spots, the rhyme room, two-word Charge, the BattleScene/rooms split, pacing (Charge ≤ 40 s a visit, rhyme room ≤ 45 s, battle 1's first choice under ~26 s), Hunt 11 art. Conductor 52-53.
-- **Session 15 (147-160):** general cleanup; fresh dev server ~3.6 s (148-149: scratch moved to `C:\Code\wordwarriors-scratch`, pruned and thinned automatically, 152); voice loading on slow servers fixed (150: background voice low priority, boot no longer awaits core clips); 147's and 132's code calls (153, 154, 159); four flakes fixed, three of them game bugs (155); content rulings (156: Comet Crash fire, Evil Elsa summons Grumpy Snowmen, Anna's ice-castle lines); Shape-Shifter words, draw change (`SHIFTER.wordsOut: 3`) and art (157, 160: MAN ~46% → ~23%, about a fifth of visits now 2-3 links); recorder `?only=` and a derived `?missing` (158). Conductor 54. Then 161: Matt's five recordings in (A, F, long OO, schwa, OW; `?missing` now empty), `voice:import --allow-short`, the word-based listen-through page `listen.html` (22 words cover all 37 live sounds). 162: F is Matt's "fuh", played whole on the bridge (a third bridge mode, `whole: true`; no hold or stretch); S marked `rerecord` in `letters.ts`. 163: Matt's new S (SUN) in; `?missing` empty again; listen page starts SUN, CHIPS, then 161's words. 164: Hunt 12 (fixes 237-272; BED never a key word or the attic counter, so Evil Julia's Cozy Bed never comes up; new checker checks `fighter-offscreen`, `pad-under-fighter`, `sound-gap`). 165: Hunt 12's calls M78, M81-M85 applied as the hunt picked (a 250 ms beat between battle runes; whole-F words off the bridge's blends; two-row-banner pictures at square height; a room's painted things never its counter; bakery 🧁; the Crushing Coil a serpent under the fighters). 166-167: art for COT (cot with tent), DOT (marker dot) and a new minion `snow_grump` ("Grumpy Snowman") that Evil Elsa summons; the Snow Buddy keeps smiling.
+- **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
+- **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` is empty.
+- **Last session (16, items 161-167):** recordings and the listen page, Hunt 12 and its calls ruled, art for COT, DOT and Evil Elsa's Grumpy Snowman. Conductor 55 (light preamble for small items).
 
 ## Queued and running
 
@@ -45,7 +45,6 @@ none
 - **KID in the Shape-Shifter** (160): it never comes up there; its only neighbour is LID (LIP-LID-KID, too short to be drawn, all fix-it). KIT or KIN would fix it but are poor words. Default: leave; KID is read in the other rooms.
 - **Opening's time budget** (165): the 250 ms rune beat leaves `opening.spec`'s 26 s limit to PICK A MOVE! about 1 s of room (seed 2 at 24.9 s). Default: leave; trim the opening if it goes red.
 - **Crushing Coil's head is a little blobby** (165). Default: leave until a polish pass touches battle art.
-- **Shape-Shifter sound-out on a miss:** 160 ms gaps vs 400-700 ms elsewhere. Matt listens; default: leave.
 - **Voice fingerprint gaps** (159): `TAIL_SECONDS` / `trimMp3` and `MP3_KBPS` are outside line fingerprints; including them re-synthesises every line. Default: leave (changing them needs `--force`).
 - **Voice manifest split per group** (148): saves 30-50 ms a boot. Default: leave (Matt agreed).
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
@@ -77,6 +76,7 @@ Rules for the planner itself: followed, never listed back to Matt (Matt, 2026-10
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy; the planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, uncommitted, including when `voice:lines`, `voice:import` or `recorder:missing` rewrite its missing block; Matt commits that repo. `?only=<sounds>` gives any targeted set.
 - **Storage policy (Matt, 2026-10-18):** git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals`, `voice-gen`), junctioned and shared into worktrees via conductor.toml / nowhere (rebuildable).
 - Auto-push on (`push = true`); `background` globs set; worktrees run `npm ci` at creation.
+
 ## Conductor
 
-- Reviewed through 54 (marker in `planner-notes.md`); 54: question cards wrap; `disk_audit` → `disk_cleanup` and `content_audit` → `content_cleanup` (old names alias); finished run logs ≥256 KB gzip (wordwarriors' backlog at its daemon's next start); preamble: irreversible step last, long-lived servers detached. Earlier: live behaviour is in `planner.md` and conductor's HANDOFF *Status*. 53: a Windows job object per executor, so an item's orphaned browsers count as its own; memory ticks every 2 s on a rise; the bug hunt template caps one browser lane plus one checker sweep; `session.md` / `inbox.md` *Now* show the next item number; "picks saved" shows on a pending pick. Still to watch: the next bug hunt's memory line against Task Manager, and the first real **pause R**.
+- Reviewed through 55 (marker in `planner-notes.md`). Live behaviour is in `planner.md` and conductor's HANDOFF *Status*. Still to watch: a bug hunt's memory line against Task Manager, and the first real **pause R**.
