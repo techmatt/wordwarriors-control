@@ -13,7 +13,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** about 140 live words (BED, TUB, NUT, BAG back live in 153; PUP, CUB, COT, KID new in 157; TAP and EGG read again in 156); risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Session 14 (132-146):** general cleanup and its rulings, Hunts 10 and 11 with their rulings, Matt's playtest fixes (137), gift spots, the rhyme room, two-word Charge, the BattleScene/rooms split, pacing (Charge ≤ 40 s a visit, rhyme room ≤ 45 s, battle 1's first choice under ~26 s), Hunt 11 art. Conductor 52-53.
-- **Session 15 (147-160):** general cleanup; fresh dev server ~3.6 s (148-149: scratch moved to `C:\Code\wordwarriors-scratch`, pruned and thinned automatically, 152); voice loading on slow servers fixed (150: background voice low priority, boot no longer awaits core clips); 147's and 132's code calls (153, 154, 159); four flakes fixed, three of them game bugs (155); content rulings (156: Comet Crash fire, Evil Elsa summons Grumpy Snowmen, Anna's ice-castle lines); Shape-Shifter words, draw change (`SHIFTER.wordsOut: 3`) and art (157, 160: MAN ~46% → ~23%, about a fifth of visits now 2-3 links); recorder `?only=` and a derived `?missing` (158). Conductor 54. Then 161: Matt's five recordings in (A, F, long OO, schwa, OW; `?missing` now empty), `voice:import --allow-short`, the word-based listen-through page `listen.html` (22 words cover all 37 live sounds). 162: F is Matt's "fuh", played whole on the bridge (a third bridge mode, `whole: true`; no hold or stretch); S marked `rerecord` in `letters.ts`. 163: Matt's new S (SUN) in; `?missing` empty again; listen page starts SUN, CHIPS, then 161's words.
+- **Session 15 (147-160):** general cleanup; fresh dev server ~3.6 s (148-149: scratch moved to `C:\Code\wordwarriors-scratch`, pruned and thinned automatically, 152); voice loading on slow servers fixed (150: background voice low priority, boot no longer awaits core clips); 147's and 132's code calls (153, 154, 159); four flakes fixed, three of them game bugs (155); content rulings (156: Comet Crash fire, Evil Elsa summons Grumpy Snowmen, Anna's ice-castle lines); Shape-Shifter words, draw change (`SHIFTER.wordsOut: 3`) and art (157, 160: MAN ~46% → ~23%, about a fifth of visits now 2-3 links); recorder `?only=` and a derived `?missing` (158). Conductor 54. Then 161: Matt's five recordings in (A, F, long OO, schwa, OW; `?missing` now empty), `voice:import --allow-short`, the word-based listen-through page `listen.html` (22 words cover all 37 live sounds). 162: F is Matt's "fuh", played whole on the bridge (a third bridge mode, `whole: true`; no hold or stretch); S marked `rerecord` in `letters.ts`. 163: Matt's new S (SUN) in; `?missing` empty again; listen page starts SUN, CHIPS, then 161's words. 164: Hunt 12 (fixes 237-272; BED never a key word or the attic counter, so Evil Julia's Cozy Bed never comes up; new checker checks `fighter-offscreen`, `pad-under-fighter`, `sound-gap`).
 
 ## Queued and running
 
@@ -23,7 +23,7 @@ nothing
 
 Triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5×; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space cleanup** after much generated media; **content cleanup** only when Matt asks; **trim state** past ~25 KB. Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`, and resume from the last hunt's *Where the next hunt resumes*.
 
-- **Bug hunt, due:** 142 (2026-10-24, done; resume from Hunt 11). Since then the Shape-Shifter draw and words, rhyme redraws, the giant edge clamp, TAP/EGG in reading, Evil Elsa's summon, Comet Crash and voice priority/boot all changed (147-160): the planner recommends one, best overnight.
+- Bug hunt: 164 (2026-10-26, done; Hunt 12; resume from its *Where the next hunt resumes*).
 - General cleanup: 147 (2026-10-24).
 - Cleanup: 076 (2026-10-21).
 - Test cleanup: 105 (2026-10-22, partial; owed: a timed 3-worker run, splitting `episode.spec`'s real-time tests, a 20 ms `WW_POLL_MS` default if two full runs stay green, 4-6 workers if memory allows).
@@ -37,7 +37,15 @@ none
 
 ## Open questions
 
-none
+Hunt 12's deferred calls (164; details in `docs/qa-findings.md` "Hunt 12"), most important first, each with the hunt's pick:
+- **M83 battle runes back to back** (~0 ms between a word's sounds): (b) a 250 ms beat.
+- **M78 F's whole "fuh" in blends on the bridge** (FROG, FLAG, GIFT, ELF): (c) keep those four off the bridge while F is whole.
+- **M82 sentence room's find box has no clear place** when a standing person drops the row (also the attic test's "flake"): (b) pictures at the square's height under a two-row banner.
+- **M85 hideout's painted chest behind CHEST:** (a) keep the hideout's things off its counter.
+- **M79 COT reads as BED, DOT as a ball, PUP like DOG:** (a) an `art:alts` round for COT and DOT.
+- **M84 bakery's 🥐 sign reads as a C:** (a) another glyph.
+- **M80 smiling "grumpy" snowmen:** (a) a grumpy minion.
+- **M81 Crushing Coil's flat discs over faces:** (a) drawn under the fighters as a body.
 
 ## Paged
 
@@ -53,9 +61,13 @@ none
 
 Each item names the checkpoint it is due from; due items are top-level bullets that say "due" (the digest copies only those). Conductor findings never go here: only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open*.
 
-- **Planner habits, due (sessions 13-14; due from checkpoint #3859):** re-stage `inbox.md` before **review next** / **check**. A bug hunt item gets `ultracode: true`. An art or candidate prompt ends at `pick:`; promotion rides a later prompt. Check a `state.md` premise against the repo before it goes in a prompt. Stage `review.md` only after the `review:` signal's receipt exists. Before saying a picker waits, read its `picks\<name>.choices.json`. Stage a write's receipts after the write's result and re-stage the same set once on a miss (one missing receipt fails the whole call); never list a folder or stage the inbox to confirm a write.
+## Planner habits
 
-- **Planner habits, due (session 15; due from checkpoint #4481):** an investigation prompt for something Matt saw quotes his concrete symptom (the screen, the character, which server) and must reproduce that exact case (148 measured the default cast and missed Jasmine; 150 redid it). A question Matt pastes with no other context: answer it with the planner's best take as the first call (152's answer landed 18 s after its default).
+Rules for the planner itself: followed, never listed back to Matt (Matt, 2026-10-25).
+
+- **Bridge and requests:** stage `state.md` fresh before a request and diff the request against it; read the inbox's *Red* before processing a report (conductor can overrule `status: done`); a stranded red branch lands with **land X**; every bridge upload goes to a fresh workspace path, never edited after; `expectedMtimeMs` only when replacing an existing file; request receipts can take ~5 s; once a conductor prompt is called ready, additions are a line Matt pastes into its session; to stop and restart work, **pause R** / **resume R**, never a tell asking an item to wait; after a critical tell, check its receipt says delivered.
+- **Sessions 13-14:** re-stage `inbox.md` before **review next** / **check**. A bug hunt item gets `ultracode: true`. An art or candidate prompt ends at `pick:`; promotion rides a later prompt. Check a `state.md` premise against the repo before it goes in a prompt. Stage `review.md` only after the `review:` signal's receipt exists. Before saying a picker waits, read its `picks\<name>.choices.json`. Stage a write's receipts after the write's result and re-stage the same set once on a miss (one missing receipt fails the whole call); never list a folder or stage the inbox to confirm a write.
+- **Session 15:** an investigation prompt for something Matt saw quotes his concrete symptom (the screen, the character, which server) and must reproduce that exact case (148 measured the default cast and missed Jasmine; 150 redid it). A question Matt pastes with no other context: answer it with the planner's best take as the first call (152's answer landed 18 s after its default).
 
 ## Flags
 
@@ -70,8 +82,6 @@ Each item names the checkpoint it is due from; due items are top-level bullets t
 - **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy; the planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, uncommitted, including when `voice:lines`, `voice:import` or `recorder:missing` rewrite its missing block; Matt commits that repo. `?only=<sounds>` gives any targeted set.
 - **Storage policy (Matt, 2026-10-18):** git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals`, `voice-gen`), junctioned and shared into worktrees via conductor.toml / nowhere (rebuildable).
 - Auto-push on (`push = true`); `background` globs set; worktrees run `npm ci` at creation.
-- **Planner habits:** stage `state.md` fresh before a request and diff the request against it; read the inbox's *Red* before processing a report (conductor can overrule `status: done`); a stranded red branch lands with **land X**; every bridge upload goes to a fresh workspace path, never edited after; `expectedMtimeMs` only when replacing an existing file; request receipts can take ~5 s; once a conductor prompt is called ready, additions are a line Matt pastes into its session; to stop and restart work, **pause R** / **resume R**, never a tell asking an item to wait; after a critical tell, check its receipt says delivered.
-
 ## Conductor
 
 - Reviewed through 54 (marker in `planner-notes.md`); 54: question cards wrap; `disk_audit` → `disk_cleanup` and `content_audit` → `content_cleanup` (old names alias); finished run logs ≥256 KB gzip (wordwarriors' backlog at its daemon's next start); preamble: irreversible step last, long-lived servers detached. Earlier: live behaviour is in `planner.md` and conductor's HANDOFF *Status*. 53: a Windows job object per executor, so an item's orphaned browsers count as its own; memory ticks every 2 s on a rise; the bug hunt template caps one browser lane plus one checker sweep; `session.md` / `inbox.md` *Now* show the next item number; "picks saved" shows on a pending pick. Still to watch: the next bug hunt's memory line against Task Manager, and the first real **pause R**.
