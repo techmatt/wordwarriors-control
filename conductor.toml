@@ -8,7 +8,7 @@ ask_default_minutes = 10
 
 [repos.wordwarriors]
 path = "../wordwarriors"
-shared = ["art-originals", "scratch", "public/voice-gen"]
+shared = ["art-originals", "public/voice-gen"]
 setup = ["npm ci"]
 push = true
 background = ["npm test*", "npm run test*", "npx playwright*", "npm run shots*", "npm run perf*", "npm run qa*"]
