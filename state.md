@@ -43,7 +43,8 @@ none
 
 - **More fight styles:** a building contest for builder Matt, a sea race. Matt revives these when Julia seems bored of the current fights.
 - **KID in the Shape-Shifter** (160): it never comes up there; its only neighbour is LID (LIP-LID-KID, too short to be drawn, all fix-it). KIT or KIN would fix it but are poor words. Default: leave; KID is read in the other rooms.
-- **DOT looks like a blue ball** standing on the sand (160, Matt's pick 2). Watch whether Julia says "ball".
+- **Opening's time budget** (165): the 250 ms rune beat leaves `opening.spec`'s 26 s limit to PICK A MOVE! about 1 s of room (seed 2 at 24.9 s). Default: leave; trim the opening if it goes red.
+- **Crushing Coil's head is a little blobby** (165). Default: leave until a polish pass touches battle art.
 - **Shape-Shifter sound-out on a miss:** 160 ms gaps vs 400-700 ms elsewhere. Matt listens; default: leave.
 - **Voice fingerprint gaps** (159): `TAIL_SECONDS` / `trimMp3` and `MP3_KBPS` are outside line fingerprints; including them re-synthesises every line. Default: leave (changing them needs `--force`).
 - **Voice manifest split per group** (148): saves 30-50 ms a boot. Default: leave (Matt agreed).
@@ -52,6 +53,8 @@ none
 ## Pending fixes
 
 Each item names the checkpoint it is due from; due items are top-level bullets that say "due" (the digest copies only those). Conductor findings never go here: only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open*.
+
+- **Recorder sync, due (rides the next wordwarriors prompt; due from checkpoint #4813):** whatever rewrites `tools/recorder/phonics-recorder.html` (`recorder:missing`, `voice:import`, `voice:lines`) also copies it to `C:\Code\techmatt.github.io\phonics-recorder.html` when that folder exists (uncommitted; Matt commits). Session 16 the planner hand-synced it three times (161-163), ~3 bridge calls each. Then drop the *Live recorder* flag's planner step.
 
 ## Planner habits
 
