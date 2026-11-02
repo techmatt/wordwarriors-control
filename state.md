@@ -10,7 +10,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Where it stands (session 16 closed 2026-10-26 ~10:10am)
 
-- **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (11 allies, 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
+- **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Ember Lark the newest (172), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` is empty.
 - **Last session (16, items 161-167):** recordings and the listen page, Hunt 12 and its calls ruled, art for COT, DOT and Evil Elsa's Grumpy Snowman. Conductor 55 (light preamble for small items).
@@ -47,13 +47,15 @@ none
 - **Crushing Coil's head is a little blobby** (165). Default: leave until a polish pass touches battle art.
 - **Voice fingerprint gaps** (159): `TAIL_SECONDS` / `trimMp3` and `MP3_KBPS` are outside line fingerprints; including them re-synthesises every line. Default: leave (changing them needs `--force`).
 - **Voice manifest split per group** (148): saves 30-50 ms a boot. Default: leave (Matt agreed).
+- **Ember Lark's two pictures don't match** (172): the rider (fox 6, ranger) and the on-foot pick and face cards (foot 3, star hem) differ in skin tone and robe. Default: leave as picked; the fix is a redraw of one, or face and pick cards cut from fox 6.
+- **Ember Lark's letters are silent** (172): the tiles over her head aren't voiced. Default: leave; voicing the sounds is a small change in `letterRow`.
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
 
 ## Pending fixes
 
 Each item names the checkpoint it is due from; due items are top-level bullets that say "due" (the digest copies only those). Conductor findings never go here: only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open*.
 
-- **Recorder sync, due (rides the next wordwarriors prompt; due from checkpoint #4813):** whatever rewrites `tools/recorder/phonics-recorder.html` (`recorder:missing`, `voice:import`, `voice:lines`) also copies it to `C:\Code\techmatt.github.io\phonics-recorder.html` when that folder exists (uncommitted; Matt commits). Session 16 the planner hand-synced it three times (161-163), ~3 bridge calls each. Then drop the *Live recorder* flag's planner step.
+none
 
 ## Planner habits
 
@@ -73,7 +75,7 @@ Rules for the planner itself: followed, never listed back to Matt (Matt, 2026-10
 - **Ultracode:** on for bug hunts, cleanups and multi-part items; off for items serial on one machine-saturating resource (full test-suite timing runs).
 - **Audits (Matt, 2026-10-20):** the planner adds `audit: true` on its own judgment for a big pass through much-changed code, saying so in the reply.
 - **Tests (Matt):** faster over thorough where reasonable; `npm test` plus the browser tests covering the change, full suite only when clearly needed (in the repo's CLAUDE.md).
-- **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy; the planner overwrites it from the repo's `tools/recorder/phonics-recorder.html` after every change, uncommitted, including when `voice:lines`, `voice:import` or `recorder:missing` rewrite its missing block; Matt commits that repo. `?only=<sounds>` gives any targeted set.
+- **Live recorder (Matt, 2026-10-20):** `C:\Code\techmatt.github.io\phonics-recorder.html` is the live hosted copy; since 172 the repo's tools copy it there whenever they rewrite it (`syncHosted`), uncommitted; Matt commits that repo. `?only=<sounds>` gives any targeted set.
 - **Storage policy (Matt, 2026-10-18):** git (source, data, recordings, game-sized art) / Drive `C:\Code\gdrive-sync\wordwarriors\` (`art-originals`, `voice-gen`), junctioned and shared into worktrees via conductor.toml / nowhere (rebuildable).
 - Auto-push on (`push = true`); `background` globs set; worktrees run `npm ci` at creation.
 
