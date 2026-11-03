@@ -8,13 +8,13 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
 
-## Where it stands (session 16 closed 2026-10-26 ~10:10am)
+## Where it stands (session 17 closed 2026-11-02 ~10:47pm)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
 - **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` is empty.
-- **Last session (16, items 161-167):** recordings and the listen page, Hunt 12 and its calls ruled, art for COT, DOT and Evil Elsa's Grumpy Snowman. Conductor 55 (light preamble for small items).
+- **Last session (17, items 168-175):** figment art rounds (168-170, not for this game; reviewed with no carry); Meryl (built as Ember Lark, renamed in 175) joins as the 12th ally (171-172); a readout of Julia's save (173: one Chrome save, no history kept, test play mixes in); choice mode (174).
 
 ## Queued and running
 
