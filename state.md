@@ -10,7 +10,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Where it stands (session 16 closed 2026-10-26 ~10:10am)
 
-- **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Ember Lark the newest (172), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
+- **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
 - **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` is empty.
@@ -48,8 +48,8 @@ none
 - **Crushing Coil's head is a little blobby** (165). Default: leave until a polish pass touches battle art.
 - **Voice fingerprint gaps** (159): `TAIL_SECONDS` / `trimMp3` and `MP3_KBPS` are outside line fingerprints; including them re-synthesises every line. Default: leave (changing them needs `--force`).
 - **Voice manifest split per group** (148): saves 30-50 ms a boot. Default: leave (Matt agreed).
-- **Ember Lark's two pictures don't match** (172): the rider (fox 6, ranger) and the on-foot pick and face cards (foot 3, star hem) differ in skin tone and robe. Default: leave as picked; the fix is a redraw of one, or face and pick cards cut from fox 6.
-- **Ember Lark's letters are silent** (172): the tiles over her head aren't voiced. Default: leave; voicing the sounds is a small change in `letterRow`.
+- **Meryl's two pictures don't match** (172): the rider (fox 6, ranger) and the on-foot pick and face cards (foot 3, star hem) differ in skin tone and robe. Default: leave as picked; the fix is a redraw of one, or face and pick cards cut from fox 6.
+- **Meryl's letters are silent** (172): the tiles over her head aren't voiced. Default: leave; voicing the sounds is a small change in `letterRow`.
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
 
 ## Pending fixes
