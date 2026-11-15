@@ -1,5 +1,6 @@
 project = "wordwarriors"
 locks = []
+ports = "5240-5259"   # this project's port block (conductor 119)
 open_roots = ["C:/Code/gdrive-sync/wordwarriors"]
 
 [defaults]
@@ -15,6 +16,6 @@ background = ["npm test*", "npm run test*", "npx playwright*", "npm run shots*",
 
 [run.game]
 repo = "wordwarriors"
-command = "npm install && npm run dev -- --port 5174"
-url = "http://localhost:5174/"
+command = "npm install && npm run dev -- --port 5240 --strictPort"
+url = "http://localhost:5240/"
 ready_seconds = 180
