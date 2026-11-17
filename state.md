@@ -6,13 +6,14 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Repos
 
-- `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5174). Voice build needs `uv` on PATH.
+- `wordwarriors`: ../wordwarriors (game code). Run target `game` (port 5240 since conductor 119, Nov 14). Voice build needs `uv` on PATH.
 
 ## Where it stands (session 17 closed 2026-11-02 ~10:47pm)
 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
-- **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3); the bank has enough variety (Matt). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
+- **Words:** about 140 live words; risky ones are stored (`STORED_WHY`, grown-ups page 3). An action word is never a picture she picks. `npm run variety` measures reach and repeats. Matt wants new words next, ahead of raising `DIFFICULTY` (2026-11-16).
+- **Julia's progress (177):** her save is in Chrome's localStorage only, per origin. Her history (67 episodes, Oct 18 – Nov 14) sits on :5174; :5240 started empty on Nov 15 (bag, rotations and shakiness reset). She has read every live word but SHEEP and THREE; every pattern is at 74–87% recent first-try; long vowels barely met; shaky: short O (MOP, ROCK, BOX; -OP -OT -OX), -ND/-NT/-ST blends, N- and R- onsets. The data mixes in dev play on :5174, and F4 auto-answers count as first-try rights. Blobs and full readout: `C:\Code\wordwarriors-scratch\progress-readout\`.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` is empty.
 - **Last session (17, items 168-175):** figment art rounds (168-170, not for this game; reviewed with no carry); Meryl (built as Ember Lark, renamed in 175) joins as the 12th ally (171-172); a readout of Julia's save (173: one Chrome save, no history kept, test play mixes in); choice mode (174).
 
@@ -38,7 +39,7 @@ none
 
 ## Open questions
 
-none
+- **Stable progress storage** (planner proposal, session 18): the dev server mirrors the save to `C:\Code\wordwarriors-data\progress.json` on every write, boot restores from it when localStorage is empty or older, dated daily backups, and a one-time merge of :5174's history with :5240's play. Waiting on Matt's "queue it".
 
 ## Paged
 
