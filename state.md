@@ -13,6 +13,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
 - **Words:** about 220 live words. 178 made the stored and `odd` pool live except BUSH, DRUM, LAMP, DUCK, BLOCK (bedroom props) and X-RAY, and added 18: FROST POND SAND FANG HELMET GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD (ROBOT swapped out: a bedroom toy). X-RAY goes live as an exception to the no-letter-name rule, the only X word (Matt, 2026-11-16; parked, rides 182). An action word is never a picture she picks. `npm run variety` measures reach and repeats. Matt wants new words ahead of raising `DIFFICULTY` (2026-11-16).
+- **Code rulings (Matt, 2026-11-16, from 179-180):** cite an item in a code comment only where it records a ruling the code obeys, trimming as files are touched (no sweep); `CharacterSpec.description` stays as a documented optional author's note; `CLAUDE.md` keeps the keyboard and sentence-game laws in place.
 - **Heard words (Matt, 2026-11-16):** a word Julia hears in a character's line before reading it is not a problem. Keeping it out of that episode's reads is at most a soft preference, never a reason to drop or avoid a word; existing dialog stays as written.
 - **Julia's progress (177):** her save is in Chrome's localStorage only, per origin. Her history (67 episodes, Oct 18 – Nov 14) sits on :5174; :5240 started empty on Nov 15 (bag, rotations and shakiness reset). She has read every live word but SHEEP and THREE; every pattern is at 74–87% recent first-try; long vowels barely met; shaky: short O (MOP, ROCK, BOX; -OP -OT -OX), -ND/-NT/-ST blends, N- and R- onsets. The data mixes in dev play on :5174, and F4 auto-answers count as first-try rights. Blobs and full readout: `C:\Code\wordwarriors-scratch\progress-readout\`.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` lists `or` (SWORD) and `er` (WIZARD), edge-tts placeholders until Matt records them.
@@ -41,11 +42,7 @@ none
 
 ## Open questions
 
-- **Stable progress storage** (planner proposal, session 18): the dev server mirrors the save to `C:\Code\wordwarriors-data\progress.json` on every write, boot restores from it when localStorage is empty or older, dated daily backups, and a one-time merge of :5174's history with :5240's play. Waiting on Matt's "queue it".
-- **Item citations in code comments** (179, Matt's call): 2,375 left. Default: cite an item only where it records a ruling the code obeys; trim as files are touched, no sweep.
-- **`CharacterSpec.description`** (179, Matt's call): read by no code. Default: keep as an optional author's note, documented.
-- **The two `firstSound` helpers** (179, Matt's call; changes play): bank.ts goes by spelling, rhyme.ts by sound. Default: unify on the sound-based one.
-- **CLAUDE.md law trims** (180, Matt's call): the keyboard bullet stays law (F-key list now a pointer); the sentence-game law's pass-by-pass detail could move to `docs/episode-rooms.md`. Default: leave both as they are.
+none
 
 ## Paged
 
@@ -60,6 +57,7 @@ none
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
 - **M83 rune-gap flake** (179): `charge.spec` M83 (≥240 ms beat) fails on main too, gaps 170-600 ms; may be a real short beat in the volley. Default: a bug-fix item in the rune voicing, not a looser test; queue with other battle work.
 - **Small code calls** (179): delete `FLIP_TO_FACE` (always true); VoiceBank warns on a `MANIFEST_VERSION` mismatch; rename `src/scenes/minigames` → `src/scenes/parked` and move `sceneGen.ts` out of `src/fx/` (unblocked by 180). Queue with other work there.
+- **Unify `firstSound` on the sound-based helper** (Matt, 2026-11-16, from 179): bank.ts's spelling-based one goes; SH/TH distractors change. Queue with other work in the bank or rhyme room.
 
 ## Pending fixes
 
