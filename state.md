@@ -12,23 +12,22 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
-- **Words:** about 220 live words. 178 made the stored and `odd` pool live except BUSH, DRUM, LAMP, DUCK, BLOCK (bedroom props) and X-RAY, and added 18: FROST POND SAND FANG HELMET GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD (ROBOT swapped out: a bedroom toy). X-RAY goes live as an exception to the no-letter-name rule, the only X word (Matt, 2026-11-16; parked, rides 182). An action word is never a picture she picks. `npm run variety` measures reach and repeats. Matt wants new words ahead of raising `DIFFICULTY` (2026-11-16).
+- **Words:** about 220 live words, all with their own art (182). 178 made the stored and `odd` pool live and added FROST POND SAND FANG GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD. X-RAY is live as the one exception to the no-letter-name rule (Matt; `docs/rulings.md`). BUSH stays stored; HELMET waits on 183's pick (promoted in 184). Bedroom toys never keep a word out (Matt, 2026-11-16): 184 brings back ROBOT, DRUM, LAMP, DUCK, BLOCK. An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Code rulings (Matt, 2026-11-16, from 179-180):** cite an item in a code comment only where it records a ruling the code obeys, trimming as files are touched (no sweep); `CharacterSpec.description` stays as a documented optional author's note; `CLAUDE.md` keeps the keyboard and sentence-game laws in place.
 - **Heard words (Matt, 2026-11-16):** a word Julia hears in a character's line before reading it is not a problem. Keeping it out of that episode's reads is at most a soft preference, never a reason to drop or avoid a word; existing dialog stays as written.
 - **Julia's progress (177):** her save is in Chrome's localStorage only, per origin. Her history (67 episodes, Oct 18 – Nov 14) sits on :5174; :5240 started empty on Nov 15 (bag, rotations and shakiness reset). She has read every live word but SHEEP and THREE; every pattern is at 74–87% recent first-try; long vowels barely met; shaky: short O (MOP, ROCK, BOX; -OP -OT -OX), -ND/-NT/-ST blends, N- and R- onsets. The data mixes in dev play on :5174, and F4 auto-answers count as first-try rights. Blobs and full readout: `C:\Code\wordwarriors-scratch\progress-readout\`.
-- **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` lists `or` (SWORD) and `er` (WIZARD), edge-tts placeholders until Matt records them.
+- **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` lists `or` (SWORD), `er` (WIZARD) and `x_name` (X-RAY), edge-tts placeholders until Matt records them.
 - **Last session (17, items 168-175):** figment art rounds (168-170, not for this game; reviewed with no carry); Meryl (built as Ember Lark, renamed in 175) joins as the 12th ally (171-172); a readout of Julia's save (173: one Chrome save, no history kept, test play mixes in); choice mode (174).
 
 ## Queued and running
 
-- 181_bug_hunt (running, focus: choice mode, Meryl, 178's words).
-- 182_promote_word_art (`needs_pick: art_alts_178`, picks saved; carries the X-RAY parked edit).
+- 184_bedroom_words (running; also promotes `art_alts_183`), then 185_disk_cleanup, 186_stable_progress.
 
 ## Maintenance
 
 Triggers: **bug hunt** after a wave of big features or a new surface; **general cleanup** after ~10 feature items or a large rework; **cleanup** when audit notes pile up; **test cleanup** when a full run has grown ~1.5×; **claude.md cleanup** when CLAUDE.md is long or stale; **disk space cleanup** after much generated media; **content cleanup** only when Matt asks; **trim state** past ~25 KB. Bug hunts start from *Categories to hunt (Matt)* at the top of `docs/qa-findings.md`, and resume from the last hunt's *Where the next hunt resumes*.
 
-- Bug hunt: 181 (2026-11-16, running); before it 164 (Hunt 12).
+- Bug hunt: 181 (2026-11-16, Hunt 13; ended early on Matt's word; resume from its *Where the next hunt resumes*).
 - General cleanup: 179 (2026-11-16; docs trimmed to ≤15 KB each, current-only).
 - Cleanup: 076 (2026-10-21).
 - Test cleanup: 105 (2026-10-22, partial; owed: a timed 3-worker run, splitting `episode.spec`'s real-time tests, a 20 ms `WW_POLL_MS` default if two full runs stay green, 4-6 workers if memory allows).
@@ -42,7 +41,12 @@ none
 
 ## Open questions
 
-none
+Hunt 13's calls (181; `docs/qa-findings.md` M86-M90, Ruling column empty). Planner defaults, applying the heard-words and bedroom-toys rulings:
+- **M86** places and stuff as fetch keys (GO GET THE POND / CAVE / CASTLE): add to `NOT_FETCHED`, as ZOO.
+- **M88** villain decals that picture bank words (Smaug's flame, Elsa's ❄️, Meryl's 🏹): leave; a picture on screen never keeps a word out.
+- **M89** FROST CLASH! banner then FROST as the counter: leave, same reason.
+- **M87** four taunts caption BOW but say "bough": leave the dialog as written (Matt's dialog-stays ruling).
+- **M90** blue at the title opens choice mode: keep (red takes her back).
 
 ## Paged
 
@@ -57,6 +61,7 @@ none
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
 - **M83 rune-gap flake** (179): `charge.spec` M83 (≥240 ms beat) fails on main too, gaps 170-600 ms; may be a real short beat in the volley. Default: a bug-fix item in the rune voicing, not a looser test; queue with other battle work.
 - **Small code calls** (179): delete `FLIP_TO_FACE` (always true); VoiceBank warns on a `MANIFEST_VERSION` mismatch; rename `src/scenes/minigames` → `src/scenes/parked` and move `sceneGen.ts` out of `src/fx/` (unblocked by 180). Queue with other work there.
+- **Meryl fixes** (181): M91 riders and their letter rows draw above props (she vanishes behind the cook-off cake); M92 her captions read KNIGHTS CAMP (needs `voice:build`, a content item). Queue with other Meryl or battle work.
 - **Unify `firstSound` on the sound-based helper** (Matt, 2026-11-16, from 179): bank.ts's spelling-based one goes; SH/TH distractors change. Queue with other work in the bank or rhyme room.
 
 ## Pending fixes
