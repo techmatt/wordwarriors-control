@@ -15,13 +15,13 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 - **Words:** about 220 live words, all with their own art (182). 178 made the stored and `odd` pool live and added FROST POND SAND FANG GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD. X-RAY is live as the one exception to the no-letter-name rule (Matt; `docs/rulings.md`). BUSH stays stored; HELMET goes live in 187. Bedroom toys never keep a word out (Matt, 2026-11-16): 184 made DRUM, LAMP, DUCK, BLOCK live and added ROBOT (🤖 is still a sign at the Robot Workshop, so ROBOT sits out there). UNICORN, TEDDY, ROCKET, BALL are not words yet (planner suggests adding them, with an art round; Matt's call). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Code rulings (Matt, 2026-11-16, from 179-180):** cite an item in a code comment only where it records a ruling the code obeys, trimming as files are touched (no sweep); `CharacterSpec.description` stays as a documented optional author's note; `CLAUDE.md` keeps the keyboard and sentence-game laws in place.
 - **Heard words (Matt, 2026-11-16):** a word Julia hears in a character's line before reading it is not a problem. Keeping it out of that episode's reads is at most a soft preference, never a reason to drop or avoid a word; existing dialog stays as written.
-- **Julia's progress (177):** her save is in Chrome's localStorage only, per origin. Her history (67 episodes, Oct 18 – Nov 14) sits on :5174; :5240 started empty on Nov 15 (bag, rotations and shakiness reset). She has read every live word but SHEEP and THREE; every pattern is at 74–87% recent first-try; long vowels barely met; shaky: short O (MOP, ROCK, BOX; -OP -OT -OX), -ND/-NT/-ST blends, N- and R- onsets. The data mixes in dev play on :5174, and F4 auto-answers count as first-try rights. Blobs and full readout: `C:\Code\wordwarriors-scratch\progress-readout\`.
+- **Julia's progress (186):** the save file `C:\Code\gdrive-sync\wordwarriors\progress\progress.json` (Drive-synced, dated daily backups beside it) is the master; the main checkout's dev server mirrors every write to it and a fresh origin restores from it (`WW_DATA_DIR` moves it). It holds 70 episodes (:5174's 67 merged with :5240's 3, Nov 16). The planner reads her progress there. 177's readout (Nov 16): every pattern 74-87% recent first-try; shaky: short O, -ND/-NT/-ST, N- and R- onsets; long vowels barely met. Her data mixes in Matt's dev play, and F4 auto-answers count as first-try rights.
 - **Voice:** Matt's recordings cover every sound the live words use, all passable (Matt, 2026-10-26); F is a whole "fuh" (no hold; blends with F kept off the bridge). `listen.html` plays a word set covering every live sound; the recorder's `?missing` lists `or` (SWORD), `er` (WIZARD) and `x_name` (X-RAY), edge-tts placeholders until Matt records them.
 - **Last session (17, items 168-175):** figment art rounds (168-170, not for this game; reviewed with no carry); Meryl (built as Ember Lark, renamed in 175) joins as the 12th ally (171-172); a readout of Julia's save (173: one Chrome save, no history kept, test play mixes in); choice mode (174).
 
 ## Queued and running
 
-- 186_stable_progress (running), then 187_promote_183_art (HELMET 4, FOG TAP MUG RUSH JAB 3; archives 178's picker; `voice:build -- --prune`).
+- 187_promote_183_art (running; also deletes `art-originals/figments/`, Matt), then 188_toy_words (UNICORN TEDDY ROCKET BALL, held for art; ends at `pick:`).
 
 ## Maintenance
 
@@ -47,7 +47,7 @@ Hunt 13's calls (181; `docs/qa-findings.md` M86-M90, Ruling column empty). Plann
 - **M89** FROST CLASH! banner then FROST as the counter: leave, same reason.
 - **M87** four taunts caption BOW but say "bough": leave the dialog as written (Matt's dialog-stays ruling).
 - **M90** blue at the title opens choice mode: keep (red takes her back).
-- **`art-originals/figments/`** (185; 1.0 GB from items 168-170, outside this game): keep until Matt says the figments are finished.
+
 
 ## Paged
 
