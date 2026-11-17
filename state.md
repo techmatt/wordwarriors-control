@@ -12,7 +12,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 - **The episode:** bedroom wake-up → entry-hall warm-up (sounds only, no letter names) → the quest place's hub (a story scene ending in a gift word, on a spot drawn for that story) → two side rooms (door a alternates Charge, two words a visit, and the Stretchy Bridge; door b the Shape-Shifter in 3 episodes of 7, never two running, else the rhyme room, fetch frames or the word machine; no side-room game repeats from last episode) → battle 1 → retreat and the attic's counter sentence → battle 2 → the reformed villain's sorry → victory scene → recap. Cast (12 allies, Meryl the newest (172; renamed from Ember Lark in 175), 7 villains), places, fights (Evil Smaug's story fight in about half his episodes), rooms and words are drawn per episode, with rotation memory.
 - **Choice mode** (174): an adult starts it with 3 / blue on the title or Dad's 2 in the bedroom; Julia picks the ally and the villain on big cards, the rest is drawn, her picks stay out of rotation memory and her play counts.
-- **Words:** about 220 live words, all with their own art (182). 178 made the stored and `odd` pool live and added FROST POND SAND FANG GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD. X-RAY is live as the one exception to the no-letter-name rule (Matt; `docs/rulings.md`). BUSH stays stored; HELMET waits on 183's pick (promoted in 184). Bedroom toys never keep a word out (Matt, 2026-11-16): 184 brings back ROBOT, DRUM, LAMP, DUCK, BLOCK. An action word is never a picture she picks. `npm run variety` measures reach and repeats.
+- **Words:** about 220 live words, all with their own art (182). 178 made the stored and `odd` pool live and added FROST POND SAND FANG GOBLIN; CAPE CAVE FLAME SMOKE ICE; SWORD SHIELD BOW DRAGON CROWN CASTLE WIZARD. X-RAY is live as the one exception to the no-letter-name rule (Matt; `docs/rulings.md`). BUSH stays stored; HELMET goes live in 187. Bedroom toys never keep a word out (Matt, 2026-11-16): 184 made DRUM, LAMP, DUCK, BLOCK live and added ROBOT (🤖 is still a sign at the Robot Workshop, so ROBOT sits out there). UNICORN, TEDDY, ROCKET, BALL are not words yet (planner suggests adding them, with an art round; Matt's call). An action word is never a picture she picks. `npm run variety` measures reach and repeats.
 - **Code rulings (Matt, 2026-11-16, from 179-180):** cite an item in a code comment only where it records a ruling the code obeys, trimming as files are touched (no sweep); `CharacterSpec.description` stays as a documented optional author's note; `CLAUDE.md` keeps the keyboard and sentence-game laws in place.
 - **Heard words (Matt, 2026-11-16):** a word Julia hears in a character's line before reading it is not a problem. Keeping it out of that episode's reads is at most a soft preference, never a reason to drop or avoid a word; existing dialog stays as written.
 - **Julia's progress (177):** her save is in Chrome's localStorage only, per origin. Her history (67 episodes, Oct 18 – Nov 14) sits on :5174; :5240 started empty on Nov 15 (bag, rotations and shakiness reset). She has read every live word but SHEEP and THREE; every pattern is at 74–87% recent first-try; long vowels barely met; shaky: short O (MOP, ROCK, BOX; -OP -OT -OX), -ND/-NT/-ST blends, N- and R- onsets. The data mixes in dev play on :5174, and F4 auto-answers count as first-try rights. Blobs and full readout: `C:\Code\wordwarriors-scratch\progress-readout\`.
@@ -21,7 +21,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-- 184_bedroom_words (running; also promotes `art_alts_183`), then 185_disk_cleanup, 186_stable_progress.
+- 186_stable_progress (running), then 187_promote_183_art (HELMET 4, FOG TAP MUG RUSH JAB 3; archives 178's picker; `voice:build -- --prune`).
 
 ## Maintenance
 
@@ -32,7 +32,7 @@ Triggers: **bug hunt** after a wave of big features or a new surface; **general 
 - Cleanup: 076 (2026-10-21).
 - Test cleanup: 105 (2026-10-22, partial; owed: a timed 3-worker run, splitting `episode.spec`'s real-time tests, a 20 ms `WW_POLL_MS` default if two full runs stay green, 4-6 workers if memory allows).
 - claude.md cleanup: 180 (2026-11-16; 15.0 KB).
-- Disk space cleanup: 151 (2026-10-25; then 152 thinned hunts 9-11, scratch home 89 GB → 1.3 GB). Hunt shots are now pruned and thinned by `tests/qa/prune.ts`, so this is rarely needed.
+- Disk space cleanup: 185 (2026-11-16; 14.2 → 5.5 GB). Hunt shots are JPEG now (~6x smaller); a hunt's shots thin once its Matt's-calls rows are ruled (`tests/qa/prune.ts`).
 - Content cleanup: 127 (2026-10-23, the word audit).
 
 ## Waiting on Matt
@@ -47,6 +47,7 @@ Hunt 13's calls (181; `docs/qa-findings.md` M86-M90, Ruling column empty). Plann
 - **M89** FROST CLASH! banner then FROST as the counter: leave, same reason.
 - **M87** four taunts caption BOW but say "bough": leave the dialog as written (Matt's dialog-stays ruling).
 - **M90** blue at the title opens choice mode: keep (red takes her back).
+- **`art-originals/figments/`** (185; 1.0 GB from items 168-170, outside this game): keep until Matt says the figments are finished.
 
 ## Paged
 
