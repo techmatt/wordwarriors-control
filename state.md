@@ -41,12 +41,7 @@ none
 
 ## Open questions
 
-Hunt 13's calls (181; `docs/qa-findings.md` M86-M90, Ruling column empty). Planner defaults, applying the heard-words and bedroom-toys rulings:
-- **M86** places and stuff as fetch keys (GO GET THE POND / CAVE / CASTLE): add to `NOT_FETCHED`, as ZOO.
-- **M88** villain decals that picture bank words (Smaug's flame, Elsa's ❄️, Meryl's 🏹): leave; a picture on screen never keeps a word out.
-- **M89** FROST CLASH! banner then FROST as the counter: leave, same reason.
-- **M87** four taunts caption BOW but say "bough": leave the dialog as written (Matt's dialog-stays ruling).
-- **M90** blue at the title opens choice mode: keep (red takes her back).
+none
 
 
 ## Paged
