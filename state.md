@@ -64,7 +64,7 @@ none
 
 Each item names the checkpoint it is due from; due items are top-level bullets that say "due" (the digest copies only those). Conductor findings never go here: only in `C:\Code\claude-conductor\planner-notes.md` *For HANDOFF Open*.
 
-none
+- **New-character checklist, due from checkpoint #6093** (195's friction): its staging defaults (no quest or hub scenes, a plain brawl) broke rules the unit tests enforce (every character has a quest and hub scenes; every active villain fights differently). Add a short "a new roster character needs" list to `docs/content.md`, as a parked edit on the next serial item.
 
 ## Planner habits
 
@@ -74,6 +74,7 @@ Rules for the planner itself: followed, never listed back to Matt (Matt, 2026-10
 - **Sessions 13-14:** re-stage `inbox.md` before **review next** / **check**. A bug hunt item gets `ultracode: true`. An art or candidate prompt ends at `pick:`. Promotion is one `npm run art:pick -- <id> <n|keep> …` plus its commit (191): a parked edit on the next serial item, never an item of its own. Check a `state.md` premise against the repo before it goes in a prompt. Stage `review.md` only after the `review:` signal's receipt exists. Before saying a picker waits, read its `picks\<name>.choices.json`. Stage a write's receipts after the write's result and re-stage the same set once on a miss (one missing receipt fails the whole call); never list a folder or stage the inbox to confirm a write.
 - **Session 15:** an investigation prompt for something Matt saw quotes his concrete symptom (the screen, the character, which server) and must reproduce that exact case (148 measured the default cast and missed Jasmine; 150 redid it). A question Matt pastes with no other context: answer it with the planner's best take as the first call (152's answer landed 18 s after its default).
 - **Session 18:** check an item is running (inbox *Now*) before a `tell:`; one finished gets a follow-up or a parked edit. A prompt names only paths conductor lets an item write (its worktree and the Drive home `C:\Code\gdrive-sync\wordwarriors`); anything else goes through the planner or Matt. Every bridge commit goes from a fresh `/mnt/user-data/outputs/` path, never one already committed: 184's rewrite arrived as stale bytes (conductor 128), and a receipt's change list (`rewritten: … (needs_pick … added; body +N −M)`) or `identical bytes` shows whether an edit landed. Write a prompt from the goal and Matt's rulings, never from an executor's step list or `carry:` checklist (190 copied 189's and was overbuilt).
+- **Session 19:** to check a repo premise (an asset, a cast list), stage the named file or grep a staged one; never list a big folder like `public/art` (one listing cost ~400 entries).
 
 ## Flags
 
