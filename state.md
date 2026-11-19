@@ -21,7 +21,7 @@ Every item for Matt sits in exactly one place. **Waiting on Matt**: what queued 
 
 ## Queued and running
 
-nothing. Kronos's art promotion (Matt's picks, art_alts_195_kronos) is parked and rides the next serial item.
+nothing.
 
 ## Maintenance
 
