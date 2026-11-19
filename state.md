@@ -55,7 +55,6 @@ none
 - **Meryl's two pictures don't match** (172): the rider (fox 6, ranger) and the on-foot pick and face cards (foot 3, star hem) differ in skin tone and robe. Default: leave as picked; the fix is a redraw of one, or face and pick cards cut from fox 6.
 - **Meryl's letters are silent** (172): the tiles over her head aren't voiced. Default: leave; voicing the sounds is a small change in `letterRow`.
 - **Cosmetic refactors** (132): split `tests/qa/qa.pw.ts`, a home for `sceneGen`, notes out of `content/art/prompts.ts`. No rush; queue only with other work there.
-- **M83 rune-gap flake** (179): `charge.spec` M83 (≥240 ms beat) fails on main too, gaps 170-600 ms; may be a real short beat in the volley. Default: a bug-fix item in the rune voicing, not a looser test; queue with other battle work.
 - **Small code calls** (179): delete `FLIP_TO_FACE` (always true); VoiceBank warns on a `MANIFEST_VERSION` mismatch; rename `src/scenes/minigames` → `src/scenes/parked` and move `sceneGen.ts` out of `src/fx/` (unblocked by 180). Queue with other work there.
 - **Meryl fixes** (181): M91 riders and their letter rows draw above props (she vanishes behind the cook-off cake); M92 her captions read KNIGHTS CAMP (needs `voice:build`, a content item). Queue with other Meryl or battle work.
 - **Unify `firstSound` on the sound-based helper** (Matt, 2026-11-16, from 179): bank.ts's spelling-based one goes; SH/TH distractors change. Queue with other work in the bank or rhyme room.
